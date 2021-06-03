@@ -13,7 +13,6 @@
 }
 body {
   position: relative;
-  
 }
 .cointainer {
   height: 100%;
@@ -53,11 +52,11 @@ body {
 }
 .card {
   margin-top: 10px;
-  padding: 10px 0;
+  padding-top: 10px;
   width: 100%;
   max-height: 80%;
   border-radius: 5px;
-  border: 1px solid var(--light-black);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .title-bar {
   width: 100%;
@@ -72,24 +71,73 @@ body {
   max-width: 10%;
   margin: 0px 3%;
 }
-.game-name{
-    font-size: 1rem;
-    font-weight: 400;
+.game-name {
+  font-size: 1rem;
+  font-weight: 400;
 }
-.dot{
-    width: 4px;
-    height: 4px;
-    background: var(--black);
-    border-radius: 50%;
-    margin: auto 0;
+.dot {
+  width: 4px;
+  height: 4px;
+  background: var(--black);
+  border-radius: 50%;
+  margin: auto 0;
 }
-.more{
-    height: 20px;
-    width: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    justify-content: space-between;
-    position: absolute;
-    right: 0;
+.more {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+}
+.game-video {
+  height: 375px;
+  width: 100%;
+  background: var(--white);
+}
+.bottom-bar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.btn-bar {
+  height: 30px;
+  width: 100%;
+  margin: 0;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  position: relative;
+}
+.btn-bar:hover {
+  background: #000000;
+}
+#btn {
+  background: inherit;
+  border: none;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.arrow-head {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%);
+  pointer-events: none;
+}
+
+.fa {
+  color: white;
+  font-size: 1.3rem;
 }
