@@ -122,6 +122,8 @@ body {
   max-height: 80%;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: grid;
+  place-items: center;
 }
 
 .title-bar {
@@ -165,7 +167,7 @@ body {
 
 .game-video {
   height: 375px;
-  width: 100%;
+  width: 90%;
   background: var(--white);
 }
 
