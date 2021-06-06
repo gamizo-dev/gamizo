@@ -31,8 +31,8 @@ body {
   justify-content: space-between;
   z-index: 4;
 }
-.search-ico{
-  max-width: 30px;
+.search-ico {
+  max-width: 25px;
 }
 .title {
   font-family: "ZCOOL KuaiLe", cursive;
@@ -43,18 +43,34 @@ body {
 .search-ico {
   color: var(--green);
 }
+
+/* Menu Button */
+
 .hamburger {
-  height: 15px;
-  width: 20px;
+  height: 25px;
+  width: 30px;
   display: flex;
   flex-direction: column;
+  padding: 4px;
+  border-radius: 5px;
 }
+
+
+
 .line {
   width: 100%;
   height: 2px;
   margin: auto 0;
   background-color: var(--green);
 }
+
+.hamburger:hover{
+  background-color: var(--white);
+}
+
+/* When clicked */
+
+/* Menu Button Ends */
 .card {
   margin-top: 10px;
   padding-top: 10px;
@@ -63,6 +79,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .title-bar {
   width: 100%;
   margin-bottom: 10px;
@@ -71,15 +88,18 @@ body {
   justify-content: left;
   position: relative;
 }
+
 .display-picture {
   border-radius: 50%;
   max-width: 10%;
   margin: 0px 3%;
 }
+
 .game-name {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
+
 .dot {
   width: 4px;
   height: 4px;
@@ -87,6 +107,7 @@ body {
   border-radius: 50%;
   margin: auto 0;
 }
+
 .more {
   height: 20px;
   width: 20px;
@@ -97,17 +118,20 @@ body {
   position: absolute;
   right: 0;
 }
+
 .game-video {
   height: 375px;
   width: 100%;
   background: var(--white);
 }
+
 .bottom-bar {
   width: 100%;
   margin: 0;
   padding: 0;
   position: relative;
 }
+
 .btn-bar {
   height: 30px;
   width: 100%;
@@ -119,8 +143,13 @@ body {
   padding: 5px 10px;
   position: relative;
 }
+
 .btn-bar:hover {
-  background: #132b22;
+  background: #0c6b48;
+}
+
+.btn-bar:active {
+  background: #0c6b48;
 }
 #btn {
   background: inherit;
@@ -135,7 +164,8 @@ body {
   font-size: 1rem;
 }
 
-.arrow-head {
+.arrow-ico {
+  max-width: 18px;
   position: absolute;
   top: 50%;
   right: 5%;
@@ -143,9 +173,8 @@ body {
   pointer-events: none;
 }
 
-
-@media only screen and (min-width: 430px){
-  .cointainer{
-    max-width:412px ;
+@media only screen and (min-width: 430px) {
+  .cointainer {
+    max-width: 412px;
   }
 }
