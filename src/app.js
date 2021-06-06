@@ -10,3 +10,14 @@ hamburger.addEventListener("click", function () {
     line[i].classList.toggle("menu-open");
   }
 });
+
+var videoC = document.querySelector(".game-video");
+var video = document.getElementById("video");
+
+videoC.addEventListener("click", () => {
+  if (video.volume == 0.0) {
+    video.volume = 1.0;
+  } else {
+    video.volume = 0.0;
+  }
+});
