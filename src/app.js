@@ -14,6 +14,14 @@ hamburger.addEventListener("click", function () {
 var videoC = document.querySelector(".game-video");
 var video = document.getElementById("video");
 
+video.addEventListener("load", () => {
+  if (video.played == flase) {
+    video.play();
+  } else {
+    video.play();
+  }
+});
+
 videoC.addEventListener("click", () => {
   if (video.volume == 0.0) {
     video.volume = 1.0;
