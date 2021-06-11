@@ -15,10 +15,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="src/style.css" />
-    <a href="#">
-      <title>Gamizo</title>
-    </a>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/upload.css">
+    <title>Gamizo | Upload Page</title>
   </head>
   <body>
     <div class="cointainer">
@@ -28,7 +27,6 @@
         <a href="#">Privacy Policy</a>
         <a href="#">Terms and Conditions</a>
         <a href="#">About</a>
-        <a href="pages/upload.html">Upload</a>
       </div>
       <div class="nav">
         <div id="hamburger" class="hamburger">
@@ -37,31 +35,17 @@
           <div class="line"></div>
         </div>
         <h2 class="title">Gamizo</h2>
-        <span class="search-ico"> <img src="asset/ico/search_black_24dp.svg" alt="search-ico" class="search-ico"> </span>
+        <span class="search-ico"> <img src="/asset/ico/search_black_24dp.svg" alt="search-ico" class="search-ico"> </span>
       </div>
-      <div class="card">
-          <div class="title-bar">
-              <img class="display-picture" src="https://picsum.photos/200/200" alt="DP">
-              <p class="game-name">Stumble Guys</p>
-              <div class="more">
-                  <div class="dot"></div>
-                  <div class="dot"></div>
-                  <div class="dot"></div>
-              </div>
-            </div>
-            <div class="game-video">
-              <video id="video" class="video" src="asset/Videos/Video.mp4" autoplay loop></video>
-              <div id="sound"></div>
-            </div>
-          <div class="bottom-bar">
-            <div class="btn-bar">
-                <input id="btn" type="submit" value="   Install Now">
-                <img src="asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico">
-              </div>
-          </div>
+      <div class="upload-form">
+          <h2>Upload Video Here</h2>
+          <form action="#" method="GET">
+              <label for="link">Link</label>
+              <input type="text" id="linkText" >
+              <button class="submitBtn" id="submitBtn">Upload</button>
+          </form>
       </div>
     </div>
-    </div>
-    <script src="src/app.js"></script>
+    <script src="/src/app.js"></script>
   </body>
 </html>
