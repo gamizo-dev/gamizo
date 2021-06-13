@@ -1,3 +1,4 @@
+// Menu js
 var hamburger = document.getElementById("hamburger");
 var menu = document.getElementById("menu");
 var line = document.getElementsByClassName("line");
@@ -11,14 +12,20 @@ hamburger.addEventListener("click", function () {
   }
 });
 
+
+//Video Player js
 var videoC = document.querySelector(".game-video");
 var video = document.getElementById("video");
 
 video.addEventListener("load", () => {
   if (video.played == flase) {
-    video.play();
-  } else {
-    video.play();
+    videoC.addEventListener("click", ()=>{
+      video.play();
+      console.log("playing success")
+    })
+  } 
+  else {
+    continue;
   }
 });
 
