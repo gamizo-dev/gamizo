@@ -17,17 +17,17 @@ hamburger.addEventListener("click", function () {
 var videoC = document.querySelector(".game-video");
 var video = document.getElementById("video");
 
-video.addEventListener("load", () => {
-  if (video.played == flase) {
-    videoC.addEventListener("click", ()=>{
-      video.play();
-      console.log("playing success")
-    })
-  } 
-  else {
-    continue;
-  }
-});
+// video.addEventListener("load", () => {
+//   if (video.played == flase) {
+//     videoC.addEventListener("click", ()=>{
+//       video.play();
+//       console.log("playing success")
+//     })
+//   } 
+//   else {
+//     continue;
+//   }
+// });
 
 videoC.addEventListener("click", () => {
   if (video.volume == 0.0) {

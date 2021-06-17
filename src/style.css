@@ -164,18 +164,48 @@ body {
 }
 
 .game-video {
-  height: 375px;
+  padding-top: 100%;
   width: 95%;
   border-radius: 5px;
-  background: var(--wine);
+  background: var(--white);
   overflow: hidden;
   position: relative;
 }
 
 .video{
   width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.507);
 }
 
+.backdrop-video{
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(8px);
+  opacity: 1;
+}
+
+.temp-video{
+  height: 100%;
+  border-top: none;
+  border-bottom: none;
+  border-right: 5px solid white;
+  border-left: 5px solid white;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.507);
+}
+.video2{
+  width: 100%;
+  height: auto;
+}
 /* #sound{
   width: 20%;
   height: 20%;
