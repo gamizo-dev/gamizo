@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="asset/ico/logo.jpg" />
+    <link rel="icon" href="static/asset/ico/logo.jpg" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -21,7 +21,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
     <a href="#">
       <title>Gamizo</title>
     </a>
@@ -34,7 +34,7 @@
         <a href="#">Privacy Policy</a>
         <a href="#">Terms and Conditions</a>
         <a href="#">About</a>
-        <a href="pages/upload.html">Upload</a>
+        <a href="upload.html">Upload</a>
       </div>
       <div class="nav">
         <div id="hamburger" class="hamburger">
@@ -45,7 +45,7 @@
         <h2 class="title">Gamizo</h2>
         <span class="search-ico">
           <img
-            src="asset/ico/search_black_24dp.svg"
+            src="static/asset/ico/search_black_24dp.svg"
             alt="search-ico"
             class="search-ico"
           />
@@ -53,14 +53,16 @@
       </div>
 
       <!-- Card 1 -->
-      <div class="card">
+      {% for docs in doc %}
+      {%endfor%}
+       <div class="card">
         <div class="title-bar">
           <img
             class="display-picture"
             src="https://picsum.photos/200/200"
             alt="DP"
           />
-          <p class="game-name">Stumble Guys</p>
+          <p class="game-name"></p>
           <div class="more">
             <div class="dot"></div>
             <div class="dot"></div>
@@ -71,7 +73,7 @@
           <video
             id="video"
             class="impvideo"
-            src="asset/Videos/Video (1).mp4"
+            src="static/asset/Videos/Video (1).mp4"
             autoplay
             loop
           ></video>
@@ -82,7 +84,7 @@
           <div class="btn-bar">
             <input id="btn" type="submit" value="   Install Now" />
             <img
-              src="asset/ico/arrow_forward_ios_black_24dp.svg"
+              src="static/asset/ico/arrow_forward_ios_black_24dp.svg"
               alt="arrow_forward"
               class="arrow-ico"
             />
@@ -108,7 +110,7 @@
           <video
             id="video"
             class="impvideo"
-            src="asset/Videos/Video (2).mp4"
+            src="static/asset/Videos/Video (2).mp4"
             loop
           ></video>
           <div class="play-button"></div>
@@ -118,7 +120,7 @@
           <div class="btn-bar">
             <input id="btn" type="submit" value="   Install Now" />
             <img
-              src="asset/ico/arrow_forward_ios_black_24dp.svg"
+              src="static/asset/ico/arrow_forward_ios_black_24dp.svg"
               alt="arrow_forward"
               class="arrow-ico"
             />
@@ -144,12 +146,12 @@
           <video
             id="video"
             class="video backdrop-video"
-            src="asset/Videos/Video (7).mp4"
+            src="static/asset/Videos/Video (7).mp4"
           ></video>
           <video
             id="video"
             class="impvideo"
-            src="asset/Videos/Video (7).mp4"
+            src="static/asset/Videos/Video (7).mp4"
             loop
           ></video>
           <div class="play-button"></div>
@@ -159,7 +161,7 @@
           <div class="btn-bar">
             <input id="btn" type="submit" value="   Install Now" />
             <img
-              src="asset/ico/arrow_forward_ios_black_24dp.svg"
+              src="static/asset/ico/arrow_forward_ios_black_24dp.svg"
               alt="arrow_forward"
               class="arrow-ico"
             />
@@ -185,12 +187,12 @@
           <video
             id="video"
             class="video backdrop-video video2"
-            src="asset/Videos/Video (4).mp4"
+            src="static/asset/Videos/Video (4).mp4"
           ></video>
           <video
             id="video"
             class="impvideo temp-video"
-            src="asset/Videos/Video (4).mp4"
+            src="static/asset/Videos/Video (4).mp4"
             loop
           ></video>
           <div class="play-button"></div>
@@ -200,7 +202,7 @@
           <div class="btn-bar">
             <input id="btn" type="submit" value="   Install Now" />
             <img
-              src="asset/ico/arrow_forward_ios_black_24dp.svg"
+              src="static/asset/ico/arrow_forward_ios_black_24dp.svg"
               alt="arrow_forward"
               class="arrow-ico"
             />
@@ -210,7 +212,7 @@
     </div>
     </div>
     
-    <script src="src/app.js"></script>
-    <script src="src/video.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/video.js"></script>
   </body>
 </html>
