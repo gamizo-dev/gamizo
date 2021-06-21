@@ -68,6 +68,10 @@ body {
 .hamburger:hover{
   background-color: var(--white);
 }
+
+
+
+
 /* actual menu */
 #menu{
   
@@ -85,7 +89,7 @@ body {
   overflow: hidden;
 
 }
-#menu a{
+#menu>a{
   text-decoration: none;
   color: #ffffff;
   font-size: 1.8rem;
@@ -95,17 +99,26 @@ body {
   width: 100%;
   text-align: center;
 }
-#menu a:hover{
+#menu>a:hover{
   color: #3c896d;
   transform: scale(1.1);
   background-color: #dfffff;
+}
+/* Bottom part */
+#menu .menu-footer{
+  position: absolute;
+  bottom: 1em;
+}
+#menu .menu-footer a{
+  color: white;
+  font-size: 0.75rem;
 }
 /* When clicked */
 #menu.menu-open{
   visibility: visible;
   transform: scale(1);
 }
-#menu.menu-open a{
+#menu.menu-open>a{
   visibility: visible;
 }
 .hamburger.menu-open{
@@ -113,6 +126,10 @@ body {
   background-color: #dfffff;
 }
 /* Menu Button Ends */
+
+
+
+
 .card {
   margin-top: 15px;
   padding-top: 10px;

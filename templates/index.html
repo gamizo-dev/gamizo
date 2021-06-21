@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="static/asset/ico/logo.jpg" />
+    <link rel="icon" href="\static/asset/ico/logo.jpg" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -21,20 +21,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="static/css/style.css" />
-    <a href="#">
-      <title>Gamizo</title>
-    </a>
+    <link rel="stylesheet" href="\static/css/style.css" />
+    <title>Gamizo</title>
   </head>
   <body>
     <div class="cointainer">
-      <div id="menu">
+      <div id="menu" >
         <a href="#">Home</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms and Conditions</a>
+        <a href="contact.html">Contact Us</a>
+        
         <a href="#">About</a>
         <a href="upload.html">Upload</a>
+        <div class="menu-footer">
+          <a href="#">Privacy Policy</a>
+
+        <a href="#">Terms and Conditions</a>
+        </div>
       </div>
       <div class="nav">
         <div id="hamburger" class="hamburger">
@@ -45,7 +47,7 @@
         <h2 class="title">Gamizo</h2>
         <span class="search-ico">
           <img
-            src="static/asset/ico/search_black_24dp.svg"
+            src="\static/asset/ico/search_black_24dp.svg"
             alt="search-ico"
             class="search-ico"
           />
@@ -53,8 +55,6 @@
       </div>
 
       <!-- Card 1 -->
-      {% for docs in doc %}
-      {%endfor%}
        <div class="card">
         <div class="title-bar">
           <img
@@ -62,7 +62,7 @@
             src="https://picsum.photos/200/200"
             alt="DP"
           />
-          <p class="game-name"></p>
+          <p class="game-name">Stumble Guys</p>
           <div class="more">
             <div class="dot"></div>
             <div class="dot"></div>
@@ -73,7 +73,7 @@
           <video
             id="video"
             class="impvideo"
-            src="static/asset/Videos/Video (1).mp4"
+            src="\static/asset/Videos/Video (1).mp4"
             autoplay
             loop
           ></video>
@@ -84,135 +84,16 @@
           <div class="btn-bar">
             <input id="btn" type="submit" value="   Install Now" />
             <img
-              src="static/asset/ico/arrow_forward_ios_black_24dp.svg"
+              src="\static/asset/ico/arrow_forward_ios_black_24dp.svg"
               alt="arrow_forward"
               class="arrow-ico"
             />
           </div>
         </div>
       </div>
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="title-bar">
-          <img
-            class="display-picture"
-            src="https://picsum.photos/200/200"
-            alt="DP"
-          />
-          <p class="game-name">Stumble Guys</p>
-          <div class="more">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-        </div>
-        <div class="game-video">
-          <video
-            id="video"
-            class="impvideo"
-            src="static/asset/Videos/Video (2).mp4"
-            loop
-          ></video>
-          <div class="play-button"></div>
-          <div id="sound"></div>
-        </div>
-        <div class="bottom-bar">
-          <div class="btn-bar">
-            <input id="btn" type="submit" value="   Install Now" />
-            <img
-              src="static/asset/ico/arrow_forward_ios_black_24dp.svg"
-              alt="arrow_forward"
-              class="arrow-ico"
-            />
-          </div>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="title-bar">
-          <img
-            class="display-picture"
-            src="https://picsum.photos/200/200"
-            alt="DP"
-          />
-          <p class="game-name">Stumble Guys</p>
-          <div class="more">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-        </div>
-        <div class="game-video">
-          <video
-            id="video"
-            class="video backdrop-video"
-            src="static/asset/Videos/Video (7).mp4"
-          ></video>
-          <video
-            id="video"
-            class="impvideo"
-            src="static/asset/Videos/Video (7).mp4"
-            loop
-          ></video>
-          <div class="play-button"></div>
-          <div id="sound"></div>
-        </div>
-        <div class="bottom-bar">
-          <div class="btn-bar">
-            <input id="btn" type="submit" value="   Install Now" />
-            <img
-              src="static/asset/ico/arrow_forward_ios_black_24dp.svg"
-              alt="arrow_forward"
-              class="arrow-ico"
-            />
-          </div>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="card">
-        <div class="title-bar">
-          <img
-            class="display-picture"
-            src="https://picsum.photos/200/200"
-            alt="DP"
-          />
-          <p class="game-name">Stumble Guys</p>
-          <div class="more">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-        </div>
-        <div class="game-video">
-          <video
-            id="video"
-            class="video backdrop-video video2"
-            src="static/asset/Videos/Video (4).mp4"
-          ></video>
-          <video
-            id="video"
-            class="impvideo temp-video"
-            src="static/asset/Videos/Video (4).mp4"
-            loop
-          ></video>
-          <div class="play-button"></div>
-          <div id="sound"></div>
-        </div>
-        <div class="bottom-bar">
-          <div class="btn-bar">
-            <input id="btn" type="submit" value="   Install Now" />
-            <img
-              src="static/asset/ico/arrow_forward_ios_black_24dp.svg"
-              alt="arrow_forward"
-              class="arrow-ico"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
     </div>
     
-    <script src="static/js/app.js"></script>
-    <script src="static/js/video.js"></script>
+    <script src="\static/js/app.js"></script>
+    <script src="\static/js/video.js"></script>
   </body>
 </html>
