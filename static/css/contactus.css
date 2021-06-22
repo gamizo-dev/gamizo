@@ -1,0 +1,37 @@
+#contactus{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.contactus-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#contactus p{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+#contactus input{
+    margin-bottom: 2em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 0.5em;
+    width: 20em;
+    border-bottom: 1px solid #adadadc0 ;
+}
+
+#contact-form-submit-btn{
+    border: none;
+    max-width:8em; 
+    padding-top: 0.5em;
+    background-color: rgb(53, 124, 255);
+    color: white;
+    border-radius: 5px;
+}
