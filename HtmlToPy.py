@@ -52,12 +52,14 @@ def upload():
        
  # transfer.ALLOWED_UPLOAD_ARGS.append('ContentType')
     transfer.upload_file(f.filename, 'gamizo', s['category']+'/'+s['name'],extra_args={'ContentType': 'video/mp4','ACL':'public-read'})
+    str=s['name']
     doc_ref = db.collection('apps').document('apps').collection(s['category']).document(s['name'])
-    url_take=f"https://gamizo.sgp1.digitaloceanspaces.com/{s['category']}/s['name']"
+    s['name'].strip()
+    url_take=f"https://gamizo.sgp1.digitaloceanspaces.com/{s['category']}/{s['name']}"
     doc_ref.set({
-        'name': s['name'],
+        'name': str,
         'link': linkText,
-        'url':url_take
+        'videoUrl':url_take
     })
     return render_template('upload.html')
 

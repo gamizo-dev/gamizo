@@ -14,8 +14,7 @@ def takeinput(url):
 
     s = title.string
     # s = s.replace('- Apps on Google Play',' ')
-    s=s[:-21]
-
+    s=s[:-22]
     cat={'name': s,'category': category}
     return cat
 
