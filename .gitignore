@@ -142,5 +142,5 @@ cython_debug/
 driver_data/*
 
 #key
-key.json
-gamizo-firebase-adminsdk.json
+#key.json
+#gamizo-firebase-adminsdk.json
