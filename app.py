@@ -1,4 +1,4 @@
-import os 
+import os
 import boto3
 from flask import Flask, render_template, request
 import main
@@ -27,45 +27,54 @@ firebase_admin.initialize_app(cred)
 app = Flask(__name__)
 # upload_path = 'static/asset/Videos/'
 # app.config['UPLOAD_FOLDER'] = upload_path
+
+
 @app.route('/')
 def index():
-    db= firestore.client()
-    docs = db.collection('apps').where('category','==','Action').stream()
-    print(docs)
-    return render_template('index.html',doc=docs)
+    db = firestore.client()
+    docs = db.collection('apps').document('apps').collection('Action').get()
+    list = []
+    for doc in docs:
+        list.append(doc.to_dict())
+    print(list)
+    return render_template('index.html', list=list)
+
 
 @app.route('/upload.html')
 def new():
     return render_template('upload.html')
 
-@app.route('/getlink',methods=['GET','POST'])
+
+@app.route('/getlink', methods=['GET', 'POST'])
 def upload():
-    if request.method=='POST':
-        linkText=request.form['linkText']
+    if request.method == 'POST':
+        linkText = request.form['linkText']
         f = request.files['mp4video']
         f.save(f.filename)
 
-    
-    db= firestore.client()
-    s=main.takeinput(linkText)
+    db = firestore.client()
+    s = main.takeinput(linkText)
     # print(s)
-       
+
  # transfer.ALLOWED_UPLOAD_ARGS.append('ContentType')
-    transfer.upload_file(f.filename, 'gamizo', s['category']+'/'+s['name'],extra_args={'ContentType': 'video/mp4','ACL':'public-read'})
-    str=s['name']
-    doc_ref = db.collection('apps').document('apps').collection(s['category']).document(s['name'])
+    transfer.upload_file(f.filename, 'gamizo', s['category']+'/'+s['name'], extra_args={'ContentType': 'video/mp4', 'ACL': 'public-read'})
+    str = s['name']
+    doc_ref = db.collection('apps').document(
+        'apps').collection(s['category']).document(s['name'])
     s['name'].strip()
-    url_take=f"https://gamizo.sgp1.digitaloceanspaces.com/{s['category']}/{s['name']}"
+    url_take = f"https://gamizo.sgp1.digitaloceanspaces.com/{s['category']}/{s['name']}"
     doc_ref.set({
         'name': str,
         'link': linkText,
-        'videoUrl':url_take
+        'videoUrl': url_take
     })
     return render_template('upload.html')
+
 
 @app.route('/contact.html')
 def contact():
     return render_template('contact.html')
 
-if __name__ =='__main__':
+
+if __name__ == '__main__':
     app.run(debug=True)
