@@ -33,8 +33,6 @@ app = Flask(__name__)
 def index():
     db = firestore.client()
     docs = db.collection('apps').document('apps').collection('Action').get()
-    cat=db.collection('apps').document('apps').get()
-    print(cat)
     
     l=[]
     for doc in docs:
@@ -70,8 +68,24 @@ def upload():
         'link': linkText,
         'videoUrl': url_take
     })
+    category_ref=db.collection('category').document('apps')
+    
+    list1=[]
+    cat_refget=db.collection('category').get()
 
-    s.add("Arcade")
+    for c in cat_refget:
+        list1.append(c.to_dict())
+    
+    for i in list1:
+        if s['category'] != i.values():
+             category_ref.set({
+              f"{s['category']}": s['category']
+            })
+    
+    # if s['category'] not in cat:
+    #    
+        
+    # print(set)
     return render_template('upload.html')
 
 
