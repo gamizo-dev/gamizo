@@ -70,6 +70,7 @@ def upload():
         'link': linkText,
         'videoUrl': url_take
     })
+
     s.add("Arcade")
     return render_template('upload.html')
 
