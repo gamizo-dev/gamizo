@@ -33,11 +33,13 @@ app = Flask(__name__)
 def index():
     db = firestore.client()
     docs = db.collection('apps').document('apps').collection('Action').get()
-    list = []
+    cat=db.collection('apps').document('apps').get()
+    print(cat)
+    
+    l=[]
     for doc in docs:
-        list.append(doc.to_dict())
-    print(list)
-    return render_template('index.html', list=list)
+        l.append(doc.to_dict())
+    return render_template('index.html', list=l)
 
 
 @app.route('/upload.html')
@@ -68,6 +70,7 @@ def upload():
         'link': linkText,
         'videoUrl': url_take
     })
+    s.add("Arcade")
     return render_template('upload.html')
 
 
