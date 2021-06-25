@@ -1,7 +1,6 @@
 import os
 import boto3
-from flask import Flask, render_template, request
-import main
+from flask import Flask, render_template,request
 import firebase_admin
 from firebase_admin import credentials, firestore, initialize_app
 from boto3 import session
@@ -23,6 +22,27 @@ transfer = S3Transfer(client)
 
 cred = credentials.Certificate('key.json')
 firebase_admin.initialize_app(cred)
+
+from os import replace
+import  requests
+from bs4 import BeautifulSoup
+
+def takeinput(url):
+
+    r = requests.get(url)
+    htmlContent = r.content
+
+    soup = BeautifulSoup(htmlContent,'html.parser')
+
+    title = soup.title
+    category=soup.find("a",{"itemprop" :"genre"}).text
+    # print(title.string)
+
+    s = title.string
+    # s = s.replace('- Apps on Google Play',' ')
+    s=s[:-22]
+    cat={'name': s,'category': category}
+    return cat
 
 app = Flask(__name__)
 # upload_path = 'static/asset/Videos/'
@@ -53,7 +73,7 @@ def upload():
         f.save(f.filename)
 
     db = firestore.client()
-    s = main.takeinput(linkText)
+    s = takeinput(linkText)
     # print(s)
 
  # transfer.ALLOWED_UPLOAD_ARGS.append('ContentType')
