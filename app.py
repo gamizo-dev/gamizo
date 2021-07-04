@@ -57,7 +57,7 @@ def takeinput(url):
     rating = rating.replace('stars out of five stars','')
     print(rating)
     
-    cat={'name': s,'category': category,'icon':icon,'appSize':appSize,'Downloads':Downloads}
+    cat={'name': s,'category': category,'icon':icon,'appSize':appSize,'Downloads':Downloads,'rating':rating}
     return cat
 
 app = Flask(__name__)
@@ -68,7 +68,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     db = firestore.client()
-    docs = db.collection('apps').document('apps').collection('Action').get()
+    docs = db.collection('apps').document('apps').collection('Arcade').get()
     
     l=[]
     for doc in docs:
@@ -103,9 +103,14 @@ def upload():
         'name': str,
         'link': linkText,
         'videoUrl': url_take,
+        'imageLink': s['icon'],
+        'Downloads':s['Downloads'],
+        'AppSize':s['appSize'],
+        'Rating': s['rating']
+
         # 'imageLink':imageLink
     })
-    category_ref=db.collection('category').document('apps')
+    category_ref=db.collection('category').document(s['category'])
     
     list1=[]
     cat_refget=db.collection('category').get()

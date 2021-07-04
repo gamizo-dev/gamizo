@@ -8,7 +8,7 @@
 // //       video.play();
 // //       console.log("playing success")
 // //     })
-// //   } 
+// //   }
 // //   else {
 // //     continue;
 // //   }
@@ -54,15 +54,15 @@
 //     }
 
 // }
-const videos = document.getElementsByClassName('impvideo');
-for(i=0;i<videos.length;i++){
-  videos[i].pause()
+const videos = document.getElementsByClassName("impvideo");
+for (i = 0; i < videos.length; i++) {
+  videos[i].pause();
 }
-const observer = new IntersectionObserver(entries => {
-    // Loop over the entries
-    for(i=0;i<videos.length;i++){
-      video=videos[i];
-    entries.forEach(entry => {
+const observer = new IntersectionObserver((entries) => {
+  // Loop over the entries
+  for (i = 0; i < videos.length; i++) {
+    video = videos[i];
+    entries.forEach((entry) => {
       // If the element is visible
       if (entry.isIntersecting) {
         // Add the animation class
@@ -72,10 +72,20 @@ const observer = new IntersectionObserver(entries => {
       video.pause();
     });
   }
-  });
-  for(i=0;i<videos.length;i++){
+});
+for (i = 0; i < videos.length; i++) {
   observer.observe(videos[i]);
+}
+var video = document.getElementsByClassName("impvideo");
+for (let i = 0; i < video.length; i++) {
+  var video_width = video[i].clientWidth;
+  var video_height = video[i].clientHeight;
+  if (video_width > video_height) {
+    video[i].style.width = "100%";
+  } else {
+    video[i].style.height = "100%";
   }
+}
 
 // window.addEventListener('scroll', checkScroll, false);
 // window.addEventListener('resize', checkScroll, false);

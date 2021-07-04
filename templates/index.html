@@ -75,13 +75,17 @@
           <video
             id="video"
             class="impvideo"
-            src="\static/asset/Videos/Video (1).mp4"
+            src="\static/asset/Videos/video(12).mp4"
+            height="100%"
+            width="100%"
             autoplay
             loop
           ></video>
           <div class="play-button"></div>
           <div id="sound"></div>
         </div>
+      
+        
         <div class="bottom-bar">
           <div class="btn-bar">
             <input id="btn" type="submit" value="Install Now" />
@@ -98,10 +102,10 @@
         <div class="title-bar">
           <img
             class="display-picture"
-            src="https://picsum.photos/200/200"
+            src="{{i.imageLink}}"
             alt="DP"
           />
-          <p class="game-name">{{i.name}}</p>
+          <p class="game-name">{{i.name }}</p>
           <div class="more">
             <div class="dot"></div>
             <div class="dot"></div>
@@ -119,6 +123,7 @@
           <div class="play-button"></div>
           <div id="sound"></div>
         </div>
+       
         <div class="bottom-bar">
           <div class="btn-bar">
             <a href="{{i.link}}" target="_blank"></a>
