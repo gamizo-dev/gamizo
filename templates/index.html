@@ -1,89 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="\static/asset/ico/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="\static/css/style.css" />
+    <title>Gamizo</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="\static/asset/ico/logo.jpg" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="\static/css/style.css" />
-  <title>Gamizo</title>
-</head>
+  <body>
+    <div class="cointainer">
+      <div id="menu">
+        <a href="#">Home</a>
+        <a href="contact.html">Contact Us</a>
 
-<body>
-  <div class="cointainer">
-    <div id="menu">
-      <a href="#">Home</a>
-      <a href="contact.html">Contact Us</a>
+        <a href="#">About</a>
+        <a href="upload.html">Upload</a>
+        <div class="menu-footer">
+          <a href="#">Privacy Policy</a>
 
-      <a href="#">About</a>
-      <a href="upload.html">Upload</a>
-      <div class="menu-footer">
-        <a href="#">Privacy Policy</a>
-
-        <a href="#">Terms and Conditions</a>
-      </div>
-    </div>
-    <div class="nav">
-      <div id="hamburger" class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <h2 class="title">Gamizo</h2>
-      <span class="search-ico">
-        <img src="\static/asset/ico/search_black_24dp.svg" alt="search-ico" class="search-ico" />
-      </span>
-    </div>
-
-    <!-- Card 1 -->
-    <div class="card">
-      <div class="title-bar">
-        <img class="display-picture" src="https://picsum.photos/200/200" alt="DP" />
-        <p class="game-name">Stumble Guys</p>
-        <div class="more">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+          <a href="#">Terms and Conditions</a>
         </div>
       </div>
-      
-    
-      <div class="game-video">
-        <video id="video" class="impvideo" src="\static/asset/Videos/Video (1).mp4" autoplay loop></video>
-        <div class="play-button"></div>
-        <div id="sound"></div>
+      <div class="nav">
+        <div id="hamburger" class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <h2 class="title">Gamizo</h2>
+        <span class="search-ico">
+          <img
+            src="\static/asset/ico/search_black_24dp.svg"
+            alt="search-ico"
+            class="search-ico"
+          />
+        </span>
       </div>
-      <div class="bottom-bar">
-        <div class="btn-bar">
-          <input id="btn" type="submit" value="   Install Now" />
-          <img src="\static/asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico" />
+
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="title-bar">
+          <img
+            class="display-picture"
+            src="https://picsum.photos/200/200"
+            alt="DP"
+          />
+          <p class="game-name">Stumble Guys</p>
+          <div class="more">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <div class="game-video">
+          <video
+            id="video"
+            class="impvideo"
+            src="\static/asset/Videos/Video (1).mp4"
+            autoplay
+            loop
+          ></video>
+          <div class="play-button"></div>
+          <div id="sound"></div>
+        </div>
+        <div class="bottom-bar">
+          <div class="btn-bar">
+            <input id="btn" type="submit" value="Install Now" />
+            <img
+              src="\static/asset/ico/arrow_forward_ios_black_24dp.svg"
+              alt="arrow_forward"
+              class="arrow-ico"
+            />
+          </div>
         </div>
       </div>
       {%for i in list%}
-      <div class="game-video">
-        <video id="video" class="impvideo" src="{{i.videoUrl}}" autoplay loop></video>
-        <div class="play-button"></div>
-        <div id="sound"></div>
-      </div>
-      <div class="bottom-bar">
-        <div class="btn-bar">
-          <a href="{{i.link}}"><button id="btn" type="submit" value="Install Now">Install now</button></a>
-          <img src="\static/asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico" />
+      <div class="card">
+        <div class="title-bar">
+          <img
+            class="display-picture"
+            src="https://picsum.photos/200/200"
+            alt="DP"
+          />
+          <p class="game-name">{{i.name}}</p>
+          <div class="more">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <div class="game-video">
+          <video
+            id="video"
+            class="impvideo"
+            src="{{i.videoUrl}}"
+            autoplay
+            loop
+          ></video>
+          <div class="play-button"></div>
+          <div id="sound"></div>
+        </div>
+        <div class="bottom-bar">
+          <div class="btn-bar">
+            <a href="{{i.link}}" target="_blank"></a>
+              <button id="btn" type="submit" value="    Install Now">
+                Install now
+              </button>
+            <img
+              src="\static/asset/ico/arrow_forward_ios_black_24dp.svg"
+              alt="arrow_forward"
+              class="arrow-ico"
+            />
+          </div>
         </div>
       </div>
       {%endfor%}
     </div>
-  </div>
-  <script src="\static/js/app.js"></script>
-  <script src="\static/js/video.js"></script>
-</body>
-
+    <script src="\static/js/app.js"></script>
+    <script src="\static/js/video.js"></script>
+  </body>
 </html>

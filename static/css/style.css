@@ -229,6 +229,15 @@ body {
   border-left: 5px solid white;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.507);
 }
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover { 
+  text-decoration:none; 
+  cursor:pointer;  
+}
 .video2{
   width: 100%;
   height: auto;

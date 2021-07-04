@@ -37,11 +37,27 @@ def takeinput(url):
     title = soup.title
     category=soup.find("a",{"itemprop" :"genre"}).text
     # print(title.string)
-
     s = title.string
-    # s = s.replace('- Apps on Google Play',' ')
     s=s[:-22]
-    cat={'name': s,'category': category}
+
+    imageLink = soup.find("div", {"class": "xSyT2c"})
+    for item in imageLink:
+        icon=item['src']
+    
+    spans = soup.find_all("span",{"class":"htlgb"})
+    appSize=spans[2].text
+    Downloads=spans[4].text  
+
+    stars = soup.find("div",{"class":"pf5lIe"})
+    for item2 in stars:
+        rating= item2['aria-label']
+    print(appSize)
+    print(Downloads)
+    rating = rating.replace('Rated ','')
+    rating = rating.replace('stars out of five stars','')
+    print(rating)
+    
+    cat={'name': s,'category': category,'icon':icon,'appSize':appSize,'Downloads':Downloads}
     return cat
 
 app = Flask(__name__)
@@ -86,7 +102,8 @@ def upload():
     doc_ref.set({
         'name': str,
         'link': linkText,
-        'videoUrl': url_take
+        'videoUrl': url_take,
+        # 'imageLink':imageLink
     })
     category_ref=db.collection('category').document('apps')
     
