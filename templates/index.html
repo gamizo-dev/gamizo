@@ -54,11 +54,8 @@
           <div class="dot"></div>
         </div>
       </div>
-      {%for i in list%}
-      <p>{{i.link}}</p>
-      <p>{{i.name}}</p>
-      <p>{{i.videoUrl}}</p>
-      {% endfor %}
+      
+    
       <div class="game-video">
         <video id="video" class="impvideo" src="\static/asset/Videos/Video (1).mp4" autoplay loop></video>
         <div class="play-button"></div>
@@ -70,6 +67,19 @@
           <img src="\static/asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico" />
         </div>
       </div>
+      {%for i in list%}
+      <div class="game-video">
+        <video id="video" class="impvideo" src="{{i.videoUrl}}" autoplay loop></video>
+        <div class="play-button"></div>
+        <div id="sound"></div>
+      </div>
+      <div class="bottom-bar">
+        <div class="btn-bar">
+          <a href="{{i.link}}"><button id="btn" type="submit" value="Install Now">Install now</button></a>
+          <img src="\static/asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico" />
+        </div>
+      </div>
+      {%endfor%}
     </div>
   </div>
   <script src="\static/js/app.js"></script>
