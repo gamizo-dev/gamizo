@@ -38,11 +38,13 @@
         email
         message -->
         <div class="contactus-form">
-            <form id="contactus" action="">
+            <form id="contactus" action="#">
                 <p>Drop us a line</p>
-                <input type="text" value="Name">
-                <input type="text" value="Email">
-                <input type="text" value="Message">
+                <input type="text" placeholder="Enter your Name" name="name" required>
+                <input type="text" placeholder="Enter your Email" name="email" required>
+               <textarea rows="10" cols="40" placeholder="Drop in your message"  name="message" style="margin-bottom: 6px;" required>
+
+               </textarea>
                 <input type="button" id="contact-form-submit-btn" value="Submit">
             </form>
         </div>

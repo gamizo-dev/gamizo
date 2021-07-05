@@ -187,6 +187,7 @@ body {
   background: var(--white);
   overflow: hidden;
   position: relative;
+  border-radius: 7%;
 }
 
 .video{

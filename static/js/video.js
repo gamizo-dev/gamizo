@@ -86,6 +86,14 @@ for (let i = 0; i < video.length; i++) {
     video[i].style.height = "100%";
   }
 }
-
+$(window).scroll(function() {
+  $('impvideo').each(function() {
+      if ($(this).visible(true)) {
+          $(this)[0].play();
+      } else {
+          $(this)[0].pause();
+      }
+  })
+});
 // window.addEventListener('scroll', checkScroll, false);
 // window.addEventListener('resize', checkScroll, false);

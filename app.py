@@ -1,11 +1,12 @@
 import os
 import boto3
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request,redirect
 import firebase_admin
 from firebase_admin import credentials, firestore, initialize_app
 from boto3 import session
 from botocore.client import Config
 from boto3.s3.transfer import S3Transfer
+from requests.api import options
 
 ACCESS_ID = '5GFF7YOAHZWTV5VKP7Q6'
 SECRET_KEY = '3mPgnLrUXGhLSb+0JHFElxP0HICyv7LSaEw0hsLWs5c'
@@ -51,11 +52,10 @@ def takeinput(url):
     stars = soup.find("div",{"class":"pf5lIe"})
     for item2 in stars:
         rating= item2['aria-label']
-    print(appSize)
-    print(Downloads)
+  
     rating = rating.replace('Rated ','')
     rating = rating.replace('stars out of five stars','')
-    print(rating)
+    
     
     cat={'name': s,'category': category,'icon':icon,'appSize':appSize,'Downloads':Downloads,'rating':rating}
     return cat
@@ -68,11 +68,13 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     db = firestore.client()
-    docs = db.collection('apps').document('apps').collection('Arcade').get()
+    docs = db.collection('apps').document('apps').collection('Action').get()
     
     l=[]
     for doc in docs:
         l.append(doc.to_dict())
+    
+
     return render_template('index.html', list=l)
 
 
@@ -106,21 +108,21 @@ def upload():
         'imageLink': s['icon'],
         'Downloads':s['Downloads'],
         'AppSize':s['appSize'],
-        'Rating': s['rating']
-
+        'Rating': s['rating'],
+        'appid': s['category']+'_'+s['name']
         # 'imageLink':imageLink
     })
-    category_ref=db.collection('category').document(s['category'])
-    
+    category_ref=db.collection('category').document('apps')
     list1=[]
     cat_refget=db.collection('category').get()
 
     for c in cat_refget:
         list1.append(c.to_dict())
+    print(list1)
     
     for i in list1:
         if s['category'] != i.values():
-             category_ref.set({
+             category_ref.update({
               f"{s['category']}": s['category']
             })
     
@@ -135,6 +137,32 @@ def upload():
 def contact():
     return render_template('contact.html')
 
+@app.route('/report',methods=['GET','POST'])
+def report():
+    if request.method=="POST":
+        option=request.form['Report']
+        gamename=request.form['gamename']
+    
+    db = firestore.client()
+    doc_ref = db.collection('Report').document(gamename)
+    docs=db.collection('Report').document(gamename).get()
+    doc=docs.to_dict()
+    if doc:
+        num=doc['number']
+        nums=int(num)
+        nums=nums+1
+        doc_ref.update({
+            'number': f'{nums}',
+            f'{nums}':option
+        
+        })
+    else:
+        doc_ref.set({
+            'number': '1',
+            '1':option
+        })
+    
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)
