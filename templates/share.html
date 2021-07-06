@@ -99,53 +99,8 @@
         </div>
       </div>
     </div>
-    {%for i in list%}
-    <div class="card">
-      <div class="title-bar">
-        <img class="display-picture" src="{{i.imageLink}}" alt="DP" />
-        <p class="game-name">{{i.name }}</p>
-        <div class="more" id="{{loop.index}}" onclick="work(this.id)">
-
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <span id="span{{loop.index}}"></span>
-        </div>
-      </div>
-      <div class="game-video">
-        <video id="video" class="impvideo" src="{{i.videoUrl}}" autoplay loop></video>
-        <div class="play-button"></div>
-        <div id="sound"></div>
-      </div>
-
-      <div class="bottom-bar">
-        <div class="btn-bar">
-          <a href="{{i.link}}" target="_blank"></a>
-          <button id="btn" type="submit" value="    Install Now">
-            Install now
-          </button>
-          <a href="/share/{{i.category}}_{{i.name}}" ><button id="btn" type="submit" value="    Install Now">
-            Share Now
-          </button></a>
-          <img src="\static/asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico" />
-        </div>
-      </div>
-    </div>
-    {%endfor%}
-    <form action="/report" method="POST">
-      <input type="radio" id="1" name="Report" value="FakeGamePlay">
-      <label for="1">Fake Gameplay</label><br>
-      <input type="radio" id="2" name="Report" value="PoorQuality">
-      <label for="2">Poor Quality</label><br>
-      <input type="radio" id="3" name="Report" value="InappropiateLink">
-      <label for="3">Inappropiate Link</label><br><br>
-      <input type="radio" id="4" name="Report" value="videolaging">
-      <label for="4">video laging</label><br><br>
-      <input type="radio" id="5" name="Report" value="Others">
-      <label for="5">Others</label><br><br>
-      <input type="hidden" value="Call Of Duty" name="gamename">
-      <input type="submit" value="Submit">
-    </form>
+    
+    
 
   </div>
   <script src="\static/js/app.js"></script>
