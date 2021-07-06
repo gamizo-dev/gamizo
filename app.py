@@ -24,6 +24,7 @@ transfer = S3Transfer(client)
 cred = credentials.Certificate('key.json')
 firebase_admin.initialize_app(cred)
 
+
 from os import replace
 import  requests
 from bs4 import BeautifulSoup
@@ -61,6 +62,7 @@ def takeinput(url):
     return cat
 
 app = Flask(__name__)
+
 # upload_path = 'static/asset/Videos/'
 # app.config['UPLOAD_FOLDER'] = upload_path
 
@@ -120,30 +122,41 @@ def share(sharestr):
     while sharestr[i]!='_':
         cat+=sharestr[i]
         i=i+1
-    i-i+1
+    
+    i=i+1
+
     while i<len(sharestr):
         name+=sharestr[i]
         i=i+1
 
-    print(name,cat)
-    # docs = db.collection('apps').document('apps').collection(cat).get()
     
-    # l=[]
-    # for doc in docs:
-    #     l.append(doc.to_dict())
+    docs = db.collection('apps').document('apps').collection(cat).get()
     
-    # list1=[]
-    # cat_refget=db.collection('category').get()
+    l=[]
+    fl=[]
+    for doc in docs:
+        l.append(doc.to_dict())
+    
+    for t in l:
+        if t['name']==name:
+            sp=t
+        else:
+            fl.append(t)
+    print(fl)
+    print(sp)
+    list1=[]
 
-    # for c in cat_refget:
+    cat_refget=db.collection('category').get()
+
+    for c in cat_refget:
         
-    #     list1.append(c.to_dict())
-    # print(list1)
-    # a=[]
-    # for i in list1:
-    #     for j in i.values():
-    #         a.append(j)
-    # print(a)
+        list1.append(c.to_dict())
+    print(list1)
+    a=[]
+    for i in list1:
+        for j in i.values():
+            a.append(j)
+    print(a)
     return render_template('index.html',cat=[])
 
 @app.route('/upload.html')
@@ -177,7 +190,7 @@ def upload():
         'Downloads':s['Downloads'],
         'AppSize':s['appSize'],
         'Rating': s['rating'],
-        'appid': s['category']+'_'+s['name']
+        'Category': s['category']
         # 'imageLink':imageLink
     })
     category_ref=db.collection('category').document('apps')
