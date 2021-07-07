@@ -24,7 +24,6 @@ transfer = S3Transfer(client)
 cred = credentials.Certificate('key.json')
 firebase_admin.initialize_app(cred)
 
-
 from os import replace
 import  requests
 from bs4 import BeautifulSoup
@@ -62,7 +61,6 @@ def takeinput(url):
     return cat
 
 app = Flask(__name__)
-
 # upload_path = 'static/asset/Videos/'
 # app.config['UPLOAD_FOLDER'] = upload_path
 
@@ -103,7 +101,7 @@ def index1(cat):
     cat_refget=db.collection('category').get()
 
     for c in cat_refget:
-        
+    
         list1.append(c.to_dict())
     print(list1)
     a=[]
@@ -122,16 +120,16 @@ def share(sharestr):
     while sharestr[i]!='_':
         cat+=sharestr[i]
         i=i+1
-    
     i=i+1
-
     while i<len(sharestr):
         name+=sharestr[i]
         i=i+1
 
+    print(name,cat)
+    # docs = db.collection('apps').document('apps').collection(cat).get()
     
     docs = db.collection('apps').document('apps').collection(cat).get()
-    
+
     l=[]
     fl=[]
     for doc in docs:
