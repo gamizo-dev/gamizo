@@ -9,40 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v11.0"
+    nonce="tGaK0QLZ"></script>
   <link rel="stylesheet" href="\static/css/style.css" />
-  <style>
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      padding: 12px 16px;
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-  </style>
   <title>Gamizo</title>
- 
 </head>
 
-<body>
+<body onclick="fnc()" style="cursor:pointer">
   <div class="cointainer">
     <div id="menu">
       <a href="#">Home</a>
@@ -68,89 +49,133 @@
       </span>
     </div>
     <div class="dropdown">
-      <span>Categories</span>
-      <div class="dropdown-content">
+      <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+      <div id="myDropdown" class="dropdown-content">
         {%for j in cat%}
-        <a href="/{{j}}"><p style="color: black;">{{j}}</p></a>
+        <a href="/{{j}}">{{j}}</a>
         {%endfor%}
       </div>
     </div>
-    <!-- Card 1 -->
+    <!-- <div class="dropdown">
+        <span>Categories</span>
+        <div class="dropdown-content">
+          {%for j in cat%}
+          <a href="/{{j}}"><p style="color: black">{{j}}</p></a>
+          {%endfor%}
+        </div>
+      </div> -->
+    <!-- ------------------------------------------------Card 1-------------------------------------- -->
     <div class="card">
       <div class="title-bar">
         <img class="display-picture" src="https://picsum.photos/200/200" alt="DP" />
         <p class="game-name">Stumble Guys</p>
-        <div class="more">
+        <button type="button" class="more" onclick="toggleText()">
           <div class="dot"></div>
           <div class="dot"></div>
           <div class="dot"></div>
-        </div>
+        </button>
       </div>
-
+      <!-- <form action="/report" method="POST" style="display: none;">
+          <input type="radio" id="1" name="Report" value="FakeGamePlay"/>
+          <label for="1" class="check">Fake Gameplay</label><br />
+          <input type="radio" id="2" name="Report" value="PoorQuality"/>
+          <label for="2" class="check">Poor Quality</label><br />
+          <input type="radio" id="3" name="Report" value="InappropiateLink"/>
+          <label for="3" class="check">Inappropiate Link</label><br />
+          <input type="radio" id="4" name="Report" value="videolaging"/>
+          <label for="4" class="check">Video laging</label><br/>
+          <input type="radio" id="5" name="Report" value="Others"/>
+          <label for="5" class="check">Others</label><br />
+          <input type="hidden" value="Call Of Duty" name="gamename"/>
+          <input type="submit" value="Submit" class="check1"/>
+        </form> -->
       <div class="game-video">
+        <video id="video" class="video backdrop-video" src="\static/asset/Videos/video(12).mp4"></video>
         <video id="video" class="impvideo" src="\static/asset/Videos/video(12).mp4" height="100%" width="100%" autoplay
           loop></video>
         <div class="play-button"></div>
         <div id="sound"></div>
       </div>
 
-
       <div class="bottom-bar">
-        <div class="btn-bar">
-          <input id="btn" type="submit" value="Install Now" />
-          <img src="\static/asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico" />
-        </div>
+        <a href="www.google.com" target="_blank">
+          <div class="btn-bar">
+            <button id="btn" type="submit" value="Install Now">
+              Install now
+            </button>
+          </div>
+        </a>
+        <a href="wwww.google.com">
+          <div class="btn-bar"><button id="btn" type="submit" value="    Install Now">
+              Share Now
+            </button></div>
+        </a>
       </div>
     </div>
- 
     {%for i in list%}
     <div class="card">
       <div class="title-bar">
         <img class="display-picture" src="{{i.imageLink}}" alt="DP" />
         <p class="game-name" style="font-family: 'Source Sans Pro', sans-serif;">{{i.name[0:35]}}....</p>
-        <div class="more" id="{{loop.index}}" onclick="work(this.id)">
-
+        <button type="button" id="{{loop.index}}" class="more" onclick="toggleText(this.id)">
           <div class="dot"></div>
           <div class="dot"></div>
           <div class="dot"></div>
-          <span id="span{{loop.index}}"></span>
-        </div>
+        </button>
       </div>
+      <form id="r{{loop.index}}" action="/report" method="POST" class="report_form">
+        <input type="radio" id="1" name="Report" value="FakeGamePlay" />
+        <label for="1" class="check">Fake Gameplay</label><br />
+        <input type="radio" id="2" name="Report" value="PoorQuality" />
+        <label for="2" class="check">Poor Quality</label><br />
+        <input type="radio" id="3" name="Report" value="InappropiateLink" />
+        <label for="3" class="check">Inappropiate Link</label><br />
+        <input type="radio" id="4" name="Report" value="videolaging" />
+        <label for="4" class="check">Video laging</label><br />
+        <input type="radio" id="5" name="Report" value="Others" />
+        <label for="5" class="check">Others</label><br />
+        <input type="hidden" value="Call Of Duty" name="gamename" />
+        <button type="submit" value="Submit" class="check1 custom-btn"><span>Submit</span></button>
+      </form>
       <div class="game-video">
+        <video id="video" class="video backdrop-video" src="{{i.videoUrl}}"></video>
         <video id="video" class="impvideo" src="{{i.videoUrl}}" autoplay loop></video>
         <div class="play-button"></div>
         <div id="sound"></div>
       </div>
 
       <div class="bottom-bar">
-        <div class="btn-bar">
-          <a href="{{i.link}}" target="_blank"></a>
-          <button id="btn" type="submit" value="    Install Now">
-            Install now
-          </button>
-          <a href="/share/{{i.category}}_{{i.name}}" ><button id="btn" type="submit" value="    Install Now">
-            Share Now
-          </button></a>
-          <img src="\static/asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico" />
-        </div>
+        <a href="{{i.link}}" target="_blank">
+          <div class="btn-bar">
+            <button id="btn" type="submit" value="Install Now">
+              Install now
+            </button>
+          </div>
+        </a>
+        <a href="/share/{{i.category}}_{{i.name}}">
+          <div class="btn-bar"><button id="btn" type="submit" value="    Install Now">
+              Share Now
+            </button></div>
+        </a>
+
       </div>
+      <a href="whatsapp://send?text=https://gimizo.com/share/{{i.category}}_{{i.name}}"
+        data-action="share/whatsapp/share" target="_blank" style="color:black;">
+        Share to whatsapp
+      </a>
+      <a href="https://t.me/share/url?url=https://gimizo.com/share/{{i.category}}_{{i.name}}&text=gimizo"
+        target="_blank" style="color:black;">
+        Share to Telegram
+      </a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=https://gimizo.com/share/{{i.category}}_{{i.name}}&amp;src=sdkpreparse"
+        class="fb-xfbml-parse-ignore" style="color: black;">Share on facebook
+      </a>
+      <input type="text" value="https://gimizo.com/share/{{i.category}}_{{i.name}}" id="copy{{loop.index}}" style="color: black;">
+      <button onclick="myFunction(this.id)" id="{{loop.index}}">Copy text</button>
+
     </div>
     {%endfor%}
-    <form action="/report" method="POST">
-      <input type="radio" id="1" name="Report" value="FakeGamePlay">
-      <label for="1">Fake Gameplay</label><br>
-      <input type="radio" id="2" name="Report" value="PoorQuality">
-      <label for="2">Poor Quality</label><br>
-      <input type="radio" id="3" name="Report" value="InappropiateLink">
-      <label for="3">Inappropiate Link</label><br><br>
-      <input type="radio" id="4" name="Report" value="videolaging">
-      <label for="4">video laging</label><br><br>
-      <input type="radio" id="5" name="Report" value="Others">
-      <label for="5">Others</label><br><br>
-      <input type="hidden" value="Call Of Duty" name="gamename">
-      <input type="submit" value="Submit">
-    </form>
-
   </div>
   <script src="\static/js/app.js"></script>
   <script src="\static/js/video.js"></script>
@@ -158,15 +183,27 @@
 <script>
   function work(id) {
     let txt = document.getElementById(id);
-    let spantxt = document.getElementById('span' + id);
+    let spantxt = document.getElementById("span" + id);
     spantxt.innerHTML = `
        `;
 
     //  spantxt.inne='Report';
-
+   
   }
+  function myFunction(id) {
+      /* Get the text field */
+      var copyText = document.getElementById('copy'+id);
+      console.log(id);
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+
+      /* Alert the copied text */
+      alert("Copied the text: " + copyText.value);
+    }
 </script>
-
 
 </html>
