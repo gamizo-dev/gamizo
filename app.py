@@ -157,6 +157,8 @@ def share(sharestr):
     print(a)
     return render_template('index.html',cat=[])
 
+
+
 @app.route('/upload.html')
 def new():
     return render_template('upload.html')
