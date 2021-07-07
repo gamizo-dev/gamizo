@@ -1,168 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="\static/asset/ico/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="\static/asset/ico/logo.jpg" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <link rel="stylesheet" href="\static/css/style.css" />
+    <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
 
-  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
 
-  <link rel="stylesheet" href="\static/css/style.css" />
-  <style>
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+    <title>Gamizo</title>
+  </head>
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      padding: 12px 16px;
-      z-index: 1;
-    }
+  <body onclick="fnc()" style="cursor:pointer">
+    <div class="cointainer">
+      <div id="menu">
+        <a href="#">Home</a>
+        <a href="contact.html">Contact Us</a>
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-  </style>
-  <title>Gamizo</title>
-</head>
+        <a href="#">About</a>
+        <a href="upload.html">Upload</a>
+        <div class="menu-footer">
+          <a href="#">Privacy Policy</a>
 
-<body>
-  <div class="cointainer">
-    <div id="menu">
-      <a href="#">Home</a>
-      <a href="contact.html">Contact Us</a>
-
-      <a href="#">About</a>
-      <a href="upload.html">Upload</a>
-      <div class="menu-footer">
-        <a href="#">Privacy Policy</a>
-
-        <a href="#">Terms and Conditions</a>
-      </div>
-    </div>
-    <div class="nav">
-      <div id="hamburger" class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <h2 class="title">Gamizo</h2>
-      <span class="search-ico">
-        <img src="\static/asset/ico/search_black_24dp.svg" alt="search-ico" class="search-ico" />
-      </span>
-    </div>
-    <div class="dropdown">
-      <span>Categories</span>
-      <div class="dropdown-content">
-        {%for j in cat%}
-        <a href="/{{j}}"><p style="color: black;">{{j}}</p></a>
-        {%endfor%}
-      </div>
-    </div>
-    <!-- Card 1 -->
-    <div class="card">
-      <div class="title-bar">
-        <img class="display-picture" src="https://picsum.photos/200/200" alt="DP" />
-        <p class="game-name">Stumble Guys</p>
-        <div class="more">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+          <a href="#">Terms and Conditions</a>
         </div>
       </div>
-
-      <div class="game-video">
-        <video id="video" class="impvideo" src="\static/asset/Videos/video(12).mp4" height="100%" width="100%" autoplay
-          loop></video>
-        <div class="play-button"></div>
-        <div id="sound"></div>
-      </div>
-
-
-      <div class="bottom-bar">
-        <div class="btn-bar">
-          <input id="btn" type="submit" value="Install Now" />
-          <img src="\static/asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico" />
+      <div class="nav">
+        <div id="hamburger" class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
+        <h2 class="title">Gamizo</h2>
+        <span class="search-ico">
+          <img
+            src="\static/asset/ico/search_black_24dp.svg"
+            alt="search-ico"
+            class="search-ico"
+          />
+        </span>
       </div>
-    </div>
-    {%for i in list%}
-    <div class="card">
-      <div class="title-bar">
-        <img class="display-picture" src="{{i.imageLink}}" alt="DP" />
-        <p class="game-name">{{i.name }}</p>
-        <div class="more" id="{{loop.index}}" onclick="work(this.id)">
-
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <span id="span{{loop.index}}"></span>
+      <div id="app">
+      <b-dd text="Categories" menu-class="overflow-hidden py-0 rounded-lg">{%for j in cat%}
+        <li>
+          <ul class="dropdown-menu d-block scrollable-menu position-relative mt-0 border-0">
+              <a href="/{{j}}"><p style="color: black">{{j}}</p></a>
+          </ul>
+        </li>{%endfor%}
+      </b-dd></div>
+      <!-- <div class="dropdown">
+        <span>Categories</span>
+        <div class="dropdown-content">
+          {%for j in cat%}
+          <a href="/{{j}}"><p style="color: black">{{j}}</p></a>
+          {%endfor%}
         </div>
-      </div>
-      <div class="game-video">
-        <video id="video" class="impvideo" src="{{i.videoUrl}}" autoplay loop></video>
-        <div class="play-button"></div>
-        <div id="sound"></div>
-      </div>
-
-      <div class="bottom-bar">
-        <div class="btn-bar">
-          <a href="{{i.link}}" target="_blank"></a>
-          <button id="btn" type="submit" value="    Install Now">
-            Install now
+      </div> -->
+      <!-- ------------------------------------------------Card 1-------------------------------------- -->
+      <div class="card">
+        <div class="title-bar">
+          <img
+            class="display-picture"
+            src="https://picsum.photos/200/200"
+            alt="DP"
+          />
+          <p class="game-name">Stumble Guys</p>
+          <button type="button" class="more" onclick="toggleText()">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </button>
-          <a href="/share/{{i.category}}_{{i.name}}" ><button id="btn" type="submit" value="    Install Now">
-            Share Now
-          </button></a>
-          <img src="\static/asset/ico/arrow_forward_ios_black_24dp.svg" alt="arrow_forward" class="arrow-ico" />
+        </div>
+        <!-- <form action="/report" method="POST" style="display: none;">
+          <input type="radio" id="1" name="Report" value="FakeGamePlay"/>
+          <label for="1" class="check">Fake Gameplay</label><br />
+          <input type="radio" id="2" name="Report" value="PoorQuality"/>
+          <label for="2" class="check">Poor Quality</label><br />
+          <input type="radio" id="3" name="Report" value="InappropiateLink"/>
+          <label for="3" class="check">Inappropiate Link</label><br />
+          <input type="radio" id="4" name="Report" value="videolaging"/>
+          <label for="4" class="check">Video laging</label><br/>
+          <input type="radio" id="5" name="Report" value="Others"/>
+          <label for="5" class="check">Others</label><br />
+          <input type="hidden" value="Call Of Duty" name="gamename"/>
+          <input type="submit" value="Submit" class="check1"/>
+        </form> -->
+          <div class="game-video">
+            <video
+            id="video"
+            class="video backdrop-video"
+            src="\static/asset/Videos/video(12).mp4"
+           ></video>
+            <video
+              id="video"
+              class="impvideo"
+              src="\static/asset/Videos/video(12).mp4"
+              height="100%"
+              width="100%"
+              autoplay
+              loop
+            ></video>
+            <div class="play-button"></div>
+            <div id="sound"></div>
+          </div>
+
+        <div class="bottom-bar">
+          <a href="www.google.com" target="_blank">
+          <div class="btn-bar">
+              <button id="btn" type="submit" value="Install Now">
+               Install now
+              </button>
+          </div></a>
+          <a href="wwww.google.com"
+              ><div class="btn-bar"><button id="btn" type="submit" value="    Install Now">
+                Share Now
+              </button></div></a
+              >
         </div>
       </div>
-    </div>
-    {%endfor%}
-    <form action="/report" method="POST">
-      <input type="radio" id="1" name="Report" value="FakeGamePlay">
-      <label for="1">Fake Gameplay</label><br>
-      <input type="radio" id="2" name="Report" value="PoorQuality">
-      <label for="2">Poor Quality</label><br>
-      <input type="radio" id="3" name="Report" value="InappropiateLink">
-      <label for="3">Inappropiate Link</label><br><br>
-      <input type="radio" id="4" name="Report" value="videolaging">
-      <label for="4">video laging</label><br><br>
-      <input type="radio" id="5" name="Report" value="Others">
-      <label for="5">Others</label><br><br>
-      <input type="hidden" value="Call Of Duty" name="gamename">
-      <input type="submit" value="Submit">
-    </form>
+      {%for i in list%}
+      <div class="card">
+        <div class="title-bar">
+          <img class="display-picture" src="{{i.imageLink}}" alt="DP" />
+          <p class="game-name" style="font-family: 'Source Sans Pro', sans-serif;">{{i.name[0:35]}}....</p>
+          <button type="button" id="{{loop.index}}" class="more" onclick="toggleText(this.id)">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </button>
+        </div>
+        <form id="r{{loop.index}}" action="/report" method="POST" class="report_form">
+          <input type="radio" id="1" name="Report" value="FakeGamePlay"/>
+          <label for="1" class="check">Fake Gameplay</label><br />
+          <input type="radio" id="2" name="Report" value="PoorQuality"/>
+          <label for="2" class="check">Poor Quality</label><br />
+          <input type="radio" id="3" name="Report" value="InappropiateLink"/>
+          <label for="3" class="check">Inappropiate Link</label><br />
+          <input type="radio" id="4" name="Report" value="videolaging"/>
+          <label for="4" class="check">Video laging</label><br/>
+          <input type="radio" id="5" name="Report" value="Others"/>
+          <label for="5" class="check">Others</label><br />
+          <input type="hidden" value="Call Of Duty" name="gamename"/>
+          <button type="submit" value="Submit" class="check1 custom-btn"><span>Submit</span></button>
+        </form>
+        <div class="game-video">
+          <video
+            id="video"
+            class="video backdrop-video"
+            src="{{i.videoUrl}}"
+           ></video>
+          <video
+            id="video"
+            class="impvideo"
+            src="{{i.videoUrl}}"
+            autoplay
+            loop
+          ></video>
+          <div class="play-button"></div>
+          <div id="sound"></div>
+        </div>
 
-  </div>
-  <script src="\static/js/app.js"></script>
-  <script src="\static/js/video.js"></script>
-</body>
-<script>
-  function work(id) {
-    let txt = document.getElementById(id);
-    let spantxt = document.getElementById('span' + id);
-    spantxt.innerHTML = `
+        <div class="bottom-bar">
+          <a href="{{i.link}}" target="_blank">
+          <div class="btn-bar">
+              <button id="btn" type="submit" value="Install Now">
+               Install now
+              </button>
+          </div></a>
+          <a href="/share/{{i.category}}_{{i.name}}"
+              ><div class="btn-bar"><button id="btn" type="submit" value="    Install Now">
+                Share Now
+              </button></div></a
+              >
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+    <script src="\static/js/app.js"></script>
+    <script src="\static/js/video.js"></script>
+  </body>
+  <script>
+    function work(id) {
+      let txt = document.getElementById(id);
+      let spantxt = document.getElementById("span" + id);
+      spantxt.innerHTML = `
        `;
 
-    //  spantxt.inne='Report';
-
-  }
-
-</script>
-
-
+      //  spantxt.inne='Report';
+    }
+  </script>
 </html>
