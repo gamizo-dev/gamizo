@@ -159,19 +159,19 @@
         </a>
 
       </div>
-      <a href="whatsapp://send?text=https://gimizo.com/share/{{i.category}}_{{i.name}}"
+      <a href="whatsapp://send?text=https://gimizo.com/share/{{i.Category}}_{{i.GameName}}"
         data-action="share/whatsapp/share" target="_blank" style="color:black;">
         Share to whatsapp
       </a>
-      <a href="https://t.me/share/url?url=https://gimizo.com/share/{{i.category}}_{{i.name}}&text=gimizo"
+      <a href="https://t.me/share/url?url=https://gimizo.com/share/{{i.Category}}_{{i.GameName}}&text=gimizo"
         target="_blank" style="color:black;">
         Share to Telegram
       </a>
       <a target="_blank"
-        href="https://www.facebook.com/sharer/sharer.php?u=https://gimizo.com/share/{{i.category}}_{{i.name}}&amp;src=sdkpreparse"
+        href="https://www.facebook.com/sharer/sharer.php?u=https://gimizo.com/share/{{i.Category}}_{{i.GameName}}&amp;src=sdkpreparse"
         class="fb-xfbml-parse-ignore" style="color: black;">Share on facebook
       </a>
-      <input type="text" value="https://gimizo.com/share/{{i.category}}_{{i.name}}" id="copy{{loop.index}}" style="color: black;">
+      <input type="text" value="https://gimizo.com/share/{{i.Category}}_{{i.GameName}}" id="copy{{loop.index}}" style="color: black;">
       <button onclick="myFunction(this.id)" id="{{loop.index}}">Copy text</button>
 
     </div>
