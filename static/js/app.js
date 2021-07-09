@@ -29,39 +29,6 @@ function toggleText(id){
 
 }
 
-// window.onload = () => {
-//   new Vue({
-//     el: "#app",
-//     data() {
-//       return {
-//         sortBy: "age",
-//         sortDesc: false,
-//         fields: [
-          
-//           { key: "first_name", sortable: true },
-//           { key: "age", sortable: true },
-//           { key: "isActive", sortable: false }
-//         ],
-//         items: [
-//           {
-//             isActive: true,
-//             age: 40,
-//             first_name: "Dickerson",
-//             last_name: "Macdonald"
-//           },
-//           { isActive: false, age: 21, first_name: "Larsen", last_name: "Shaw" },
-//           {
-//             isActive: false,
-//             age: 89,
-//             first_name: "Geneva",
-//             last_name: "Wilson"
-//           },
-//           { isActive: true, age: 38, first_name: "Jami", last_name: "Carney" }
-//         ]
-//       };
-//     }
-//   });
-// };
 
 function fnc(){
     if(op%2==0){
@@ -73,3 +40,26 @@ function fnc(){
       }
     }
   }
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  console.log("here");
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  console.log("outhere");
+  if (!event.target.matches('.dropbtn')) {
+    console.log("inhere");
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var l;
+    for (l = 0; l < dropdowns.length; l++) {
+      var openDropdown = dropdowns[l];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
