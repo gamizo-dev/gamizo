@@ -1,0 +1,25 @@
+.menu-btn {
+    position: absolute;
+    width: 44px;
+    height: 30px;
+    left: 16px;
+    top: 22px;
+
+    background: radial-gradient(91.67% 136.89% at 50% 50%, #1c00ca 0%, #0d0060 100%);
+    box-shadow: -10px -7px 26px 10px #869aff;
+    border-radius: 7px;
+    padding: 8px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .line{
+        background-color: white;
+        width: 31px;
+        height: 2px;
+    }
+    .center-line{
+        width: 20px;
+    }
+}

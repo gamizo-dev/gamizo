@@ -1,0 +1,96 @@
+.card {
+    margin-top: 10rem;
+    background-color: white;
+    border-radius: 15px;
+    padding: 9px;
+    .details-bar {
+        margin-top: 3px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .text_ico {
+            display: flex;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+            margin-left:-1rem;
+            .text {
+                display: flex;
+                flex-direction: column;
+                h2 {
+                    font-weight: 600;
+                    font-size: 28px;
+                    line-height: 42px;
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+                .game-numbers {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    max-width: 75%;
+                }
+            }
+            .game-ico {
+                background: #9873ff;
+                border-radius: 25px;
+                width: 65px;
+                height: 65px;
+
+                /* Inside Auto Layout */
+
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                margin: 0px 16px;
+            }
+        }
+        .more{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 1rem;
+            .circle{
+                background-color: black;
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .game-video{
+        border-radius: 15px 15px 0 0;
+        background-color: rgb(179, 193, 255);
+        height: 396px;
+        width: 396px;
+    }
+    // <div class="btns">
+    //     <div class="btn play-now"><h3>Play Now</h3></div>
+    //     <div class="btn share"><h3>Share</h3></div>
+    //   </div>
+    .btns{
+        display: flex;
+        width: 100%;
+        .btn{
+            width: 50%;
+            height: 50px;
+            // background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .play-now{
+            border-radius:  0 0 0 15px;
+            background: #3C5CFF;
+        }
+        .share{
+            border-radius:  0 0 15px 0;
+            background: #8255FF; 
+        }
+    }
+}
