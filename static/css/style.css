@@ -91,14 +91,20 @@ html {
 .menu-btn .center-line {
   width: 20px;
 }
-
+.shift{
+  margin-top: 17rem;
+}
+.cards{
+  margin-top: 5rem;
+}
 .card {
-  margin-top: 10rem;
+  margin-top: 0.5rem;
   background-color: white;
   border-radius: 15px;
   padding-top: 9px;
   padding-right: 9px;
   padding-left: 9px;
+  overflow: hidden;
 }
 
 .card .details-bar {
@@ -141,7 +147,7 @@ html {
 .card .details-bar .text_ico .text h2 {
   font-weight: 600;
   display: block;
-  width: 296px;
+  max-width: 296px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -214,7 +220,7 @@ html {
   border-radius: 15px 15px 0 0;
   background-color: #b3c1ff;
   height: 396px;
-  width: 396px;
+  width: 402px;
 }
 .video {
   max-width: min-content;
@@ -223,6 +229,7 @@ html {
   top: 50%;
   left: 50%;
   z-index: 1;
+  width: 100%;
   transform: translate(-50%, -45%);
   /* border-top: 5px solid white; */
   /* border-bottom: 5px solid white; */
@@ -230,14 +237,16 @@ html {
 }
 .impvideo {
   /* min-width: max-content; */
-  max-width: min-content;
+  width:100%;
+  /* min-height: fit-content; */
   border-radius: 15px 15px 0 0;
   z-index: 2;
   /* height:396px; */
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 52%);
+  transform: translate(-50%, -152%);
+  /* display: none  ; */
   /* border-top: 5px solid white; */
   /* border-bottom: 5px solid white; */
   /* box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.507); */
@@ -246,9 +255,11 @@ html {
 .backdrop-video {
   position: relative;
   height: 100%;
-  width: auto;
+  width: 100%;
   top: 50%;
   left: 50%;
+  /* display: none; */
+  padding: none;
   z-index: 1;
   transform: translate(-50%, -50%);
   filter: blur(8px);
@@ -274,8 +285,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
+  height:70px;
 }
 
 .card .btns .btn {
@@ -284,6 +296,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -305,6 +318,7 @@ html {
   background: #8255ff;
   cursor: pointer;
   border: none;
+  transform: translate(100%,-100%);
   transition: all 300ms ease-in-out;
 }
 .card .btns .share:hover{
@@ -515,17 +529,17 @@ code {
 .pg-modal {
   display: flex;
   position: absolute;
-  top: max(42px, 10%);
+  /* top: max(42px, 10%); */
   left: 50%;
-  width: 70%;
+  width: 80%;
   max-width: 500px;
-  max-height: 60%;
+  max-height: 247px;
   overflow: hidden;
-  background-color: #1e2428;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   box-shadow: 2px 2px 11px 0px #868686;
   flex-direction: column;
-  opacity: 0;
+  opacity: 1;
   transform: translateX(-50%) scale(0);
   transition: 150ms all ease-in;
 }
@@ -538,12 +552,12 @@ code {
   display: flex;
   align-items: center;
   padding: 16px;
-  background-color: #33383b;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .search-bar svg,
 .search-bar input::placeholder {
-  color: #828689;
+  color: black;
 }
 
 .search-bar svg {
@@ -557,7 +571,7 @@ code {
   background-color: transparent;
   border: 0px;
   font-size: 18px;
-  color: #fff;
+  color: black;
 }
 .search-bar input:focus {
   outline: 0px;
@@ -566,6 +580,7 @@ code {
 .content {
   flex: 1;
   overflow: auto;
+  display: none;
 }
 
 .content ul {
@@ -577,19 +592,19 @@ code {
 .content ul li {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: black;
   cursor: pointer;
   padding: 16px 18px;
-  background-color: #131c21;
+  background: rgba(255, 255, 255, 0.3);
   transition: 50ms all ease-in;
-  border-top: 1px solid #323739;
+  /* border-top: 1px solid #323739; */
 }
 .content ul li:last-child {
-  border-bottom: 1px solid #323739;
+  border-bottom: 1px solid white;
 }
 .content ul li:focus {
   outline: 0px;
-  background-color: #323739;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .content ul li img {
@@ -617,9 +632,37 @@ code {
     margin-left: 3%;
   }
 }
-@media screen and (max-width: 386px) {
-  /* .logo {border: 1px solid red; } */
-  /* #secondary { width:30%; margin-left:3%;}   */
+/* responsive for all general phones */
+@media screen and (max-width: 420px) {
+  .card{
+    width:inherit;
+  }
+  .card .game-video{
+    width:inherit;
+  }
+  .card .details-bar{
+    width:inherit;
+  }
+  .card .details-bar .text_ico .text h2 {
+    width:256px;
+    font-size:26px;
+  }
+}
+/* some phone like iPhone/SE  */
+@media screen and (max-width: 320px) {
+  .card{
+    width:inherit;
+  }
+  .card .game-video{
+    width:inherit;
+  }
+  .card .details-bar{
+    width:inherit;
+  }
+  .card .details-bar .text_ico .text h2 {
+    width:156px;
+    font-size: 24px;
+  }
 }
 
 /* Tabled Portrait */
