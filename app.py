@@ -119,7 +119,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     db = firestore.client()
-    docs = db.collection('apps').document('apps').collection('Action').get()
+    docs = db.collection('apps').document('apps').collection('Popular').get()
 
     l = []
     for doc in docs:
@@ -131,12 +131,12 @@ def index():
     for c in cat_refget:
 
         list1.append(c.to_dict())
-    print(list1)
+    
     a = []
     for i in list1:
         for j in i.values():
             a.append(j)
-    print(a)
+    
     return render_template('index.html', list=l, cat=a)
 
 
@@ -178,22 +178,11 @@ def share(sharestr):
         name += sharestr[i]
         i = i+1
 
-    print(name, cat)
     # docs = db.collection('apps').document('apps').collection(cat).get()
 
-    docs = db.collection('apps').document('apps').collection(cat).get()
-
-    l = []
-    fl = []
-    for doc in docs:
-        l.append(doc.to_dict())
-
-    for t in l:
-        if t['GameName'] == name:
-            sp = t
-        else:
-            fl.append(t)
+    docs = db.collection('apps').document('apps').collection(cat).document(name).get()
     
+    sp=docs.to_dict()
 
     list1 = []
 
@@ -202,12 +191,12 @@ def share(sharestr):
     for c in cat_refget:
 
         list1.append(c.to_dict())
-    print(list1)
+    
     a = []
     for i in list1:
         for j in i.values():
             a.append(j)
-    print(a)
+    
     return render_template('share.html', cat=a,sp=sp)
 
 

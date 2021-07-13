@@ -182,12 +182,12 @@
           <div class="text">
                 <h2>{{i.name[0:35]}}</h2>
             <div class="game-numbers">
-              <p class="rating">4.3</p>
+              <p class="rating">{{i.Rating}}</p>
               <div class="star"><img src="\static/asset/ico/Star 1.png" alt="">
               </div>
-              <p class="size">55MB</p>
+              <p class="size">{{i.AppSize}}</p>
               <div class="dwn-ico"><img src="\static/asset/ico/Download-ico.svg" alt=""></div>
-              <p class="dwns">10M+</p>
+              <p class="dwns">{{i.SmallDownloads}}</p>
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@
       <div class="btns">
         <a href="{{i.link}}" target="_blank">
         <button id="btn" type="submit" value="Install Now" class="btn play-now"><h1>Play Now</h1></button></a>
-        <a href="/share/{{i.category}}_{{i.name}}">
+        <a href="/share/{{i.Category}}_{{i.GameName}}">
         <button id="btn" type="submit" value="Install Now" class="btn share"><h1>Share</h1></button></a>
       </div>
     </div>
