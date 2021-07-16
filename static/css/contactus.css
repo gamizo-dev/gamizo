@@ -4,7 +4,9 @@
     align-items: flex-start;
     flex-direction: column;
 }
-
+body{
+    background-color: white;
+}
 .contactus-form{
     display: flex;
     justify-content: center;
@@ -14,24 +16,30 @@
 
 #contactus p{
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin: 1rem;
 }
 
-#contactus input{
+#contactus input,textarea{
     margin-bottom: 2em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
+    
     padding-bottom: 0.5em;
     width: 20em;
-    border-bottom: 1px solid #adadadc0 ;
+    border-radius: 6px;
+    padding: 6px;
+    border: 2px solid black;
 }
-
+#contactus label{
+    margin: 6px;
+    font-size: 1.1rem;
+}
 #contact-form-submit-btn{
-    border: none;
-    max-width:8em; 
-    padding-top: 0.5em;
+    width: 40%; 
+    margin: auto;
+    padding: 4px;
     background-color: rgb(53, 124, 255);
     color: white;
-    border-radius: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 12px;
 }
