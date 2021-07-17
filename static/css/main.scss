@@ -1,8 +1,9 @@
-@import "menu.scss";
-@import "mediaQuery.scss";
-@import "report.scss";
-@import "shareMenu.scss";
+@import "menu";
+@import "mediaQuery";
+@import "report";
+@import "shareMenu";
 @import "categories";
+
 html {
 	font-size: 100%;
 }
