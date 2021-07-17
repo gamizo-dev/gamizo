@@ -181,7 +181,6 @@ def share(sharestr):
     # docs = db.collection('apps').document('apps').collection(cat).get()
 
     docs = db.collection('apps').document('apps').collection(cat).document(name).get()
-
     sp=docs.to_dict()
 
     list1 = []
@@ -191,7 +190,6 @@ def share(sharestr):
     for c in cat_refget:
 
         list1.append(c.to_dict())
-
     a = []
     for i in list1:
         for j in i.values():
