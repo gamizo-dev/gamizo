@@ -95,16 +95,15 @@ html {
   margin-top: 17rem;
 }
 .cards{
-  margin-top: 10rem;
+   margin-top: 10rem;
 }
 .card {
-  margin-top: 0.5rem;
+ margin-top: 10rem;
   background-color: white;
   border-radius: 15px;
   padding-top: 9px;
   padding-right: 9px;
   padding-left: 9px;
-  overflow: hidden;
 }
 
 .card .details-bar {
@@ -226,13 +225,13 @@ html {
   /* place-items: center; */
 }
 .video {
-  /* max-width: min-content; */
+  max-width: min-content;
   border-radius: 15px 15px 0 0;
   position: relative;
   top: 50%;
   left: 50%;
   z-index: 1;
-  /* width: 100%; */
+  width: 100%;
   transform: translate(-50%, -45%);
   /* border-top: 5px solid white; */
   /* border-bottom: 5px solid white; */
@@ -241,14 +240,13 @@ html {
 .impvideo {
   /* min-width: max-content; */
   /* width:100%; */
-  /* min-height: fit-content; */
+  max-width: min-content;
   border-radius: 15px 15px 0 0;
   z-index: 2;
   /* height:396px; */
-  position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -250%);
+  transform: translate(-50%, 52%);
   /* display: none  ; */
   /* border-top: 5px solid white; */
   /* border-bottom: 5px solid white; */
@@ -256,17 +254,15 @@ html {
 }
 
 .backdrop-video {
-  position: relative;
-  /* height: 90%; */
-  /* width: 90%; */
-  top: 50%;
-  left: 50%;
-  /* display: none; */
-  padding: none;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-  filter: blur(8px);
-  opacity: 1;
+   position: relative;
+    height: 100%;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    filter: blur(8px);
+    opacity: 1;
 }
 
 .temp-video {
