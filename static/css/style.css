@@ -152,8 +152,6 @@ html {
   text-overflow: ellipsis;
   font-size: 28px;
   line-height: 42px;
-  /* display: inline-block; */
-  /* text-transform:lowercase; */
 }
 
 .card .details-bar .text_ico .text p {
@@ -179,7 +177,6 @@ html {
   border-radius: 25px;
   width: 65px;
   height: 65px;
-  /* Inside Auto Layout */
   -webkit-box-flex: 0;
   -ms-flex: none;
   flex: none;
@@ -221,41 +218,18 @@ html {
   height: 396px;
   width: 402px;
   overflow: hidden;
-  /* display: grid; */
-  /* place-items: center; */
-}
-.video {
-  max-width: min-content;
-  border-radius: 15px 15px 0 0;
+  display:grid;
+  place-items: center;
   position: relative;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  width: 100%;
-  transform: translate(-50%, -45%);
-  /* border-top: 5px solid white; */
-  /* border-bottom: 5px solid white; */
-  /* box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.507); */
 }
 .impvideo {
-  /* min-width: max-content; */
-  /* width:100%; */
-  max-width: min-content;
-  border-radius: 15px 15px 0 0;
-  z-index: 2;
-  /* height:396px; */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 52%);
-  /* display: none  ; */
-  /* border-top: 5px solid white; */
-  /* border-bottom: 5px solid white; */
-  /* box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.507); */
+  z-index: 4;
 }
 
 .backdrop-video {
-   position: relative;
-    height: 100%;
+   position: absolute;
+    /* height: 100%; */
+    height: inherit;
     width: auto;
     top: 50%;
     left: 50%;
@@ -263,21 +237,6 @@ html {
     transform: translate(-50%, -50%);
     filter: blur(8px);
     opacity: 1;
-}
-
-.temp-video {
-  height: 100%;
-  z-index: 1;
-  border-top: none;
-  border-bottom: none;
-  /* border-right: 5px solid white; */
-  /* border-left: 5px solid white; */
-  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.507);
-}
-.video2 {
-  width: 100%;
-  z-index: 1;
-  height: auto;
 }
 
 .card .btns {
@@ -636,8 +595,12 @@ code {
   .card{
     width:inherit;
   }
+  .cards{
+    width:inherit;
+  }
   .card .game-video{
     width:inherit;
+    height:90vw;
   }
   .card .details-bar{
     width:inherit;
@@ -652,8 +615,12 @@ code {
   .card{
     width:inherit;
   }
+  .cards{
+    width:inherit;
+  }
   .card .game-video{
     width:inherit;
+    height:90vw;
   }
   .card .details-bar{
     width:inherit;
