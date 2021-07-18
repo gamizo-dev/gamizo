@@ -144,3 +144,6 @@ driver_data/*
 #key
 #key.json
 #gamizo-firebase-adminsdk.json
+
+#node package
+*node_modules/*
