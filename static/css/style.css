@@ -115,7 +115,7 @@
 }
 
 .card {
-  margin-top: 10rem;
+  margin-top: 0.5rem;
   background-color: white;
   border-radius: 15px;
   padding-top: 9px;
@@ -241,14 +241,16 @@
 }
 
 .impvideo {
+  width:auto;
+  position: absolute;
   z-index: 4;
 }
 
 .backdrop-video {
   position: absolute;
   /* height: 100%; */
-  height: inherit;
-  width: auto;
+  /* height: inherit; */
+  /* width: auto; */
   top: 50%;
   left: 50%;
   z-index: 1;

@@ -1,27 +1,49 @@
-var video = document.querySelectorAll(".impvideo");
-var main = document.querySelectorAll(".game-video");
-var backVideo = document.querySelectorAll(".backdrop-video");
 
-function videoResize() {
-  for (i = 0; i < video.length; i++) {
-    console.log("resizing");
-    if (video[i].offsetHeight > video[i].offsetWidth) {
-      video[i].setAttribute("style", `max-height: ${main[i].offsetHeight}px;`);
-      backVideo[i].setAttribute(
-        "style",
-        `max-width: ${main[i].offsetWidth}px;`
-      );
-    } else if (video[i].offsetHeight < video[i].offsetWidth) {
-      video[i].setAttribute("style", `max-width: ${main[i].offsetWidth}px;`);
-      backVideo[i].setAttribute(
-        "style",
-        `max-height: ${main[i].offsetHeight}px;`
-      );
-    } else if (video[i].offsetHeight == video[i].offsetWidth) {
-      video[i].setAttribute("style", `max-width: ${main[i].offsetWidth}px;`);
+// function resize(){
+    var main = document.getElementsByClassName("game-video");
+    // var video = document.getElementsByClassName("impVideo");
+    // var backVideo = document.getElementsByClassName("backdrop-video");
+
+    var array=[];
+    for(j=1;j<20;j++){
+      var video = document.getElementById("video"+j);
+      array.push(video);
     }
-  }
-}
+    var array2=[];
+    for(k=1;k<20;k++){
+      var backVideo = document.getElementById(k+"video");
+      array2.push(backVideo);
+    }
+    function videoResize() {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].offsetHeight > array[i].offsetWidth) {
+          array[i].setAttribute("style", `max-height: ${main[i].offsetHeight}px;`);
+          array2[i].setAttribute(
+            "style",
+            `min-width: ${main[i].offsetWidth}px;`
+          );
+        } else if (array[i].offsetHeight < array[i].offsetWidth) {
+          array[i].setAttribute("style", `max-width: ${main[i].offsetWidth}px;`);
+          array2[i].setAttribute(
+            "style",
+            `max-height: ${main[i].offsetHeight}px;`
+          );
+        } else if (array[i].offsetHeight == array[i].offsetWidth) {
+          array[i].setAttribute("style", `max-width: ${main[i].offsetWidth}px;`);
+        }
+      }
+    }
 
-window.addEventListener("load", videoResize);
-window.addEventListener("resize", videoResize);
+    // setTimeout(videoResize, 100);
+    window.addEventListener("load",videoResize);
+    window.addEventListener("resize",videoResize);
+// }
+
+// // setTimeout(resize(), 500);
+
+
+// function sleep(ms) {
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// }
+
+// sleep(1000).then(resize());

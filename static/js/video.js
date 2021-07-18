@@ -55,45 +55,57 @@
 
 // }
 const videos = document.getElementsByClassName("impvideo");
-for (i = 0; i < videos.length; i++) {
-  videos[i].pause();
-}
-const observer = new IntersectionObserver((entries) => {
-  // Loop over the entries
-  for (i = 0; i < videos.length; i++) {
-    video = videos[i];
-    entries.forEach((entry) => {
-      // If the element is visible
-      if (entry.isIntersecting) {
-        // Add the animation class
-        video.play();
-        return;
-      }
-      video.pause();
-    });
-  }
-});
-for (i = 0; i < videos.length; i++) {
-  observer.observe(videos[i]);
-}
-var video = document.getElementsByClassName("impvideo");
-for (let i = 0; i < video.length; i++) {
-  var video_width = video[i].clientWidth;
-  var video_height = video[i].clientHeight;
-  if (video_width > video_height) {
-    video[i].style.width = "100%";
-  } else {
-    video[i].style.height = "100%";
-  }
-}
-$(window).scroll(function() {
-  $('impvideo').each(function() {
-      if ($(this).visible(true)) {
-          $(this)[0].play();
-      } else {
-          $(this)[0].pause();
-      }
-  })
-});
+// for (i = 0; i < videos.length; i++) {
+//   videos[i].pause();
+// }
+// const observer = new IntersectionObserver((entries) => {
+//   // Loop over the entries
+//   for (i = 0; i < videos.length; i++) {
+//     video = videos[i];
+//     entries.forEach((entry) => {
+//       // If the element is visible
+//       if (entry.isIntersecting) {
+//         // Add the animation class
+//         video.play();
+//         return;
+//       }
+//       video.pause();
+//     });
+//   }
+// });
+// for (i = 0; i < videos.length; i++) {
+//   observer.observe(videos[i]);
+// }
+// var video = document.getElementsByClassName("impvideo");
+// for (let i = 0; i < video.length; i++) {
+//   var video_width = video[i].clientWidth;
+//   var video_height = video[i].clientHeight;
+//   if (video_width > video_height) {
+//     video[i].style.width = "100%";
+//   } else {
+//     video[i].style.height = "100%";
+//   }
+// }
+// $(window).scroll(function() {
+//   $('impvideo').each(function() {
+//       if ($(this).visible(true)) {
+//           $(this)[0].play();
+//       } else {
+//           $(this)[0].pause();
+//       }
+//   })
+// });
 // window.addEventListener('scroll', checkScroll, false);
 // window.addEventListener('resize', checkScroll, false);
+var array=[];
+    for(j=1;j<20;j++){
+      var video = document.getElementById("video"+j);
+      array.push(video);
+    }
+for(var i=0;i<array.length;i++){
+  if (array[i].is(":in-viewport")) {
+      array[0].play();
+  } else {
+      array[0].pause();
+  }
+}

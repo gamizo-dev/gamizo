@@ -129,48 +129,6 @@
       <input type="hidden" value="Call Of Duty" name="gamename"/>
       <input type="submit" value="Submit" class="check1"/>
     </form>
-    <!-- header -->
-    <!-- <h1 class="category-header">Casual Games</h1> -->
-    <!-- card 1-->
-    <!-- <div class="card">
-      <div class="details-bar">
-        <div class="text_ico">
-          <div class="game-ico"></div>
-          <div class="text">
-            <h2>Candy Crush</h2>
-            <div class="game-numbers">
-              <p class="rating">4.3</p>
-              <div class="star"><img src="\static/asset/ico/Star 1.png" alt="">
-              </div>
-              <p class="size">55MB</p>
-              <div class="dwn-ico"><img src="\static/asset/ico/Download-ico.svg" alt=""></div>
-              <p class="dwns">10M+</p>
-            </div>
-          </div>
-        </div>
-        <div class="more">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-        </div>
-      </div>
-      <div class="game-video">
-        <img src="\static/asset/ico/Rectangle 30.png" alt="">
-      </div>
-      <div class="btns">
-        <div class="btn play-now"><h3>Play Now</h3></div>
-        <div class="btn share"><h3>Share</h3></div>
-        <div class="share-menu" id="share-menu">
-          <ul>
-            <li><i class="fab fa-whatsapp"></i></li>
-            <li><i class="fab fa-facebook-f"></i></li>
-            <li><i class="fab fa-telegram-plane"></i></li>
-            <li><i class="far fa-copy"></i></li>
-          </ul>
-        </div>
-      </div>
-      
-    </div> -->
     <!-- cards-->
     <div class="cards">
     {%for i in list%}
@@ -198,8 +156,8 @@
         </button>
       </div>
       <div class="game-video">
-        <video id="video" class="video backdrop-video" src="{{i.videoUrl}}"></video>
-        <video id="video" class="impvideo" src="{{i.videoUrl}}" autoplay loop></video>
+        <video id="{{loop.index}}video" class="backdrop-video" src="{{i.videoUrl}}" autoplay loop></video>
+        <video id="video{{loop.index}}" class="impvideo" src="{{i.videoUrl}}" autoplay loop></video>
         <div class="play-button"></div>
         <div id="sound"></div>
       </div>
