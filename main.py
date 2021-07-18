@@ -29,7 +29,7 @@ firebase_admin.initialize_app(cred)
 
 
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='template')
 # upload_path = 'static/asset/Videos/'
 # app.config['UPLOAD_FOLDER'] = upload_path
 
