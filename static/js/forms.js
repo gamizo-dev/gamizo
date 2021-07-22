@@ -5,13 +5,18 @@ var closebtn= document.getElementsByClassName("closebtn");
 var report = document.getElementById("reportfrm")
 var share = document.getElementById("sharefrm")
 var j=0;
-function ShowReportfrm() {
+function ShowReportfrm(id) {
     console.log(j);
+    gamename=id;
     if(report.style.display = "none"){
       // console.log(content.style.display);
       report.style.display = "block";
     j=1;
     }
+    document.getElementById('repname').value=gamename;
+    console.log(gamename);
+    rp=document.getElementById('repname')
+    console.log(rp);
 }
 function HideReportfrm(){
     if(j!==1){

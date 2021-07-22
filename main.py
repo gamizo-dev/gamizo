@@ -119,15 +119,14 @@ def share(sharestr):
 
 
 
-@app.route('/contact.html')
+@app.route('/contact')
 def contact():
     return render_template('contact.html')
-
 
 @app.route('/report', methods=['GET', 'POST'])
 def report():
     if request.method == "POST":
-        option = request.form['Report']
+        option = request.form['report']
         gamename = request.form['gamename']
 
     db = firestore.client()
