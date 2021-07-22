@@ -28,12 +28,12 @@
   <title>Gimizo</title>
 </head>
 
-<body onclick="HideContent();" style="cursor: pointer;" class="body">
+<body onclick="HideContent();HideReportfrm();" style="cursor: pointer; -webkit-tap-highlight-color: transparent;" class="body">
 
   <div class="cointainer">
     <div class="cointainer">
       <!--Report form-->
-      <section class="form-Backdrop cointainer">
+      <section class="form-Backdrop cointainer" id="reportfrm" style="display:none;">
         <div class="form">
           <h2 class="__heading">Report Video</h2>
           <form action="/report" method="POST" class="__report" id="report">
@@ -51,6 +51,29 @@
             <div class="__btns">
               <input type="submit" value="Cancel" class="reporting cancel" />
               <input type="submit" value="Report" class="reporting report-submit" />
+            </div>
+          </form>
+        </div>
+      </section>
+      <!--Share form-->
+      <section class="form-Backdrop cointainer" id="sharefrm" style="display:none;">
+        <div class="form">
+          <div class="tag-remove" id="closebtn"></div>
+          <h2 class="__heading">Share Video Via</h2>
+          <form action="/report" method="POST" class="__share" id="share">
+            <img class ="share-logo1" id="whatsapp" src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=s180-rw" alt="Img">
+            <img class ="share-logo2" id="telegram" src="https://play-lh.googleusercontent.com/ZU9cSsyIJZo6Oy7HTHiEPwZg0m2Crep-d5ZrfajqtsH-qgUXSqKpNA2FpPDTn-7qA5Q=s180-rw" alt="Img">
+            <img class ="share-logo3" id="facebook"src="https://play-lh.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s180-rw" alt="Img">
+            <div class="logo-names">
+            <label for="whatsapp" class="logo-name1">Whatsapp</label>
+            <label for="telegram" class="logo-name2">Telegram</label>
+            <label for="facebook" class ="logo-name3">Facebook</label>
+            </div>
+            <div class="foot-link">
+            <div class="copy-link">
+              <input type="text" value="https://google/ai57fsakncaicnsicnspfjpswfpojfpasjfiswfpsjfpksj" class="copy-text" readonly>
+              <button class="copy-btn">Copy</button>
+            </div>
             </div>
           </form>
         </div>
@@ -143,21 +166,6 @@
         <a id="{{loop.index}}" class="categorisedClass" href="/{{j}}">{{j}}</a>
         {%endfor%}
       </div>
-
-      <!-- <form action="/report" method="POST" class="report_form">
-      <input type="radio" id="1" name="Report" value="FakeGamePlay"/>
-      <label for="1" class="check">Fake Gameplay</label><br />
-      <input type="radio" id="2" name="Report" value="PoorQuality"/>
-      <label for="2" class="check">Poor Quality</label><br />
-      <input type="radio" id="3" name="Report" value="InappropiateLink"/>
-      <label for="3" class="check">Inappropiate Link</label><br />
-      <input type="radio" id="4" name="Report" value="videolaging"/>
-      <label for="4" class="check">Video laging</label><br/>
-      <input type="radio" id="5" name="Report" value="Others"/>
-      <label for="5" class="check">Others</label><br />
-      <input type="hidden" value="Call Of Duty" name="gamename"/>
-      <input type="submit" value="Submit" class="check1"/>
-    </form> -->
       <!-- cards-->
       <div class="cards">
         {%for i in list%}
@@ -169,16 +177,20 @@
               <div class="text">
                 <h2>{{i.name[0:35]}}</h2>
                 <div class="game-numbers">
-                  <p class="rating">{{i.Rating}}</p>
-                  <div class="star"><img src="\static/asset/ico/Star 1.png" alt="">
-                  </div>
-                  <p class="size">{{i.AppSize}}</p>
-                  <div class="dwn-ico"><img src="\static/asset/ico/Download-ico.svg" alt=""></div>
+                  <div style="display: flex; flex-direction:row;"><p class="rating">{{i.Rating}}</p>
+                  <div class="star"><img src="\static/asset/ico/Star 1.png" alt=""></div>
+                </div>
+                <div style="display: flex; flex-direction:row;">
                   <p class="dwns">{{i.SmallDownloads}}</p>
+                  <div class="dwn-ico"><img src="\static/asset/ico/download-ico.png" alt=""></div>
+                </div>
+                  {% if i.AppSize+"B" != "Varies with deviceB" %}
+                  <p class="size">{{i.AppSize+"B"}}</p>
+                  {% endif %}
                 </div>
               </div>
             </div>
-            <button type="button" id="{{loop.index}}" class="more" onclick="toggleText(this.id)">
+            <button type="button" class="more" onclick="ShowReportfrm();">
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
@@ -210,6 +222,7 @@
 <script src="\static/js/share-menu.js"></script>
 <script src="\static/js/dropdown.js"></script>
 <script src="\static/js/video-size.js"></script>
+<script src="\static/js/forms.js"></script>
 
 
 

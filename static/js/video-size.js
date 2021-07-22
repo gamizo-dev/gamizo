@@ -26,7 +26,7 @@
           array[i].setAttribute("style", `max-width: ${main[i].offsetWidth}px;`);
           array2[i].setAttribute(
             "style",
-            `max-height: ${main[i].offsetHeight}px;`
+            `min-height: ${main[i].offsetHeight}px;`
           );
         } else if (array[i].offsetHeight == array[i].offsetWidth) {
           array[i].setAttribute("style", `max-width: ${main[i].offsetWidth}px;`);

@@ -171,7 +171,7 @@ body {
 }
 
 .card .details-bar .text_ico .text h2 {
-  font-weight: 600;
+  font-weight: 400;
   display: block;
   max-width: 296px;
   overflow: hidden;
@@ -187,23 +187,36 @@ body {
 }
 
 .card .details-bar .text_ico .text .game-numbers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
+  flex-direction: row;
   justify-content: space-between;
-  max-width: 75%;
+  max-width: 60%;
+}
+.card .details-bar .text_ico .text .game-numbers .rating{
+  align-self: right;  
+}
+.card .details-bar .text_ico .text .game-numbers .dwns{
+  align-self: right;
+}
+.card .details-bar .text_ico .text .game-numbers .size{
+  float:right;
+}
+.card .details-bar .text_ico .text .game-numbers p{
+  font-size: 1rem;
+}
+.card .details-bar .text_ico .text .game-numbers .star{
+  filter:brightness(10%);
+  transform: translate(0%,-15%);
+}
+.card .details-bar .text_ico .text .game-numbers .dwn-ico{
+  transform: translate(0%,-5%);
 }
 
 .card .details-bar .text_ico .game-ico {
   background: #9873ff;
-  border-radius: 25px;
-  width: 65px;
-  height: 65px;
+  border-radius: 24px;
+  width: 60px;
+  height: 60px;
   -webkit-box-flex: 0;
   -ms-flex: none;
   flex: none;
@@ -233,8 +246,8 @@ body {
 
 .card .details-bar .more .circle {
   background-color: black;
-  height: 8px;
-  width: 8px;
+  height: 6px;
+  width: 6px;
   border-radius: 50%;
   margin-bottom: 5px;
 }
@@ -403,6 +416,7 @@ a {
   z-index: 100;
   display: grid;
   place-items: center;
+  transition: all 300ms ease-in;
 }
 .form{
   padding: 5% 5% 2% 10%;
@@ -432,7 +446,6 @@ a {
   
 }
 .__report input[type= "radio"]{
-  visibility: hidden;
   position: relative;
   font-size: 1.25rem;
 }
@@ -448,7 +461,6 @@ a {
   height:0.8em;
   border-radius:50%;  
   background-color: white;
-  visibility: visible;
   border: 1px solid rgb(0, 0, 0);
 }
 
@@ -497,7 +509,89 @@ a {
   font-weight: 500;
 }
 /* Report Form Ends */
-
+/*Share Form Starts*/
+.__share{
+  display: grid;
+  grid-template:
+  "a b c"
+  "e e e"
+  "d d d";
+  place-items: center;
+  margin-top: -20%;
+}
+.tag-remove::before {
+  content: '×';
+  color: black;
+  float:right;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+  margin-top: -2%;
+}
+.share-logo1{
+  border-radius: 50%;
+  height: 30%;
+  width: auto;    
+  grid-area: a;
+  clip-path: circle(2em);
+}
+.share-logo2{
+  border-radius: 50%;
+  height: 37%;
+  width: auto;
+  grid-area: b;
+  clip-path: circle(2em);
+}
+.share-logo3{
+  border-radius: 50%;
+  height: 30%;
+  width: auto;
+  grid-area: c;
+  clip-path: circle(2em);
+}
+.logo-names{
+  grid-area:e;
+  margin-top: -30%;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.foot-link{
+  margin-top:-10%;
+  padding-top:5%;
+  border-radius: 10px;
+  width:100%;
+  grid-area:d;
+  margin-bottom: 5%;
+}
+.copy-link{
+  border:1px solid gray;
+  border-radius: 10px;
+  padding:3%;
+  background: white;
+}
+.copy-text{
+  padding:3%;
+  border:none;
+  height: inherit;
+  background: inherit;
+  padding: 0% 0% 0% 5% ;
+  width:66.66%;
+} 
+.copy-btn{
+  border-radius: 10px;
+  height:inherit;
+  background: inherit;
+  border:none;
+  color: #226dc9;
+  text-transform: uppercase;
+  float:right;
+  text-align: right;
+  width:33.33%;
+  padding-right:2%;
+  font-weight: 500;
+}
 p {
   text-align: center;
 }
@@ -703,20 +797,5 @@ code {
     width: 100%;
     margin: 0;
     border: none;
-  }
-}
-@media (min-width: 640px) {
-  body {
-    font-size: 1rem;
-  }
-}
-@media (min-width: 960px) {
-  body {
-    font-size: 1.2rem;
-  }
-}
-@media (min-width: 1100px) {
-  body {
-    font-size: 1.5rem;
   }
 }
