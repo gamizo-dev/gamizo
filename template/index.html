@@ -57,7 +57,7 @@
         </div>
       </section>
       <!--Share form-->
-      <section class="form-Backdrop cointainer" id="sharefrm" style="display:block;">
+      <section class="form-Backdrop cointainer" id="sharefrm" style="display:none;">
         <div class="form">
           <div class="tag-remove" id="closebtn"></div>
           <h2 class="__heading">Share Video Via</h2>
@@ -198,8 +198,8 @@
             </button>
           </div>
           <div class="game-video">
-            <video id="{{loop.index}}video" class="backdrop-video" src="{{i.videoUrl}}" autoplay loop></video>
-            <video id="video{{loop.index}}" class="impvideo" src="{{i.videoUrl}}" autoplay loop></video>
+            <video id="{{loop.index}}video" class="backdrop-video" src="{{i.videoUrl}}"></video>
+            <video id="video{{loop.index}}" class="impvideo" src="{{i.videoUrl}}"></video>
             <div class="play-button"></div>
             <div id="sound"></div>
           </div>
@@ -217,7 +217,7 @@
       </div>
     </div>
 </body>
-
+{#
 <!-- <a href="whatsapp://send?text=https://gimizo.com/share/{{i.Category}}_{{i.GameName}}"
 data-action="share/whatsapp/share" target="_blank" style="color:black;">
 Share to whatsapp
@@ -232,7 +232,7 @@ class="fb-xfbml-parse-ignore" style="color: black;">Share on facebook
 </a>
 <input type="text" value="https://gimizo.com/share/{{i.Category}}_{{i.GameName}}" id="copy{{loop.index}}" style="color: black;">
 <button onclick="myFunction(this.id)" id="{{loop.index}}">Copy text</button> -->
-
+#}
 <script src="\static/js/app.js"></script>
 <script src="\static/js/video.js"></script>
 <script src="\static/js/share-menu.js"></script>
