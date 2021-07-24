@@ -1,16 +1,16 @@
 .bg-grad{
-    height: 40vh;
+    height: 30vh;
     position: relative;
     display: grid;
     place-items: center;
     /* background: white; */
 }
-.menu-btn{
+/* .menu-btn{
     box-shadow: none;
     background: transparent;
     border-radius: 0;
     border-left: 3px solid white ;
-}
+} */
 .cointainer{
     height: 100vh;
     display: flex;
