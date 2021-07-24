@@ -128,6 +128,7 @@ def report():
     if request.method == "POST":
         option = request.form['report']
         gamename = request.form['gamename']
+        category = request.form['category']
 
     db = firestore.client()
     doc_ref = db.collection('Report').document(gamename)
@@ -148,7 +149,7 @@ def report():
             '1': option
         })
 
-    return redirect('/')
+    return redirect(f'/{category}')
 
 
 if __name__ == '__main__':
