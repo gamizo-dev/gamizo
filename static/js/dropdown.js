@@ -16,6 +16,16 @@ function getItemHTML(item) {
     </a>
   `;
 }
+var url = window.location.pathname;
+const urlCat=url.substring(1);
+function changePlaceholder(urlCat) {
+  if(urlCat!=""){
+  document.getElementById("changePlaceholder").placeholder = urlCat;
+  }
+  else{
+  document.getElementById("changePlaceholder").placeholder = "Popular";
+  }
+}
 
 // a function to render array of items to content
 function render(items) {
@@ -93,3 +103,5 @@ function HideContent(){
   // console.log(content.style.display);
   // console.log(cardshift.classList);
 }
+
+window.addEventListener('onload',changePlaceholder(urlCat),false);

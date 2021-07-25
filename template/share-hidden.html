@@ -61,9 +61,9 @@
       {% for i in list %}
       <section class="form-Backdrop cointainer" id="sharefrm" style="display:none;">
         <div class="form" onclick="k=1;">
-          <div class="tag-remove" id="closebtn" onclick="k=0;HideSharefrm();"></div>
+          <div class="tag-remove" id="closebtn"></div>
           <h2 class="__heading">Share Video Via</h2>
-          <form class="__share" id="share">
+          <form  method="POST" class="__share" id="share">
             <a href="whatsapp://send?text=https://gimizo.com/share/{{i.Category}}_{{i.GameName}}"
             -action="share/whatsapp/share" target="_blank">
             <img class ="share-logo1" id="whatsapp" src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=s180-rw" alt="Img"></a>
@@ -82,7 +82,7 @@
             <div class="foot-link">
             <div class="copy-link">
               <input type="text" value="https://google/ai57fsakncaicnsicnspfjpswfpojfpasjfiswfpsjfpksj" class="copy-text" readonly>
-              <div class="copy-btn" onclick="clipboard()">Copy</div>
+              <button class="copy-btn">Copy</button>
             </div>
             </div>
           </form>
@@ -161,7 +161,7 @@
         <p style="font-size:1rem; padding-bottom:5px">Browse Category:</p>
         <div class="pg-modal open">
           <div class="search-bar" onclick="ShowContent();">
-            <input id="changePlaceholder" type="text" readonly/>
+            <input type="text" placeholder="Browse any category..." readonly/>
             <img src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v2.png"/>
           </div>
           <div class="content">
@@ -176,6 +176,51 @@
       </div>
       <!-- cards-->
       <div class="cards">
+        {%for k in list%}
+        <div class="card">
+            <!-- top Details -->
+            <div class="details-bar">
+              <div class="text_ico">
+                <img class="game-ico" src="{{k.imageLink}}" alt="DP" />
+                <div class="text">
+                  <h2>{{k.name[0:35]}}</h2>
+                  <div class="game-numbers">
+                    <div style="display: flex; flex-direction:row;"><p class="rating">{{k.Rating}}</p>
+                    <div class="star"><img src="\static/asset/ico/Star 1.png" alt=""></div>
+                  </div>
+                  <div style="display: flex; flex-direction:row;">
+                    <p class="dwns">{{k.SmallDownloads}}</p>
+                    <div class="dwn-ico"><img src="\static/asset/ico/download-ico.png" alt=""></div>
+                  </div>
+                    {% if k.AppSize+"B" != "Varies with deviceB" %}
+                    <p class="size">{{k.AppSize+"B"}}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="more" id="{{k.GameName}}" value="{{k.Category}}" onclick="ShowReportfrm(this.id,this.value);">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </button>
+            </div>
+            <div class="game-video">
+              <video id="{{loop.index}}video" class="backdrop-video" src="{{k.videoUrl}}"></video>
+              <video id="video{{loop.index}}" class="impvideo" src="{{k.videoUrl}}"></video>
+              <div class="play-button"></div>
+              <div id="sound"></div>
+            </div>
+            <div class="btns">
+              <a href="{{k.link}}" target="_blank">
+                <button id="btn" type="submit" value="Install Now" class="btn play-now">
+                  <h1>Play Now</h1>
+                </button></a>
+              <a onclick="ShowSharefrm();"> <button id="btn" type="submit" value="Install Now" class="btn share">
+                  <h1>Share</h1>
+                </button></a>
+            </div>
+          </div>
+          {%endfor%}
         {%for i in list%}
         <div class="card">
           <!-- top Details -->
@@ -222,7 +267,6 @@
         </div>
         {%endfor%}
       </div>
-      <div id="snackbar">Copied to clipboard</div>
     </div>
 </body>
 {#
