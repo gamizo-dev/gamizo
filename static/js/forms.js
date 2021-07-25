@@ -6,6 +6,7 @@ var report = document.getElementById("reportfrm");
 var share = document.getElementById("sharefrm");
 var sharebtn = document.getElementsByClassName("btn share");
 var j=0;
+var gval='share';
 function ShowReportfrm(id, cat) {
     gamename=id;
     category=cat;
@@ -29,9 +30,20 @@ cancel.addEventListener("click", function(event){
     event.preventDefault()
   });
 
-function ShowSharefrm() {
+function ShowSharefrm(value) {
     // gamename=id;
     // category=cat;
+    gval=value;
+    let whatsappshare=document.getElementById('whatsappshare');
+    let telegramshare=document.getElementById('telegramshare');
+    let facebookshare=document.getElementById('facebookshare');
+    
+    whatsappshare.href="whatsapp://send?text="+value;
+
+    telegramshare.href="https://t.me/share/url?url="+value+"&text=gimizo";
+
+    facebookshare.href="https://www.facebook.com/sharer/sharer.php?u="+value+"&amp;src=sdkpreparse";
+    
     if(share.style.display = "none"){
       share.style.display = "block";
     k=1;
@@ -51,10 +63,13 @@ function HideSharefrm(){
 function clipboard() {
     // Get the snackbar DIV
     var x = document.getElementById("snackbar");
-  
+    
     // Add the "show" class to DIV
     x.className = "show";
-  
+    
+    shareval=document.getElementById('shareval');
+    shareval.value=gval;
+    
     // After 3 seconds, remove the show class from DIV
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
   }

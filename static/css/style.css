@@ -148,7 +148,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
   margin-top: 0.5rem;
   margin-left: -1rem;
 }
@@ -157,6 +157,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: -3px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -182,17 +183,19 @@ body {
 .card .details-bar .text_ico .text .game-numbers {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  max-width: 60%;
+  /* justify-content: space-between; */
+  max-width: 80%;
 }
 .card .details-bar .text_ico .text .game-numbers .rating{
-  align-self: right;  
+  align-self: right;
 }
 .card .details-bar .text_ico .text .game-numbers .dwns{
   align-self: right;
+  transform: translate(40%,0%);  
 }
 .card .details-bar .text_ico .text .game-numbers .size{
   float:right;
+  transform: translate(80%,0%); 
 }
 .card .details-bar .text_ico .text .game-numbers p{
   font-size: 1rem;
@@ -202,12 +205,12 @@ body {
   transform: translate(0%,-15%);
 }
 .card .details-bar .text_ico .text .game-numbers .dwn-ico{
-  transform: translate(0%,-5%);
+  transform: translate(100%,-5%);
 }
 
 .card .details-bar .text_ico .game-ico {
   background: #9873ff;
-  border-radius: 24px;
+  border-radius: 15px;
   width: 60px;
   height: 60px;
   -webkit-box-flex: 0;
@@ -218,7 +221,7 @@ body {
   order: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  margin: 0px 16px;
+  margin: 0px 20px;
 }
 
 .card .details-bar .more {
@@ -239,8 +242,8 @@ body {
 
 .card .details-bar .more .circle {
   background-color: black;
-  height: 6px;
-  width: 6px;
+  height: 4px;
+  width: 4px;
   border-radius: 50%;
   margin-bottom: 5px;
 }
@@ -529,7 +532,7 @@ a {
 }
 .share-logo1{
   border-radius: 50%;
-  margin-top: 40%;
+  margin-top: 60%;
   margin-left: 20%;
   height: 75%;
   width:75%;    
@@ -538,7 +541,7 @@ a {
 }
 .share-logo2{
   border-radius: 50%;
-  margin-top: 40%;
+  margin-top: 60%;
   margin-left: 20%;
   height: 75%;
   width: 75%;
@@ -547,7 +550,7 @@ a {
 }
 .share-logo3{
   border-radius: 50%;
-  margin-top: 40%;
+  margin-top: 60%;
   margin-left: 20%;
   height: 75%;
   width: 75%;
@@ -739,17 +742,17 @@ code {
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
-  min-width: 250px; /* Set a default minimum width */
-  margin-left: -125px; /* Divide value of min-width by 2 */
+  min-width: 180px; /* Set a default minimum width */
+  height: 40px;
   background-color: #333; /* Black background color */
   color: #fff; /* White text color */
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
-  padding: 16px; /* Padding */
+  padding: 6px; /* Padding */
   position: fixed; /* Sit on top of the screen */
-  z-index: 1; /* Add a z-index if needed */
-  left: 50%; /* Center the snackbar */
-  bottom: 30px; /* 30px from the bottom */
+  z-index: 100; /* Add a z-index if needed */
+  border-radius: 5px;
+  bottom: 45px; /* 30px from the bottom */
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
@@ -814,6 +817,25 @@ code {
   }
   .card .details-bar .text_ico .text h2 {
     width: 256px;
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .card {
+    width: inherit;
+  }
+  .cards {
+    width: inherit;
+  }
+  .card .game-video {
+    width: inherit;
+    height: 90vw;
+  }
+  .card .details-bar {
+    width: inherit;
+  }
+  .card .details-bar .text_ico .text h2 {
+    width: 200px;
     font-size: 26px;
   }
 }

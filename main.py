@@ -37,11 +37,11 @@ app = Flask(__name__,template_folder='template')
 @app.route('/')
 def index():
     db = firestore.client()
-    docs = db.collection('apps').document('apps').collection('Popular').get()
+    # docs = db.collection('apps').document('apps').collection('Popular').get()
 
-    l = []
-    for doc in docs:
-        l.append(doc.to_dict())
+    # l = []
+    # for doc in docs:
+    #     l.append(doc.to_dict())
 
     list1 = []
     cat_refget = db.collection('category').get()
@@ -54,32 +54,62 @@ def index():
     for i in list1:
         for j in i.values():
             a.append(j)
-    
-    return render_template('index.html', list=l, cat=a)
+
+    dc=db.collection('games').document('gamizoapp').collection('Popular').document('0').get()
+    dc_num=dc.to_dict()
+
+    k=1
+    newlist=[]
+    while k<=dc_num['recordnum']:
+        doc = db.collection('games').document('gamizoapp').collection('Popular').document(f'{k}').get()
+        op=doc.to_dict()
+       
+        for key, value in op.items():
+            if not key == 'numbercount':
+              newlist.append(value)  
+        k=k+1
+    return render_template('index.html', list=newlist, cat=a)
 
 
 @app.route('/<string:cat>')
 def index1(cat):
-    db = firestore.client()
-    docs = db.collection('apps').document('apps').collection(cat).get()
+    # db = firestore.client()
+    # docs = db.collection('apps').document('apps').collection(cat).get()
 
-    l = []
-    for doc in docs:
-        l.append(doc.to_dict())
-
+    # l = []
+    # for doc in docs:
+    #     l.append(doc.to_dict())
+    db=firestore.client()
+    
     list1 = []
     cat_refget = db.collection('category').get()
 
     for c in cat_refget:
 
         list1.append(c.to_dict())
-    print(list1)
+    
     a = []
     for i in list1:
         for j in i.values():
             a.append(j)
-    print(a)
-    return render_template('index.html', list=l, cat=a)
+    
+
+
+    dc=db.collection('games').document('gamizoapp').collection(cat).document('0').get()
+    dc_num=dc.to_dict()
+
+    k=1
+    newlist=[]
+    while k<=dc_num['recordnum']:
+        doc = db.collection('games').document('gamizoapp').collection(cat).document(f'{k}').get()
+        op=doc.to_dict()
+       
+        for key, value in op.items():
+            if not key == 'numbercount':
+              newlist.append(value)  
+        k=k+1
+    
+    return render_template('index.html', list=newlist, cat=a)
 
 
 @app.route('/share/<string:sharestr>')
@@ -87,19 +117,43 @@ def share(sharestr):
     db = firestore.client()
     cat = ''
     name = ''
+    dc_num=''
     i = 0
     while sharestr[i] != '_':
         cat += sharestr[i]
         i = i+1
     i = i+1
+    
+    dc_num=sharestr[i]
+    
+    i=i+2
     while i < len(sharestr):
         name += sharestr[i]
         i = i+1
+    
+    sp={}
+    checkname=''.join(e for e in name if e.isalnum())
+    doc = db.collection('games').document('gamizoapp').collection(cat).document(dc_num).get()
+    op=doc.to_dict()
+       
+    for key, value in op.items():
+        if  key == checkname:
+            sp=value  
+    
+    dc=db.collection('games').document('gamizoapp').collection(cat).document('0').get()
+    dc_num=dc.to_dict()
 
-    # docs = db.collection('apps').document('apps').collection(cat).get()
-
-    docs = db.collection('apps').document('apps').collection(cat).document(name).get()
-    sp=docs.to_dict()
+    k=1
+    newlist=[]
+    while k<=dc_num['recordnum']:
+        doc = db.collection('games').document('gamizoapp').collection('Popular').document(f'{k}').get()
+        op=doc.to_dict()
+       
+        for key, value in op.items():
+            if not key == 'numbercount':
+              newlist.append(value)  
+        k=k+1
+    
 
     list1 = []
 
@@ -113,7 +167,7 @@ def share(sharestr):
         for j in i.values():
             a.append(j)
     
-    return render_template('share.html', cat=a,sp=sp)
+    return render_template('share-hidden.html', cat=a,sp=sp,list=newlist)
 
 
 

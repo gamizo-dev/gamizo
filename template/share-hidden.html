@@ -58,7 +58,7 @@
         </div>
       </div>
       <!--Share form-->
-      {% for i in list %}
+      {#
       <section class="form-Backdrop cointainer" id="sharefrm" style="display:none;">
         <div class="form" onclick="k=1;">
           <div class="tag-remove" id="closebtn"></div>
@@ -87,8 +87,9 @@
             </div>
           </form>
         </div>
-      </section>
-      {%endfor%}
+      </section> 
+      #}
+      
       <div id="menu">
         <a href="#">Home</a>
         <a href="contact.html">Contact Us</a>
@@ -176,87 +177,41 @@
       </div>
       <!-- cards-->
       <div class="cards">
-        {%for k in list%}
-        <div class="card">
-            <!-- top Details -->
-            <div class="details-bar">
-              <div class="text_ico">
-                <img class="game-ico" src="{{k.imageLink}}" alt="DP" />
-                <div class="text">
-                  <h2>{{k.name[0:35]}}</h2>
-                  <div class="game-numbers">
-                    <div style="display: flex; flex-direction:row;"><p class="rating">{{k.Rating}}</p>
-                    <div class="star"><img src="\static/asset/ico/Star 1.png" alt=""></div>
-                  </div>
-                  <div style="display: flex; flex-direction:row;">
-                    <p class="dwns">{{k.SmallDownloads}}</p>
-                    <div class="dwn-ico"><img src="\static/asset/ico/download-ico.png" alt=""></div>
-                  </div>
-                    {% if k.AppSize+"B" != "Varies with deviceB" %}
-                    <p class="size">{{k.AppSize+"B"}}</p>
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="more" id="{{k.GameName}}" value="{{k.Category}}" onclick="ShowReportfrm(this.id,this.value);">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-              </button>
-            </div>
-            <div class="game-video">
-              <video id="{{loop.index}}video" class="backdrop-video" src="{{k.videoUrl}}"></video>
-              <video id="video{{loop.index}}" class="impvideo" src="{{k.videoUrl}}"></video>
-              <div class="play-button"></div>
-              <div id="sound"></div>
-            </div>
-            <div class="btns">
-              <a href="{{k.link}}" target="_blank">
-                <button id="btn" type="submit" value="Install Now" class="btn play-now">
-                  <h1>Play Now</h1>
-                </button></a>
-              <a onclick="ShowSharefrm();"> <button id="btn" type="submit" value="Install Now" class="btn share">
-                  <h1>Share</h1>
-                </button></a>
-            </div>
-          </div>
-          {%endfor%}
-        {%for i in list%}
         <div class="card">
           <!-- top Details -->
           <div class="details-bar">
             <div class="text_ico">
-              <img class="game-ico" src="{{i.imageLink}}" alt="DP" />
+              <img class="game-ico" src="{{sp.imageLink}}" alt="DP" />
               <div class="text">
-                <h2>{{i.name[0:35]}}</h2>
+                <h2>{{sp.name[0:35]}}</h2>
                 <div class="game-numbers">
-                  <div style="display: flex; flex-direction:row;"><p class="rating">{{i.Rating}}</p>
+                  <div style="display: flex; flex-direction:row;"><p class="rating">{{sp.Rating}}</p>
                   <div class="star"><img src="\static/asset/ico/Star 1.png" alt=""></div>
                 </div>
                 <div style="display: flex; flex-direction:row;">
-                  <p class="dwns">{{i.SmallDownloads}}</p>
+                  <p class="dwns">{{sp.SmallDownloads}}</p>
                   <div class="dwn-ico"><img src="\static/asset/ico/download-ico.png" alt=""></div>
                 </div>
-                  {% if i.AppSize+"B" != "Varies with deviceB" %}
-                  <p class="size">{{i.AppSize+"B"}}</p>
+                  {% if sp.AppSize+"B" != "Varies with deviceB" %}
+                  <p class="size">{{sp.AppSize+"B"}}</p>
                   {% endif %}
                 </div>
               </div>
             </div>
-            <button type="button" class="more" id="{{i.GameName}}" value="{{i.Category}}" onclick="ShowReportfrm(this.id,this.value);">
+            <button type="button" class="more" id="{{sp.GameName}}" value="{{sp.Category}}" onclick="ShowReportfrm(this.id,this.value);">
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
             </button>
           </div>
           <div class="game-video">
-            <video id="{{loop.index}}video" class="backdrop-video" src="{{i.videoUrl}}"></video>
-            <video id="video{{loop.index}}" class="impvideo" src="{{i.videoUrl}}"></video>
+            <video id="0video" class="backdrop-video" src="{{sp.videoUrl}}"></video>
+            <video id="video0" class="impvideo" src="{{sp.videoUrl}}"></video>
             <div class="play-button"></div>
             <div id="sound"></div>
           </div>
           <div class="btns">
-            <a href="{{i.link}}" target="_blank">
+            <a href="{{sp.link}}" target="_blank">
               <button id="btn" type="submit" value="Install Now" class="btn play-now">
                 <h1>Play Now</h1>
               </button></a>
@@ -265,7 +220,58 @@
               </button></a>
           </div>
         </div>
-        {%endfor%}
+        <div class="cards">
+          {%for i in list%}
+          <div class="card">
+            <!-- top Details -->
+            <div class="details-bar">
+              <div class="text_ico">
+                <img class="game-ico" src="{{i.imageLink}}" alt="DP" />
+                <div class="text">
+                  <h2>{{i.name[0:35]}}</h2>
+                  <div class="game-numbers">
+                    <div style="display: flex; flex-direction:row;"><p class="rating">{{i.Rating}}</p>
+                    <div class="star"><img src="\static/asset/ico/Star 1.png" alt=""></div>
+                  </div>
+                  <div style="display: flex; flex-direction:row;">
+                    <p class="dwns">{{i.SmallDownloads}}</p>
+                    <div class="dwn-ico"><img src="\static/asset/ico/download-ico.png" alt=""></div>
+                  </div>
+                    {% if i.AppSize+"B" != "Varies with deviceB" %}
+                    <p class="size">{{i.AppSize+"B"}}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="more" id="{{i.GameName}}" value="{{i.Category}}" onclick="ShowReportfrm(this.id,this.value);">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </button>
+            </div>
+            <div class="game-video">
+              <video id="{{loop.index}}video" class="backdrop-video" src="{{i.videoUrl}}"></video>
+              <video id="video{{loop.index}}" class="impvideo" src="{{i.videoUrl}}"></video>
+              <div class="play-button"></div>
+              <div id="sound"></div>
+            </div>
+            <div class="btns">
+              <a href="{{i.link}}" target="_blank">
+                <button id="btn" type="submit" value="Install Now" class="btn play-now">
+                  <h1>Play Now</h1>
+                </button></a>
+              <a id="https://gimizo.com/share/{{i.Category}}_{{i.doc_number}}_{{i.GameName}}" onclick="ShowSharefrm(this.id);" > <button id="btn" type="submit" class="btn share">
+                  <h1>Share</h1>
+                </button></a>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+        <div id="snackbar">Copied to clipboard</div>
+      </div>
+        
+        
+     
       </div>
     </div>
 </body>
