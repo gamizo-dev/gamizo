@@ -109,7 +109,7 @@ def index1(cat):
             if not key == 'numbercount':
               newlist.append(value)  
         k=k+1
-    
+    a.sort()
     return render_template('index.html', list=newlist, cat=a)
 
 
@@ -167,7 +167,7 @@ def share(sharestr):
     for i in list1:
         for j in i.values():
             a.append(j)
-    
+    a.sort()
     return render_template('share-hidden.html', cat=a,sp=sp,list=newlist)
 
 

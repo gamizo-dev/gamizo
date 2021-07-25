@@ -52,6 +52,9 @@
     </div>
     <!-- End of Side Menu -->
     <!-- Menu Button -->
+    
+
+   
     <div class="menu-btn">
       <div class="line"></div>
       <div class="line center-line"></div>
@@ -63,14 +66,14 @@
       <div class="ccard" style="visibility: hidden;"></div>
       <div class="ccard">
         <h1 class="title">Drop us a line</h1>
-        <form>
+        <form  name="submit-to-google-sheet">
           <div class="input-container">
-            <input name="name" type="#{type}" id="#{label}" required="required" />
+            <input name="name" type="#{type}" id="name" required="required" />
             <label for="#{label}">Name</label>
             <div class="bar"></div>
           </div>
           <div class="input-container">
-            <input name="email" type="#{type}" id="#{label}" required="required" />
+            <input name="email" type="#{type}" id="email" required="required" />
             <label for="#{label}">Email</label>
             <div class="bar"></div>
           </div>
@@ -89,6 +92,7 @@
             <label for="message">Message</label>
             <div class="bar"></div>
           </div>
+          <input name="date" id="date" type="hidden" />
           <div class="button-container">
             <button><span>Go</span></button>
           </div>
@@ -96,6 +100,7 @@
       </div>
     </div>
   </div>
+  </body>
   <!-- integrated JS -->
   <script src="../static/js/app.js"></script>
   <script>
