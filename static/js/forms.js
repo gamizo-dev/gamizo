@@ -1,6 +1,6 @@
 //report form
 var td= document.getElementsByClassName("more");
-var cancel= document.getElementsByClassName("cancel");
+var cancel= document.getElementById("cancelbtn");
 var closebtn= document.getElementsByClassName("closebtn");
 var report = document.getElementById("reportfrm");
 var share = document.getElementById("sharefrm");
@@ -28,11 +28,9 @@ function HideReportfrm(){
 }
 cancel.addEventListener("click", function(event){
     event.preventDefault()
-  });
+});
 
 function ShowSharefrm(value) {
-    // gamename=id;
-    // category=cat;
     gval=value;
     let whatsappshare=document.getElementById('whatsappshare');
     let telegramshare=document.getElementById('telegramshare');
@@ -46,6 +44,8 @@ function ShowSharefrm(value) {
     
     if(share.style.display = "none"){
       share.style.display = "block";
+      shareval=document.getElementById('shareval');
+      shareval.value=gval;
     k=1;
     }
     // document.getElementById('repname').value=gamename;
@@ -72,4 +72,11 @@ function clipboard() {
     
     // After 3 seconds, remove the show class from DIV
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+  function copyToClipboard() {
+    document.getElementById('shareval').id = gval;
+    var copyText = document.getElementById(gval);
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
   }

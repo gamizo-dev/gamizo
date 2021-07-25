@@ -1,16 +1,11 @@
 //videoplayer js
 const videos = document.getElementsByClassName("impvideo");
-const backvideos= document.getElementsByClassName("backdrop-video");
+// const backvideos= document.getElementsByClassName("backdrop-video");
 function newfunc(){
 for(var i=0;i<videos.length;i++){
       elementInViewport(videos[i]);
 }
 }
-function newfunc2(){
-    for(var i=0;i<backvideos.length;i++){
-          elementInViewport(backvideos[i]);
-    }
-    }
 function elementInViewport(videos) {
 
 var bounding = videos.getBoundingClientRect();
@@ -31,4 +26,3 @@ if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWi
 // window.addEventListener('resize', checkScroll, false);
 
 window.addEventListener('scroll', newfunc, false);
-window.addEventListener('scroll', newfunc2, false);

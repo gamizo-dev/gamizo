@@ -17,7 +17,15 @@ function getItemHTML(item) {
   `;
 }
 var url = window.location.pathname;
-const urlCat=url.substring(1);
+var urlCat=url.substring(1);
+function fixingPlaceholder(){
+if(urlCat.startsWith("share")){
+  changePlaceholder("Shared Video");
+}
+else{
+  changePlaceholder(urlCat);
+}
+}
 function changePlaceholder(urlCat) {
   if(urlCat!=""){
   document.getElementById("changePlaceholder").placeholder = urlCat;
@@ -104,4 +112,4 @@ function HideContent(){
   // console.log(cardshift.classList);
 }
 
-window.addEventListener('onload',changePlaceholder(urlCat),false);
+window.addEventListener('onload',fixingPlaceholder(),false);

@@ -68,6 +68,7 @@ def index():
             if not key == 'numbercount':
               newlist.append(value)  
         k=k+1
+    a.sort()
     return render_template('index.html', list=newlist, cat=a)
 
 
