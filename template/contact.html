@@ -6,55 +6,98 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gamizo | Contact Us</title>
-  <link rel="stylesheet" href="\static/css/style.css">
-  <link rel="stylesheet" href="\static/css/contactus.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/menu.css">
+  <link rel="stylesheet" href="../static/css/contactus.css">
 </head>
 
 <body>
-  
+
   <div class="cointainer">
-    <div id="menu">
-      <a href="#">Home</a>
-      <a href="contact.html">Contact Us</a>
-
-      <a href="#">About</a>
-      <a href="upload.html">Upload</a>
-      <div class="menu-footer">
-        <a href="#">Privacy Policy</a>
-
-        <a href="#">Terms and Conditions</a>
+    <div class="bg-grad"></div>
+    <!-- Side Menu -->
+    <div class="form-Backdrop" id="nav-menu" style="display: none;">
+      <div id="menu">
+        <div class="menu-content">
+          <div class="top-bar">
+            <div class="menu-btn">
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+          <ul>
+            <li class="menu-link selected"><a href="#">Home</a></li>
+            <li class="menu-link"><a href="#">Contact Us</a></li>
+            <li class="menu-link"><a href="#">About Us</a></li>
+          </ul>
+          <div class="extra-links">
+            <a href="#">Privacy Policy</a>
+            <br>
+            <a href="#">Terms & conditions</a>
+          </div>
+        </div>
+      </div>
+      <script>
+        var menu = document.querySelector("#menu")
+        var cointainer = document.querySelector(".cointainer")
+        window.addEventListener("load", () => {
+          let widthNow = cointainer.clientWidth
+          menu.setAttribute("style", `width:${widthNow}px;`)
+        })
+        window.addEventListener("resize", () => {
+          let widthNow = cointainer.clientWidth
+          menu.setAttribute("style", `width:${widthNow}px;`)
+        })
+      </script>
     </div>
-  </div>
- 
-  <!-- Menu Button -->
-  <div class="menu-btn">
-    <div class="line"></div>
-    <div class="line center-line"></div>
-    <div class="line"></div>
-  </div>
-  <div class="bg-grad"></div>
-      <div class="contact-form">
-        <form id="contactus" name="submit-to-google-sheet">
-          <h1>Drop us a line</h1>
-          <!-- <label for="name">Name:</label> -->
-          <input type="text" placeholder="Enter your Name" name="name" id="name" required>
-          <!-- <label for="email">Email:</label> -->
-          <input type="text" placeholder="Enter your Email" name="email" id="email" required>
-          <!-- <label for="message">Message: </label> -->
-          <textarea rows="5" cols="40" placeholder="Drop in your message" name="message" id="message"
-            style="margin-bottom: 6px;" required></textarea>
-          <input type="hidden" id="date" name="date" value="javascript:document.write(Date()+'.')" />
-          <button type="submit" id="contact-form-submit-btn">Send</button>
+    <!-- End of Side Menu -->
+    <!-- Menu Button -->
+    <div class="menu-btn">
+      <div class="line"></div>
+      <div class="line center-line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="bg-grad-contact">  
+    </div>
+    <div class="card-container">
+      <div class="ccard" style="visibility: hidden;"></div>
+      <div class="ccard">
+        <h1 class="title">Drop us a line</h1>
+        <form>
+          <div class="input-container">
+            <input name="name" type="#{type}" id="#{label}" required="required" />
+            <label for="#{label}">Name</label>
+            <div class="bar"></div>
+          </div>
+          <div class="input-container">
+            <input name="email" type="#{type}" id="#{label}" required="required" />
+            <label for="#{label}">Email</label>
+            <div class="bar"></div>
+          </div>
+          <div class="input-container">
+            <textarea name="message" id="message" required></textarea>
+            <script type="text/javascript">
+              var msg = document.querySelector('#message')
+              window.addEventListener("load", () => {
+                msg.style.height = '50px';
+              })
+              msg.addEventListener('input', () => {
+                msg.style.height = "50px";
+                msg.style.height = (msg.scrollHeight) + 'px';
+              });
+            </script>
+            <label for="message">Message</label>
+            <div class="bar"></div>
+          </div>
+          <div class="button-container">
+            <button><span>Go</span></button>
+          </div>
         </form>
       </div>
-      
+    </div>
   </div>
-
-
   <!-- integrated JS -->
-
-
-  <script src="\static/js/app.js"></script>
+  <script src="../static/js/app.js"></script>
   <script>
     document.getElementById('date').value = Date();
 

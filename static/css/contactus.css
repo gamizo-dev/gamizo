@@ -1,82 +1,317 @@
+@charset "UTF-8";
+
+body {
+  /* background: #e9e9e9; */
+  color: #666666;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 0;
+}
+
+.card-container {
+  position: relative;
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto 100px;
+  margin-top: 15vh;
+}
 .bg-grad{
-    height: 30vh;
-    position: relative;
-    display: grid;
-    place-items: center;
-    /* background: white; */
-}
-/* .menu-btn{
-    box-shadow: none;
-    background: transparent;
-    border-radius: 0;
-    border-left: 3px solid white ;
-} */
-.cointainer{
-    height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-.contact-form{
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-color: white;
-    padding: 1rem 0;
-}
-.letter{
-    width: 140%;
-    filter: hue-rotate(120deg);
-}
-.main{
-    display:grid;
-    place-items: center;
     height: 100%;
+    background: #3520eb;
 }
-/* #contactus{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-} */
-#contactus{
-    padding: 0 3em;
+.card-container.active .ccard:first-child {
+  background: #f2f2f2;
+  margin: 0 15px;
 }
-.contact-form h1{
-    font-size: 2.5rem;
+.card-container.active .ccard:nth-child(2) {
+  background: #fafafa;
+  margin: 0 10px;
 }
-#contactus input{
-    padding: 0.2em;
-    border: none;
-    border-bottom: 1px solid rgb(165, 165, 165);
+.card-container .ccard {
+  position: relative;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 60px 0 40px 0;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.3s ease;
+  /* Title */
+  /* Inputs */
+  /* Button */
+  /* Footer */
+  /* Alt Card */
 }
-#contactus > *{
-    margin-top: 1em;
+.card-container .ccard:first-child {
+  background: #fafafa;
+  height: 10px;
+  border-radius: 5px 5px 0 0;
+  margin: 0 10px;
+  padding: 0;
+}
+.card-container .ccard .title {
+  position: relative;
+  z-index: 1;
+  border-left: 5px solid #3520eb;
+  margin: 0 0 35px;
+  padding: 10px 0 10px 50px;
+  color: #3520eb;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.card-container .ccard .input-container {
+  position: relative;
+  margin: 0 60px 50px;
+}
+.card-container .ccard .input-container input {
+  outline: none;
+  z-index: 1;
+  position: relative;
+  background: none;
+  width: 100%;
+  height: 60px;
+  border: 0;
+  color: #212121;
+  font-size: 24px;
+  font-weight: 400;
+}
+.card-container .ccard .input-container input:focus ~ label {
+  color: #9d9d9d;
+  transform: translate(-12%, -50%) scale(0.75);
+}
+.card-container .ccard .input-container input:focus ~ .bar:before,
+.card-container .ccard .input-container input:focus ~ .bar:after {
+  width: 50%;
+}
+.card-container .ccard .input-container input:valid ~ label {
+  color: #9d9d9d;
+  transform: translate(-12%, -50%) scale(0.75);
+}
+.card-container .ccard .input-container label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #757575;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 60px;
+  transition: 0.2s ease;
+}
+.card-container .ccard .input-container .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #757575;
+  width: 100%;
+  height: 1px;
+}
+.card-container .ccard .input-container .bar:before,
+.card-container .ccard .input-container .bar:after {
+  content: "";
+  position: absolute;
+  background: #3520eb;
+  width: 0;
+  height: 2px;
+  transition: 0.2s ease;
+}
+.card-container .ccard .input-container .bar:before {
+  left: 50%;
+}
+.card-container .ccard .input-container .bar:after {
+  right: 50%;
+}
+.card-container .ccard .button-container {
+  margin: 0 60px;
+  text-align: center;
+}
+.card-container .ccard .button-container button {
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: 0;
+  width: 240px;
+  border: 2px solid #e3e3e3;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.card-container .ccard .button-container button span {
+  position: relative;
+  z-index: 1;
+  color: #ddd;
+  transition: 0.3s ease;
+}
+.card-container .ccard .button-container button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  background: #3520eb;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: -15px 0 0 -15px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.card-container .ccard .button-container button:hover,
+.card-container .ccard .button-container button:active,
+.card-container .ccard .button-container button:focus {
+  border-color: #3520eb;
+}
+.card-container .ccard .button-container button:hover span,
+.card-container .ccard .button-container button:active span,
+.card-container .ccard .button-container button:focus span {
+  color: #3520eb;
+}
+.card-container .ccard .button-container button:active span,
+.card-container .ccard .button-container button:focus span {
+  color: #ffffff;
+}
+.card-container .ccard .button-container button:active:before,
+.card-container .ccard .button-container button:focus:before {
+  opacity: 1;
+  transform: scale(10);
+}
+.card-container .ccard .footer {
+  margin: 40px 0 0;
+  color: #d3d3d3;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+.card-container .ccard .footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.card-container .ccard .footer a:hover {
+  color: #bababa;
+}
+.card-container .ccard.alt {
+  position: absolute;
+  top: 40px;
+  right: -70px;
+  z-index: 10;
+  width: 140px;
+  height: 140px;
+  background: none;
+  border-radius: 100%;
+  box-shadow: none;
+  padding: 0;
+  transition: 0.3s ease;
+  /* Title */
+  /* Input */
+  /* Button */
+}
+.card-container .ccard.alt .title,
+.card-container .ccard.alt .input-container,
+.card-container .ccard.alt .button-container {
+  left: 100px;
+  opacity: 0;
+  visibility: hidden;
+}
+.card-container .ccard.alt .title {
+  position: relative;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.card-container .ccard.alt .title .close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 60px;
+  display: inline;
+  color: #ffffff;
+  font-size: 58px;
+  font-weight: 400;
+}
+.card-container .ccard.alt .title .close:before {
+  content: "×";
+}
+.card-container .ccard.alt .input-container input {
+  color: #ffffff;
+}
+.card-container .ccard.alt .input-container input:focus ~ label {
+  color: #ffffff;
+}
+.card-container .ccard.alt .input-container input:focus ~ .bar:before,
+.card-container .ccard.alt .input-container input:focus ~ .bar:after {
+  background: #ffffff;
+}
+.card-container .ccard.alt .input-container input:valid ~ label {
+  color: #ffffff;
+}
+.card-container .ccard.alt .input-container label {
+  color: rgba(255, 255, 255, 0.8);
+}
+.card-container .ccard.alt .input-container .bar {
+  background: rgba(255, 255, 255, 0.8);
+}
+.card-container .ccard.alt .button-container button {
+  width: 100%;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.card-container .ccard.alt .button-container button span {
+  color: #3520eb;
+}
+.card-container .ccard.alt .button-container button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+.card-container .ccard.alt .button-container button:active:before,
+.card-container .ccard.alt .button-container button:focus:before {
+  display: none;
 }
 
-#contactus textarea{
-    padding: 0.2em;
-    /* border-radius: 5px; */
-    margin-top: 2em;
-    border: 1px solid rgb(202, 202, 202);
+@-webkit-keyframes buttonFadeInUp {
+  0% {
+    bottom: 30px;
+    opacity: 0;
+  }
+}
+
+@keyframes buttonFadeInUp {
+  0% {
+    bottom: 30px;
+    opacity: 0;
+  }
+}
+
+.card-container .ccard .input-container textarea {
+    outline: none;
+    padding-top:0.5em;
+    z-index: 1;
+    position: relative;
+    background: none;
     width: 100%;
+    border:0;
+    color: #212121;
+    font-size: 24px;
     resize: none;
-}
-#contactus textarea::placeholder{
-    color: rgb(202, 202, 202);
-}
-#contactus label{
-    font-size: 1rem;
-    margin-top: 1em;
-}
+    font-weight: 400;
+  }
+  textarea::-webkit-scrollbar{
+      display: none;
+  }
 
-#contactus button{
-    width: 40%;
-    padding: 0.4em 0;
-    border-radius: 50px;
-    border: none;
-    background: #4854ff;
-    color: white;
-}
+  .card-container .ccard .input-container textarea:focus ~ label {
+    color: #9d9d9d;
+    transform: translate(-12%, -50%) scale(0.75);
+  }
+  .card-container .ccard .input-container textarea:focus ~ .bar:before,
+  .card-container .ccard .input-container textarea:focus ~ .bar:after {
+    width: 50%;
+  }
+  .card-container .ccard .input-container textarea:valid ~ label {
+    color: #9d9d9d;
+    transform: translate(-12%, -50%) scale(0.75);
+  }
