@@ -60,7 +60,7 @@ body {
   margin-top: 0.5rem;
   background-color: white;
   border-radius: 15px;
-  padding-top: 9px;
+  padding-top: 0px;
   padding-right: 9px;
   padding-left: 9px;
 }
@@ -110,7 +110,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 42px;
 }
 
@@ -130,14 +130,14 @@ body {
 }
 .card .details-bar .text_ico .text .game-numbers .dwns{
   align-self: right;
-  transform: translate(40%,0%);  
+  transform: translate(50%,0%);  
 }
 .card .details-bar .text_ico .text .game-numbers .size{
   float:right;
   transform: translate(80%,0%); 
 }
 .card .details-bar .text_ico .text .game-numbers p{
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 .card .details-bar .text_ico .text .game-numbers .star{
   filter:brightness(10%);
@@ -150,8 +150,8 @@ body {
 .card .details-bar .text_ico .game-ico {
   background: #9873ff;
   border-radius: 15px;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   -webkit-box-flex: 0;
   -ms-flex: none;
   flex: none;
@@ -160,7 +160,7 @@ body {
   order: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  margin: 0px 20px;
+  margin: 7px 20px;
 }
 
 .card .details-bar .more {
@@ -223,12 +223,13 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 70px;
+  height: 59px;
 }
 
 .card .btns .btn {
   width: 50%;
   height: 50px;
+  font-size: 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,10 +362,10 @@ a {
 }
 .form{
   padding: 5% 5% 2% 10%;
-  border-radius: 10px;
+  border-radius: 5px;
   color: black;
   font-weight: 500;
-  width: 96%;
+  width: 85%;
   position: absolute;
   top:50%;
   left: 50%;
@@ -374,8 +375,8 @@ a {
   position: relative;
 }
 .__heading{
-  font-size: 1.8rem;
-  font-weight: 450;
+  font-size: 2rem;
+  font-weight: 350;
   grid-column-start: 1;
   grid-column-end: 3;
   margin-bottom: 0.5em;
@@ -468,16 +469,16 @@ a {
   content: '×';
   color: black;
   float:right;
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 400;
   font-family: Arial, sans-serif;
   margin-top: -2%;
   z-index: 5;
 }
 .share-logo1{
   border-radius: 50%;
-  margin-top: 60%;
-  margin-left: 20%;
+  margin-top: 63%;
+  margin-left: 15%;
   height: 75%;
   width:75%;    
   grid-area: a;
@@ -485,8 +486,8 @@ a {
 }
 .share-logo2{
   border-radius: 50%;
-  margin-top: 60%;
-  margin-left: 20%;
+  margin-top: 63%;
+  margin-left: 17%;
   height: 75%;
   width: 75%;
   grid-area: b;
@@ -494,7 +495,7 @@ a {
 }
 .share-logo3{
   border-radius: 50%;
-  margin-top: 60%;
+  margin-top: 63%;
   margin-left: 20%;
   height: 75%;
   width: 75%;
@@ -510,11 +511,11 @@ a {
   justify-content: space-between;
 }
 .foot-link{
-  padding-top:5%;
+  padding-top:7%;
   border-radius: 10px;
   width:100%;
   grid-area:d;
-  margin-bottom: 5%;
+  margin-bottom: 7%;
 }
 .copy-link{
   border:1px solid gray;
