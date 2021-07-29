@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gimizo | About Us</title>
-    <link rel="stylesheet" href="../static/css/menu.css">
-    <link rel="stylesheet" href="../static/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gimizo | About Us</title>
+  <link rel="stylesheet" href="../static/css/menu.css">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
+
 <body>
-    <div class="coinainter">
-        <h1>about us</h1>
-         <!-- Menu Button -->
+  <div class="coinainter">
+    <h1>about us</h1>
+    <!-- Menu Button -->
     <div class="menu-btn">
-        <div class="line"></div>
-        <div class="line center-line"></div>
-        <div class="line"></div>
-      </div>
-      <!-- Side Menu -->
-      <div class="form-Backdrop" id="nav-menu" style="display: none;">
-        <div id="menu">
-          <div class="menu-content">
-            <div class="top-bar">
-              <div class="menu-btn">
-                <div class="line"></div>
-                <div class="line"></div>
-              </div>
-            </div>
-            <ul>
-              <li class="menu-link"><a href="./index.html">Home</a></li>
-              <li class="menu-link"><a href="./contact.html">Contact Us</a></li>
-              <li class="menu-link selected"><a href="./About-us.html">About Us</a></li>
-            </ul>
-            <div class="extra-links">
-              <a href="./privacy-policy.html">Privacy Policy</a>
-              <br>
-              <a href="./terms.html">Terms & conditions</a>
+      <div class="line"></div>
+      <div class="line center-line"></div>
+      <div class="line"></div>
+    </div>
+    <!-- Side Menu -->
+    <div class="form-Backdrop" id="nav-menu" style="display: none;">
+      <div id="menu">
+        <div class="menu-content">
+          <div class="top-bar">
+            <div class="menu-btn">
+              <div class="line"></div>
+              <div class="line"></div>
             </div>
           </div>
+          <ul>
+            <li class="menu-link"><a href="index.html">Home</a></li>
+            <li class="menu-link"><a href="contact.html">Contact Us</a></li>
+            <li class="menu-link selected"><a href="About-us.html">About Us</a></li>
+          </ul>
+          <div class="extra-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <br>
+            <a href="terms.html">Terms & conditions</a>
+          </div>
         </div>
-        <script>
-          var menu = document.querySelector("#menu")
-          var cointainer = document.querySelector(".cointainer")
-          window.addEventListener("load", () => {
-            let widthNow = cointainer.clientWidth
-            menu.setAttribute("style", `width:${widthNow}px;`)
-          })
-          window.addEventListener("resize", () => {
-            let widthNow = cointainer.clientWidth
-            menu.setAttribute("style", `width:${widthNow}px;`)
-          })
-        </script>
       </div>
-      <!-- End of Side Menu -->
+      <script>
+        var menu = document.querySelector("#menu")
+        var cointainer = document.querySelector(".cointainer")
+        window.addEventListener("load", () => {
+          let widthNow = cointainer.clientWidth
+          menu.setAttribute("style", `width:${widthNow}px;`)
+        })
+        window.addEventListener("resize", () => {
+          let widthNow = cointainer.clientWidth
+          menu.setAttribute("style", `width:${widthNow}px;`)
+        })
+      </script>
     </div>
-    <script src="../static/js/app.js"></script>
+    <!-- End of Side Menu -->
+  </div>
+  <script src="../static/js/app.js"></script>
 </body>
+
 </html>

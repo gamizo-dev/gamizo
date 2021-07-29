@@ -32,14 +32,14 @@
             </div>
           </div>
           <ul>
-            <li class="menu-link"><a href="./index.html">Home</a></li>
-            <li class="menu-link selected"><a href="./contact.html">Contact Us</a></li>
-            <li class="menu-link"><a href="./About-us.html">About Us</a></li>
+            <li class="menu-link"><a href="index.html">Home</a></li>
+            <li class="menu-link selected"><a href="contact.html">Contact Us</a></li>
+            <li class="menu-link"><a href="About-us.html">About Us</a></li>
           </ul>
           <div class="extra-links">
-            <a href="./privacy-policy.html">Privacy Policy</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
             <br>
-            <a href="./terms.html">Terms & conditions</a>
+            <a href="terms.html">Terms & conditions</a>
           </div>
         </div>
       </div>
@@ -57,13 +57,13 @@
       </script>
     </div>
     <!-- End of Side Menu -->
-    <div class="bg-grad-contact">  
+    <div class="bg-grad-contact">
     </div>
     <div class="card-container">
       <div class="ccard" style="visibility: hidden;"></div>
       <div class="ccard">
         <h1 class="title">Drop us a line</h1>
-        <form  name="submit-to-google-sheet">
+        <form name="submit-to-google-sheet">
           <div class="input-container">
             <input name="name" type="#{type}" id="name" required="required" />
             <label for="#{label}">Name</label>
@@ -97,26 +97,26 @@
       </div>
     </div>
   </div>
-  </body>
-  <!-- integrated JS -->
-  <script src="../static/js/app.js"></script>
-  <script>
-    document.getElementById('date').value = Date();
+</body>
+<!-- integrated JS -->
+<script src="../static/js/app.js"></script>
+<script>
+  document.getElementById('date').value = Date();
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyiyu0ym4ztP7hiWf00sehcwSvJGPp9ZoR8q7cJ2bRz52xmCLFVfbZdqvU4eY5gbzmd7g/exec'
-    const form = document.forms['submit-to-google-sheet']
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyiyu0ym4ztP7hiWf00sehcwSvJGPp9ZoR8q7cJ2bRz52xmCLFVfbZdqvU4eY5gbzmd7g/exec'
+  const form = document.forms['submit-to-google-sheet']
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => alert('Form submitted Succesfully'),
-      ).catch(error => console.error('Error!', error.message))
-      document.getElementById('name').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('message').value = '';
-    })
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => alert('Form submitted Succesfully'),
+    ).catch(error => console.error('Error!', error.message))
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+  })
 
-  </script>
+</script>
 </body>
 
 </html>
