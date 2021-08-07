@@ -11,11 +11,13 @@
 //     line[i].classList.toggle("menu-open");
 //   }
 // });
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 var menuBtn = document.querySelector(".menu-btn");
 var sideMenu = document.querySelector("#nav-menu");
 var crossBtn = document.querySelector("#nav-menu .menu-btn")
-
+// var show=true;
+// var i=0;
 menuBtn.addEventListener('click', () =>{
   sideMenu.setAttribute("style","display:block;")
 })
@@ -23,3 +25,9 @@ menuBtn.addEventListener('click', () =>{
 crossBtn.addEventListener('click', () => {
   sideMenu.setAttribute("style", "display:none;")
 })
+
+// document.addEventListener('click', () => {
+//   if(show!=true && sideMenu.style.display=="block"){
+//   sideMenu.setAttribute("style","display:none;")
+// }
+// })
