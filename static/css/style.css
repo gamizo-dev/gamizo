@@ -47,6 +47,12 @@ body {
   flex-direction: column;
   z-index: 5;
 }
+.menu-content{
+  z-index: 5;
+}
+#nav-menu .menu-btn{
+  z-index:10;
+}
 
 .menu-btn .line {
   background-color: var(--light);

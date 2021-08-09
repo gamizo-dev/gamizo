@@ -61,17 +61,17 @@
       </div>
     </div>
     <!-- Menu Button -->
-    <div class="menu-btn">
+    <div class="menu-btn" onclick="open_menu();">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
     </div>
     <!-- Side Menu -->
     <div class="form-Backdrop" id="nav-menu" style="display: none">
-      <div id="menu">
-        <div class="menu-content">
+      <div id="menu" onclick="close_menu();z=0;">
+        <div class="menu-content" onclick="open_menu();z=1;">
           <div class="top-bar">
-            <div class="menu-btn">
+            <div class="menu-btn" onclick="z=0;close_menu();">
               <div class="line"></div>
               <div class="line"></div>
             </div>
