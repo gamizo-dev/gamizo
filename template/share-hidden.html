@@ -2,18 +2,24 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="HandheldFriendly" content="true">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta charset="UTF-8" />
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <meta name="keywords" content="Gimizo ,Gamizo,  Games,  Phone games ,  ,  Android games ,  Play store games,  Mobile games  ,  Best android games ,  Best Play store games,  Best mobile games ,  
+  Gameplay ,Hyper causal games ,  Time pass games ,  Games like,  Action games,  Adventure games ,  Card games ,  Simulation games ,  Casual games ,  Board games ,  Casino games ,  Puzzle games ,  Racing games ,  Sports games ,  Strategy games ,  Explore games ,  Discover games,  Car games,  Free games ,  Shooting games ,  Fighting games ,  New games ,  Car racing games,
+  Bike games ,  Fun games ,  Best games,  Gemezo,  Gemizo,  Gimezo,  Mobile games android" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Love playing mobile games ? Discover Play Store games through Gimizo, watch short
+    gameplay videos and download the game you like." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -23,258 +29,326 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="\static/asset/ico/gamizoLogo.png">
+  <link rel="shortcut icon" href="\static/asset/ico/logo1.png" />
+  <link rel="icon" href="\static/asset/ico/logo1.png" />
   <link rel="stylesheet" href="../static/css/style.css" />
-  <link rel="stylesheet" href="../static/css/menu.css">
-  <title>Gimizo</title>
+  <link rel="stylesheet" href="../static/css/menu.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTHLDGE8L2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-ZTHLDGE8L2");
+  </script>
+
+  <title>Gimizo: Discover best Play Store games</title>
 </head>
 
-<body onclick="HideContent();HideReportfrm();HideSharefrm();" style="cursor: pointer; -webkit-tap-highlight-color: transparent;" class="body">
-    <div class="cointainer">
-      <!-- Background Gradient -->
-      <div class="bg-grad"></div>
-      <!-- Side Menu -->
-      <div class="form-Backdrop" id="nav-menu" style="display: none;">
-        <div id="menu">
-            <div class="menu-content">
-                <div class="top-bar">
-                    <div class="menu-btn">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-                </div>
-                <ul>
-                    <li class="menu-link selected"><a href="#">Home</a></li>
-                    <li class="menu-link"><a href="#">Contact Us</a></li>
-                    <li class="menu-link"><a href="#">About Us</a></li>
-                </ul>
-                <div class="extra-links">
-                    <a href="#">Privacy Policy</a>
-                    <br>
-                    <a href="#">Terms & conditions</a>
-                </div>
-            </div>
-        </div>
-        <script>
-            var menu = document.querySelector("#menu")
-            var cointainer = document.querySelector(".cointainer")
-            window.addEventListener("load", () => {
-                let widthNow = cointainer.clientWidth
-                menu.setAttribute("style", `width:${widthNow}px;`)
-            })
-            window.addEventListener("resize", () => {
-                let widthNow = cointainer.clientWidth
-                menu.setAttribute("style", `width:${widthNow}px;`)
-            })
-        </script>
+<body onclick="HideContent();HideReportfrm();HideSharefrm();"
+  style="cursor: pointer; -webkit-tap-highlight-color: transparent" class="body">
+  <div class="cointainer for__color">
+    <!-- Background Gradient -->
+    <div class="bg-grad">
+      <div class="main-bg"></div>
+      <div class="wave">
+        <svg width="414" height="49" viewBox="0 0 414 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 31.6447L13.8 35.6003C27.6 39.5559 55.2 47.4671 82.8 48.7774C110.4 50.1866 138 44.7476 165.6 36.9106C193.2 28.9253 220.8 18.5418 248.4 14.5121C276 10.6307 303.6 13.1029 331.2 17.1327C358.8 21.0141 386.4 26.453 400.2 28.9994L414 31.6447V0H400.2C386.4 0 358.8 0 331.2 0C303.6 0 276 0 248.4 0C220.8 0 193.2 0 165.6 0C138 0 110.4 0 82.8 0C55.2 0 27.6 0 13.8 0H0V31.6447Z" fill="#051638"/>
+          </svg>
+      </div>
     </div>
-      <!-- End of Side Menu -->
-      <!--Report form-->
-      <div class="form-Backdrop cointainer" id="reportfrm" style="display:none;">
-        <div class="form" onclick="j=1;">
-          <h2 class="__heading">Report Video</h2>
-          <form action="/report" method="POST" class="__report" id="report">
-            <input type="radio" id="1" name="report" value="FakeGamePlay" />
-            <label for="1" class="check">Fake Gameplay</label>
-            <input type="radio" id="2" name="report" value="PoorQuality" />
-            <label for="2" class="check">Poor Quality</label>
-            <input type="radio" id="3" name="report" value="InappropiateLink" />
-            <label for="3" class="check">Inappropiate Link</label>
-            <input type="radio" id="4" name="report" value="VideoLaging" />
-            <label for="4" class="check">Video laging</label>
-            <input type="radio" id="5" name="report" value="Others" />
-            <label for="5" class="check">Others</label>
-            <hr>
-            <div class="__btns">
-              <input type="hidden" id="repname" name="gamename">
-              <input type="hidden" id="repname2" name="category">
-              <button value="Cancel" class="reporting cancel" id="cancelbtn" onclick="HideReportfrm();" >Cancel</button>
-              <input type="submit" value="Report" class="reporting report-submit" />
+    <!-- Menu Button -->
+    <div class="menu-btn">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <!-- Side Menu -->
+    <div class="form-Backdrop" id="nav-menu" style="display: none">
+      <div id="menu">
+        <div class="menu-content">
+          <div class="top-bar">
+            <div class="menu-btn">
+              <div class="line"></div>
+              <div class="line"></div>
             </div>
-          </form>
+          </div>
+          <ul>
+            <li class="menu-link selected"><a href="index.html">Home</a></li>
+            <li class="menu-link"><a href="/contact">Contact Us</a></li>
+            <li class="menu-link"><a href="/about">About Us</a></li>
+          </ul>
+          
+          <div class="extra-links">
+            <div class="google_signin">
+              <div id="my-signin2"></div>
+                        <script>
+              function onSuccess(googleUser) {
+                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+              }
+              function onFailure(error) {
+                console.log(error);
+              }
+              function renderButton() {
+                gapi.signin2.render('my-signin2', {
+                  'scope': 'profile email',
+                  'width': 240,
+                  'height': 50,
+                  'longtitle': true,
+                  'theme': 'dark',
+                  'onsuccess': onSuccess,
+                  'onfailure': onFailure
+                });
+              }
+                        </script>
+            </div>
+            <a href="/privacy">Privacy Policy</a>
+            
+            <a href="/terms">Terms & conditions</a>
+          </div>
         </div>
       </div>
-      <!--Share form-->
-      
-      <section class="form-Backdrop cointainer" id="sharefrm" style="display:none;">
-        <div class="form" onclick="k=1;">
-          <div class="tag-remove" id="closebtn" onclick="k=0;HideSharefrm();"></div>
-          <h2 class="__heading">Share Video Via</h2>
-          <form class="__share" id="share">
-            <a id="whatsappshare" 
-            -action="share/whatsapp/share" target="_blank">
-            <img class ="share-logo1"  id="whatsapp" src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=s180-rw" alt="Img"></a>
-            <a id="telegramshare" 
-            target="_blank">
-            <img class ="share-logo2" id="telegram" src="https://play-lh.googleusercontent.com/ZU9cSsyIJZo6Oy7HTHiEPwZg0m2Crep-d5ZrfajqtsH-qgUXSqKpNA2FpPDTn-7qA5Q=s180-rw" alt="Img"></a>
-            <a id="facebookshare" target="_blank"
-           
-            >
-            <img class ="share-logo3" id="facebook"src="https://play-lh.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s180-rw" alt="Img"></a>
-            <div class="logo-names">
+      <script>
+        var menu = document.querySelector("#menu");
+        var cointainer = document.querySelector(".cointainer");
+        window.addEventListener("load", () => {
+          let widthNow = cointainer.clientWidth;
+          menu.setAttribute("style", `width:${widthNow}px;`);
+        });
+        window.addEventListener("resize", () => {
+          let widthNow = cointainer.clientWidth;
+          menu.setAttribute("style", `width:${widthNow}px;`);
+        });
+      </script>
+    </div>
+    <!-- End of Side Menu -->
+    <!--Report form-->
+    <div class="form-Backdrop cointainer" id="reportfrm" style="display: none">
+      <div class="form" onclick="j=1;">
+        <h2 class="__heading">Report Video</h2>
+        <form action="/report" method="POST" class="__report" id="report">
+          <input type="radio" id="1" name="report" value="FakeGamePlay" />
+          <label for="1" class="check">Fake Gameplay</label>
+          <input type="radio" id="2" name="report" value="PoorQuality" />
+          <label for="2" class="check">Poor Quality</label>
+          <input type="radio" id="3" name="report" value="InappropiateLink" />
+          <label for="2" class="check">Inappropiate Link</label>
+          <input type="radio" id="4" name="report" value="VideoLaging" />
+          <label for="4" class="check">Video laging</label>
+          <input type="radio" id="5" name="report" value="Others" />
+          <label for="5" class="check">Others</label>
+          <hr />
+          <div class="__btns">
+            <input type="hidden" id="repname" name="gamename" />
+            <input type="hidden" id="repname2" name="category" />
+            <button value="Cancel" class="reporting cancel" id="cancelbtn" onclick="HideReportfrm();">
+              Cancel
+            </button>
+            <input type="submit" value="Report" class="reporting report-submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Share form-->
+
+    <section class="form-Backdrop cointainer" id="sharefrm" style="display: none">
+      <div class="form" onclick="k=1;">
+        <div class="tag-remove" id="closebtn" onclick="k=0;HideSharefrm();"></div>
+        <h2 class="__heading">Share Video</h2>
+        <form class="__share" id="share">
+          <a id="whatsappshare" -action="share/whatsapp/share" target="_blank">
+            <img class="share-logo1" id="whatsapp"
+              src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=s180-rw"
+              alt="Img" /></a>
+          <a id="telegramshare" target="_blank">
+            <img class="share-logo2" id="telegram"
+              src="https://play-lh.googleusercontent.com/ZU9cSsyIJZo6Oy7HTHiEPwZg0m2Crep-d5ZrfajqtsH-qgUXSqKpNA2FpPDTn-7qA5Q=s180-rw"
+              alt="Img" /></a>
+          <a id="facebookshare" target="_blank">
+            <img class="share-logo3" id="facebook"
+              src="https://play-lh.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s180-rw"
+              alt="Img" /></a>
+          <div class="logo-names">
             <label for="whatsapp" class="logo-name1">Whatsapp</label>
             <label for="telegram" class="logo-name2">Telegram</label>
-            <label for="facebook" class ="logo-name3">Facebook</label>
-            </div>
-            <div class="foot-link">
+            <label for="facebook" class="logo-name3">Facebook</label>
+          </div>
+          <div class="foot-link">
             <div class="copy-link">
-              <input type="text"  class="copy-text" id="shareval" readonly>
-              <div class="copy-btn" onclick="clipboard();copyToClipboard();">Copy</div>
-            </div>
-            </div>
-          </form>
-        </div>
-      </section>
-      <!-- Menu Button -->
-      <div class="menu-btn">
-        <div class="line"></div>
-        <div class="line center-line"></div>
-        <div class="line"></div>
-      </div>
-      <!-- logo -->
-      <div class="logo-bg">
-        <div class="logo">
-          <div class="css-1u8s3kb"><div style="transform: scale(1);"><svg width="auto" height="76.41182029501859" viewBox="0 0 307 76.41182029501859" class="css-1j8o68f"><defs id="SvgjsDefs1001"></defs><g id="SvgjsG1007" featurekey="symbolFeature-0" transform="matrix(1.0010645000108624,0,0,1.0010645000108624,-5.337951597836242,-11.774451040806742)" fill="#050505"><path xmlns="http://www.w3.org/2000/svg" d="M48.1534348,11.7619305H16.4500141c-6.1412687,0-11.1177387,4.9762363-11.1177387,11.117506v31.7050896  c0,6.1412697,4.97647,11.1209183,11.1177387,11.1209183h31.7034206c6.1408806,0,11.1209221-4.9796486,11.1209221-11.1209183  V22.8794365C59.2743568,16.7381668,54.2943153,11.7619305,48.1534348,11.7619305z"></path><path xmlns="http://www.w3.org/2000/svg" d="M88.5045242,33.0447998H69.3097229c-3.7171402,0-6.735157,3.0149879-6.735157,6.7286339V58.970253  c0,3.7202072,3.0180168,6.7351913,6.735157,6.7351913h19.1948013c3.7205505,0,6.732048-3.0149841,6.732048-6.7351913V39.7734337  C95.2365723,36.0597878,92.2250748,33.0447998,88.5045242,33.0447998z"></path><path xmlns="http://www.w3.org/2000/svg" d="M77.1422272,69.7399445H66.3590775c-2.0880737,0-3.7845116,1.6946945-3.7845116,3.7879639V84.307991  c0,2.0894699,1.6964378,3.7845078,3.7845116,3.7845078h10.7831497c2.089859,0,3.7831879-1.6950378,3.7831879-3.7845078V73.5279083  C80.925415,71.434639,79.2320862,69.7399445,77.1422272,69.7399445z"></path><path xmlns="http://www.w3.org/2000/svg" d="M56.8350182,69.7399445h-6.9482002c-1.3468742,0-2.4389496,1.0938187-2.4389496,2.4375916v6.9547577  c0,1.343811,1.0920753,2.4376297,2.4389496,2.4376297h6.9482002c1.3485832,0,2.4393387-1.0938187,2.4393387-2.4376297V72.177536  C59.2743568,70.8337631,58.1836014,69.7399445,56.8350182,69.7399445z"></path></g><g id="SvgjsG1008" featurekey="nameLeftFeature-0" transform="matrix(2.3721480013528295,0,0,2.3721480013528295,108.47088376751694,8.278421578308578)" fill="#050505"><path d="M11.836 20 l0 -2.5391 q-0.60546875 1.064453125 -1.181640625 1.5625 t-1.3037 0.80078 t-1.9482 0.29297 q-0.60546875 -0.009765625 -1.2109375 -0.1416015625 t-1.1719 -0.37109 t-1.1084 -0.57617 t-0.98145 -0.77637 q-1.083984375 -1.09375 -1.684570313 -2.534179688 t-0.60059 -3.1396 q0 -1.044921875 0.25390625 -2.021484375 t0.71289 -1.8262 t1.1084 -1.5479 t1.4453 -1.1963 t1.7139 -0.77148 t1.9238 -0.27344 q1.15234375 0 2.001953125 0.3076171875 t1.8262 1.1475 l2.1875 0 l0 3.3008 l-3.0176 0 q-0.44921875 -0.693359375 -0.8447265625 -1.005859375 t-0.85938 -0.51758 t-1.2939 -0.20508 q-0.8203125 0 -1.5234375 0.37109375 t-1.2158 1.001 t-0.80566 1.4844 t-0.29297 1.7529 q0 0.888671875 0.263671875 1.689453125 t0.80078 1.4404 t1.25 0.98145 t1.5234 0.3418 q1.03515625 0 1.806640625 -0.60546875 t1.1133 -1.6504 l-2.8223 0 l0 -2.6758 l6.8555 0 l0 7.9004 l-2.9199 0 z M17.0800625 5.195 l6.3379 0 l0 2.6758 l-1.5625 0 l0 9.4531 l1.5625 0 l0 2.6758 l-6.3379 0 l0 -2.6758 l1.5332 0 l0 -9.4531 l-1.5332 0 l0 -2.6758 z M24.99021875 17.3242 l1.377 0 l0 -9.4434 l-1.377 0 l0 -2.6855 l6.0938 0 l4.3652 10.684 l4.0527 -10.684 l6.1816 0 l0 2.6855 l-1.377 0 l0 9.4434 l1.3574 0 l0 2.6758 l-5.5371 0 l0 -2.6758 l1.0156 0 l0 -8.5156 l-4.4336 11.016 l-2.7441 0 l-4.5117 -10.723 l0 8.2227 l1.1035 0 l0 2.6758 l-5.5664 0 l0 -2.6758 z M47.890609375 5.195 l6.3379 0 l0 2.6758 l-1.5625 0 l0 9.4531 l1.5625 0 l0 2.6758 l-6.3379 0 l0 -2.6758 l1.5332 0 l0 -9.4531 l-1.5332 0 l0 -2.6758 z M66.552265625 8.262 l-7.373 8.8379 l4.1797 0 l0 -2.2949 l3.1738 0 l0 5.1953 l-11.24 0 l0 -3.0566 l7.1973 -8.8477 l-3.9941 0 l0 2.3438 l-3.1836 0 l0 -5.2441 l11.24 0 l0 3.0664 z"></path></g><g id="SvgjsG1009" featurekey="inlineSymbolFeature-0" transform="matrix(1.8620047937253812,0,0,1.8620047937253812,259.2079233003939,8.207923300393901)" fill="#050505"><path xmlns="http://www.w3.org/2000/svg" d="M16,6.333c-5.331,0-9.667,4.336-9.667,9.667c0,5.33,4.336,9.667,9.667,9.667  c5.33,0,9.667-4.337,9.667-9.667C25.667,10.669,21.33,6.333,16,6.333z M16.547,23.641c-2.721-1.463-4.572-4.334-4.572-7.641  c0-3.305,1.85-6.177,4.571-7.639c3.974,0.282,7.121,3.596,7.121,7.639S20.52,23.355,16.547,23.641z"></path></g><g id="SvgjsG1010" featurekey="nameRightFeature-0" transform="matrix(1,0,0,1,307,38)" fill="#050505"><path d=""></path></g></svg></div></div>
-        </div>
-      </div>
-      <!-- Categroy Selector -->
-      <div class="category-select">
-        <p style="font-size:1rem; padding-bottom:5px">Browse Category:</p>
-        <div class="pg-modal open">
-          <div class="search-bar" onclick="ShowContent();">
-            <input id="changePlaceholder" type="text" readonly/>
-            <img src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v2.png"/>
-          </div>
-          <div class="content">
-            <ul></ul>
-          </div>
-        </div>
-      </div>
-      <div style="display: none;">
-        {%for j in cat%}
-        <a id="{{loop.index}}" class="categorisedClass" href="/{{j}}">{{j}}</a>
-        {%endfor%}
-      </div>
-      <!-- cards-->
-      <div class="cards">
-        <div class="card">
-          <!-- top Details -->
-          <div class="details-bar">
-            <div class="text_ico">
-              <img class="game-ico" src="{{sp.imageLink}}" alt="DP" />
-              <div class="text">
-                <h2>{{sp.name[0:35]}}</h2>
-                <div class="game-numbers">
-                  <div style="display: flex; flex-direction:row;"><p class="rating">{{sp.Rating}}</p>
-                  <div class="star"><img src="\static/asset/ico/Star 1.png" alt=""></div>
-                </div>
-                <div style="display: flex; flex-direction:row;">
-                  <p class="dwns">{{sp.SmallDownloads}}</p>
-                  <div class="dwn-ico"><img src="\static/asset/ico/download-ico.png" alt=""></div>
-                </div>
-                  {% if sp.AppSize+"B" != "Varies with deviceB" %}
-                  <p class="size">{{sp.AppSize+"B"}}</p>
-                  {% endif %}
-                </div>
+              <input type="text" class="copy-text" id="shareval" readonly />
+              <div class="copy-btn" onclick="clipboard();copyToClipboard();">
+                Copy
               </div>
             </div>
-            <button type="button" class="more" id="{{sp.GameName}}" value="{{sp.Category}}" onclick="ShowReportfrm(this.id,this.value);">
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-            </button>
           </div>
-          <div class="game-video">
-            <video id="1video" class="backdrop-video" src="{{sp.videoUrl}}"></video>
-            <video id="video1" class="impvideo" src="{{sp.videoUrl}}"></video>
-            <div class="play-button"></div>
-            <div id="sound"></div>
-          </div>
-          <div class="btns">
-            <a href="{{sp.link}}" target="_blank">
-              <button id="btn" type="submit" value="Install Now" class="btn play-now">
-                <h1>Play Now</h1>
-              </button></a>
-            <a onclick="ShowSharefrm();"> <button id="btn" type="submit" value="Install Now" class="btn share">
-                <h1>Share</h1>
-              </button></a>
-          </div>
-        </div>
-        <div class="cards">
-      <div class="cards">
-        {%for i in list%}
-        <div class="card">
-          <!-- top Details -->
-          <div class="details-bar">
-            <div class="text_ico">
-              <img class="game-ico" src="{{i.imageLink}}" alt="DP" />
-              <div class="text">
-                <h2>{{i.name[0:35]}}</h2>
-                <div class="game-numbers">
-                  <div style="display: flex; flex-direction:row;"><p class="rating">{{i.Rating}}</p>
-                  <div class="star"><img src="\static/asset/ico/Star 1.png" alt=""></div>
-                </div>
-                <div style="display: flex; flex-direction:row;">
-                  <div class="dwn-ico"><img src="\static/asset/ico/download-ico.png" alt="" width="16px" height="16px"></div>
-                  <p class="dwns">{{i.SmallDownloads}}</p>
-                </div>
-                  {% if i.AppSize+"B" != "Varies with deviceB" %}
-                  <p class="size">{{i.AppSize+"B"}}</p>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-            <button type="button" class="more" id="{{i.GameName}}" value="{{i.Category}}" onclick="ShowReportfrm(this.id,this.value);">
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-            </button>
-          </div>
-          <div class="game-video">
-            <video id="{{loop.index}}video" class="backdrop-video" src="{{i.videoUrl}}"></video>
-            <video id="video{{loop.index}}" class="impvideo" src="{{i.videoUrl}}"></video>
-            <div class="play-button"></div>
-            <div id="sound"></div>
-          </div>
-          <div class="btns">
-            <a href="{{i.link}}" target="_blank">
-              <button id="btn" type="submit" value="Install Now" class="btn play-now">
-                <h1>Play Now</h1>
-              </button></a>
-            <a id="https://gimizo.com/share/{{i.Category}}_{{i.doc_number}}_{{i.GameName}}" onclick="ShowSharefrm(this.id);" > <button id="btn" type="submit" class="btn share">
-                <h1>Share</h1>
-              </button></a>
-          </div>
-        </div>
-        {%endfor%}
+        </form>
       </div>
-      <div id="snackbar">Copied to clipboard</div>
+    </section>
+
+    <!-- logo -->
+    <div class="logo-bg">
+      <div class="logo">
+        <div class="css-1u8s3kb">
+          <div style="transform: scale(1)">
+            <svg width="307" height="77" viewBox="0 0 307 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M285 22C275.074 22 267 30.0737 267 40C267 49.9245 275.074 58 285 58C294.924 58 303 49.9245 303 40C303 30.0737 294.924 22 285 22ZM286.019 54.2276C280.952 51.5035 277.505 46.1576 277.505 40C277.505 33.8461 280.95 28.4984 286.017 25.7761C293.416 26.3012 299.276 32.4719 299.276 40C299.276 47.5281 293.416 53.695 286.019 54.2276Z" fill="#F7F7FD"/>
+              <path d="M144.297 33.2186C143.643 32.014 142.696 31.1019 141.457 30.4823C140.252 29.8284 138.824 29.5014 137.172 29.5014C134.315 29.5014 132.026 30.4479 130.305 32.3409C128.584 34.1995 127.724 36.6949 127.724 39.827C127.724 43.1656 128.619 45.7814 130.409 47.6744C132.233 49.533 134.728 50.4623 137.895 50.4623C140.063 50.4623 141.887 49.9116 143.367 48.8102C144.882 47.7088 145.983 46.1256 146.671 44.0605H135.468V37.5553H154.674V45.7642C154.02 47.967 152.901 50.0149 151.318 51.9079C149.769 53.8009 147.79 55.3326 145.381 56.5028C142.971 57.673 140.252 58.2581 137.223 58.2581C133.644 58.2581 130.443 57.4837 127.621 55.9349C124.833 54.3516 122.647 52.166 121.064 49.3781C119.515 46.5902 118.741 43.4065 118.741 39.827C118.741 36.2474 119.515 33.0637 121.064 30.2758C122.647 27.4535 124.833 25.2679 127.621 23.7191C130.409 22.1358 133.592 21.3442 137.172 21.3442C141.509 21.3442 145.157 22.394 148.117 24.4935C151.111 26.593 153.09 29.5014 154.054 33.2186H144.297ZM168.392 21.7572V58H159.564V21.7572H168.392ZM215.834 21.7572V58H207.006V36.2646L198.9 58H191.776L183.618 36.213V58H174.79V21.7572H185.219L195.39 46.8484L205.457 21.7572H215.834ZM231.011 21.7572V58H222.183V21.7572H231.011ZM246.805 50.7721H262.397V58H236.79V51.2884L252.278 28.9851H236.79V21.7572H262.397V28.4688L246.805 50.7721Z" fill="#F7F7FD"/>
+              <path d="M11.0696 1H42.6357C48.1981 1 52.7085 5.50739 52.7085 11.0694V48.2591V52.7099H11.0696C5.50758 52.7099 1 48.1999 1 42.6371V11.0694C1 5.507 5.50718 1 11.0696 1Z" fill="#F7F7FD" stroke="#F7F7FD" stroke-width="2"/>
+              <path d="M63.7004 22.1907H82.812C85.9642 22.1907 88.5149 24.7449 88.5149 27.8902V47.0038C88.5149 50.1563 85.9636 52.7099 82.812 52.7099H57.9944V47.0038V27.8902C57.9944 24.7458 60.5507 22.1907 63.7004 22.1907Z" fill="#F7F7FD" stroke="#F7F7FD" stroke-width="2"/>
+              <path d="M57.9944 58.7268H60.7625V57.7268L60.7626 58.7268H60.7629H60.7634H60.7641H60.765H60.766H60.7673H60.7688H60.7704H60.7723H60.7743H60.7766H60.779H60.7816H60.7844H60.7874H60.7906H60.7939H60.7975H60.8012H60.8051H60.8092H60.8135H60.818H60.8226H60.8275H60.8325H60.8377H60.843H60.8486H60.8543H60.8602H60.8663H60.8726H60.879H60.8856H60.8924H60.8993H60.9064H60.9137H60.9212H60.9288H60.9366H60.9446H60.9528H60.9611H60.9695H60.9782H60.987H60.996H61.0051H61.0144H61.0239H61.0335H61.0433H61.0532H61.0633H61.0736H61.084H61.0946H61.1053H61.1162H61.1273H61.1385H61.1499H61.1614H61.173H61.1849H61.1968H61.209H61.2212H61.2337H61.2462H61.259H61.2718H61.2848H61.298H61.3113H61.3248H61.3384H61.3521H61.366H61.38H61.3942H61.4085H61.4229H61.4375H61.4523H61.4671H61.4821H61.4973H61.5126H61.528H61.5435H61.5592H61.575H61.591H61.607H61.6232H61.6396H61.6561H61.6727H61.6894H61.7063H61.7232H61.7403H61.7576H61.7749H61.7924H61.81H61.8278H61.8456H61.8636H61.8817H61.8999H61.9183H61.9367H61.9553H61.974H61.9928H62.0118H62.0308H62.05H62.0692H62.0886H62.1081H62.1277H62.1475H62.1673H62.1872H62.2073H62.2275H62.2477H62.2681H62.2886H62.3092H62.3299H62.3507H62.3716H62.3926H62.4137H62.435H62.4563H62.4777H62.4992H62.5208H62.5425H62.5644H62.5863H62.6083H62.6304H62.6526H62.6749H62.6973H62.7198H62.7423H62.765H62.7878H62.8106H62.8335H62.8566H62.8797H62.9029H62.9262H62.9496H62.973H62.9966H63.0202H63.0439H63.0677H63.0916H63.1156H63.1396H63.1637H63.1879H63.2122H63.2366H63.261H63.2855H63.3101H63.3348H63.3595H63.3844H63.4092H63.4342H63.4592H63.4844H63.5095H63.5348H63.5601H63.5855H63.6109H63.6365H63.662H63.6877H63.7134H63.7392H63.7651H63.791H63.8169H63.843H63.8691H63.8952H63.9214H63.9477H63.9741H64.0005H64.0269H64.0534H64.08H64.1066H64.1333H64.16H64.1868H64.2136H64.2405H64.2674H64.2944H64.3214H64.3485H64.3757H64.4028H64.4301H64.4573H64.4847H64.512H64.5394H64.5669H64.5944H64.6219H64.6495H64.6771H64.7048H64.7325H64.7602H64.788H64.8158H64.8436H64.8715H64.8994H64.9274H64.9554H64.9834H65.0115H65.0396H65.0677H65.0958H65.124H65.1522H65.1804H65.2087H65.237H65.2653H65.2937H65.322H65.3504H65.3788H65.4073H65.4358H65.4642H65.4927H65.5213H65.5498H65.5784H65.607H65.6356H65.6642H65.6928H65.7215H65.7501H65.7788H65.8075H65.8362H65.8649H65.8937H65.9224H65.9512H65.9799H66.0087H66.0375H66.0663H66.095H66.1238H66.1527H66.1815H66.2103H66.2391H66.2679H66.2967H66.3256H66.3544H66.3832H66.412H66.4408H66.4697H66.4985H66.5273H66.5561H66.5849H66.6137H66.6425H66.6713H66.7H66.7288H66.7576H66.7863H66.8151H66.8438H66.8725H66.9012H66.9299H66.9586H66.9873H67.0159H67.0445H67.0732H67.1018H67.1303H67.1589H67.1875H67.216H67.2445H67.273H67.3014H67.3299H67.3583H67.3867H67.4151H67.4434H67.4717H67.5H67.5283H67.5565H67.5847H67.6129H67.641H67.6692H67.6972H67.7253H67.7533H67.7813H67.8093H67.8372H67.8651H67.8929H67.9207H67.9485H67.9762H68.0039H68.0316H68.0592H68.0868H68.1143H68.1418H68.1693H68.1967H68.224H68.2513H68.2786H68.3058H68.333H68.3601H68.3872H68.4142H68.4412H68.4682H68.495H68.5219H68.5487H68.5754H68.602H68.6287H68.6552H68.6817H68.7082H68.7346H68.7609H68.7872H68.8134H68.8395H68.8656H68.8917H68.9176H68.9435H68.9694H68.9952H69.0209H69.0465H69.0721H69.0976H69.1231H69.1485H69.1738H69.199H69.2242H69.2493H69.2743H69.2993H69.3242H69.349H69.3737H69.3984H69.423H69.4475H69.4719H69.4963H69.5206H69.5448H69.5689H69.5929H69.6169H69.6408H69.6646H69.6883H69.7119H69.7355H69.7589H69.7823H69.8056H69.8288H69.8519H69.8749H69.8978H69.9207H69.9434H69.9661H69.9887H70.0112H70.0335H70.0558H70.078H70.1001H70.1221H70.144H70.1658H70.1876H70.2092H70.2307H70.2521H70.2734H70.2946H70.3157H70.3367H70.3576H70.3784H70.3991H70.4197H70.4402H70.4606H70.4808H70.501H70.5211H70.541H70.5608H70.5806H70.6002H70.6197H70.639H70.6583H70.6775H70.6965H70.7154H70.7342H70.7529H70.7715H70.7899H70.8083H70.8265H70.8446H70.8626H70.8804H70.8981H70.9157H70.9332H70.9506H70.9678H70.9849H71.0019H71.0188H71.0355H71.0521H71.0685H71.0849H71.1011H71.1171H71.1331H71.1489H71.1646H71.1801H71.1955H71.2108H71.2259H71.2409H71.2558H71.2705H71.2851H71.2995H71.3138H71.328H71.342H71.3559H71.3696H71.3832H71.3967H71.41H71.4231H71.4361H71.449H71.4617H71.4743H71.4867H71.499C73.0264 58.7268 74.2658 59.9654 74.2658 61.4984V72.2318C74.2658 73.7604 73.027 74.9999 71.499 74.9999H60.7625C59.2355 74.9999 57.9944 73.7597 57.9944 72.2318V58.7268Z" fill="#2BA84A" stroke="#2BA84A" stroke-width="2"/>
+              <path d="M44.362 58.7268H52.7089V60.1538V67.0785C52.7089 67.8645 52.0702 68.5056 51.2801 68.5056H44.362C43.5733 68.5056 42.9336 67.8643 42.9336 67.0785V60.1538C42.9336 59.3681 43.5733 58.7268 44.362 58.7268Z" fill="#F7F7FD" stroke="#F7F7FD" stroke-width="2"/>
+              </svg>
+              
+          </div>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit, consectetur adipiscing elit. </p>
     </div>
+    <!-- Categroy Selector -->
+    <div class="category-select">
+      <div class="pg-modal open">
+        <div class="search-bar" onclick="ShowContent();">
+          <input id="changePlaceholder" type="text" readonly />
+          <img src="https://img.icons8.com/material-outlined/24/F7F7FD/expand-arrow--v2.png" />
+        </div>
+        <div class="content">
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+    <div style="display: none">
+      {%for j in cat%}
+      <a id="{{loop.index}}" class="categorisedClass" href="/{{j[0]}}">{{j[0]}}</a>
+      {%endfor%}
+    </div>
+    <!-- cards-->
+
+    <div class="cards">
+     <div class="card">
+        <!-- top Details -->
+        <div class="details-bar">
+          <div class="text_ico">
+            <img class="game-ico" src="{{sp[11]}}" alt="DP" />
+            <div class="text">
+              <h2>{{sp[1]}}</h2>
+              <div class="game-numbers">
+                <div style="display: flex; flex-direction: row">
+                  <p class="rating">{{sp[6]}}</p>
+                  <div class="star">
+                    <img src="\static/asset/ico/Star 1.png" alt="" />
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                  <div class="dwn-ico">
+                    <img src="\static/asset/ico/download-ico.png" alt="" width="16px" height="16px" />
+                  </div>
+                  <p class="dwns">{{sp[8]}}</p>
+                </div>
+                {% if sp[4]+"B" != "Varies with deviceB" %}
+                <p class="size">{{sp[4]+"B"}}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <button type="button" class="more" id="{{sp[9]}}" value="{{sp[7]}}"
+            onclick="ShowReportfrm(this.id,this.value);">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </button>
+        </div>
+        <div class="game-video">
+
+          <video id="{{loop.index}}video" class="backdrop-video" src="{{sp[3]}}"></video>
+          <video id="video{{loop.index}}" class="impvideo" src="{{sp[3]}}">
+            <img class="play_btn" src="\static/asset/ico/play_arrow_white_24dp.svg" alt="img">
+          </video>
+          <div class="play-button"></div>
+          <div id="sound"></div>
+        </div>
+        <div class="btns">
+          <a href="{{sp[2]}}" target="_blank">
+            <button id="btn" type="submit" value="Install Now" class="btn play-now">
+              <h1>Play Now</h1>
+            </button></a>
+          <a id="https://gimizo.com/share/{{sp[7]}}_{{sp[9]}}"
+            onclick="ShowSharefrm(this.id);">
+            <button id="btn" type="submit" class="btn share">
+              <h1>Share</h1>
+            </button></a>
+        </div>
+      </div>
+      {%for i in list%}
+      <div class="card">
+        <!-- top Details -->
+        <div class="details-bar">
+          <div class="text_ico">
+            <img class="game-ico" src="{{i[11]}}" alt="DP" />
+            <div class="text">
+              <h2>{{i[1]}}</h2>
+              <div class="game-numbers">
+                <div style="display: flex; flex-direction: row">
+                  <p class="rating">{{i[6]}}</p>
+                  <div class="star">
+                    <img src="\static/asset/ico/Star 1.png" alt="" />
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                  <div class="dwn-ico">
+                    <img src="\static/asset/ico/download-ico.png" alt="" width="16px" height="16px" />
+                  </div>
+                  <p class="dwns">{{i[8]}}</p>
+                </div>
+                {% if i[4]+"B" != "Varies with deviceB" %}
+                <p class="size">{{i[4]+"B"}}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <button type="button" class="more" id="{{i[9]}}" value="{{i[7]}}"
+            onclick="ShowReportfrm(this.id,this.value);">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </button>
+        </div>
+        <div class="game-video">
+
+          <video id="{{loop.index}}video" class="backdrop-video" src="{{i[3]}}"></video>
+          <video id="video{{loop.index}}" class="impvideo" src="{{i[3]}}">
+            <img class="play_btn" src="\static/asset/ico/play_arrow_white_24dp.svg" alt="img">
+          </video>
+          <div class="play-button"></div>
+          <div id="sound"></div>
+        </div>
+        <div class="btns">
+          <a href="{{i[2]}}" target="_blank">
+            <button id="btn" type="submit" value="Install Now" class="btn play-now">
+              <h1>Play Now</h1>
+            </button></a>
+          <a id="https://gimizo.com/share/{{i[7]}}_{{i[9]}}"
+            onclick="ShowSharefrm(this.id);">
+            <button id="btn" type="submit" class="btn share">
+              <h1>Share</h1>
+            </button></a>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+    <div id="snackbar">Copied to clipboard</div>
+  </div>
 </body>
-{#
-<!-- <a href="whatsapp://send?text=https://gimizo.com/share/{{i.Category}}_{{i.GameName}}"
-data-action="share/whatsapp/share" target="_blank" style="color:black;">
-Share to whatsapp
-</a>
-<a href="https://t.me/share/url?url=https://gimizo.com/share/{{i.Category}}_{{i.GameName}}&text=gimizo"
-target="_blank" style="color:black;">
-Share to Telegram
-</a>
-<a target="_blank"
-href="https://www.facebook.com/sharer/sharer.php?u=https://gimizo.com/share/{{i.Category}}_{{i.GameName}}&amp;src=sdkpreparse"
-class="fb-xfbml-parse-ignore" style="color: black;">Share on facebook
-</a>
-<input type="text" value="https://gimizo.com/share/{{i.Category}}_{{i.GameName}}" id="copy{{loop.index}}" style="color: black;">
-<button onclick="myFunction(this.id)" id="{{loop.index}}">Copy text</button> -->
-#}
+
 <script src="\static/js/app.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 <script src="\static/js/video.js"></script>
 <script src="\static/js/share-menu.js"></script>
 <script src="\static/js/dropdown.js"></script>
 <script src="\static/js/video-size.js"></script>
 <script src="\static/js/forms.js"></script>
-
-
 
 <script>
   function work(id) {
@@ -284,11 +358,10 @@ class="fb-xfbml-parse-ignore" style="color: black;">Share on facebook
        `;
 
     //  spantxt.inne='Report';
-
   }
   function myFunction(id) {
     /* Get the text field */
-    var copyText = document.getElementById('copy' + id);
+    var copyText = document.getElementById("copy" + id);
     console.log(id);
     /* Select the text field */
     copyText.select();

@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect
 from boto3 import session
 from boto3.s3.transfer import S3Transfer
 import mysql.connector
-
+from datetime import datetime
 
 ACCESS_ID = '5GFF7YOAHZWTV5VKP7Q6'
 SECRET_KEY = '3mPgnLrUXGhLSb+0JHFElxP0HICyv7LSaEw0hsLWs5c'
@@ -44,7 +44,7 @@ def index():
 
 @app.route('/<string:cat>')
 def index1(cat):
-    cursor.execute('''SELECT * from gamesdata WHERE category=%s''',(cat))
+    cursor.execute('''SELECT * from gamesdata WHERE category=%s''',(cat,))
     result=cursor.fetchall()
 
 
@@ -52,6 +52,34 @@ def index1(cat):
     a=cursor.fetchall()
 
     return render_template('index.html', cat=a,list=result)
+
+@app.route('/share/<string:sharestr>')
+def index1(sharestr):
+    category=''
+    gamename=''
+
+    i=0
+    while sharestr[i]!='_':
+        category=category+sharestr[i]
+        i=i+1
+
+    i=i+1
+    while i<=len(sharestr):
+        gamename=gamename+sharestr[i]
+        i=i+1
+
+    cursor.execute('''SELECT * from gamesdata WHERE category=%s and gamename=%s''',(category,gamename))
+
+    sp=cursor.fetchall()
+
+
+    cursor.execute('''SELECT DISTINCT category from gamesdata''')
+    a=cursor.fetchall()
+
+    cursor.execute('''SELECT * from where category="Popular" ''')
+    result=cursor.fetchall()
+
+    return render_template('share-hidden.html', sp=sp,cat=a,list=result)
 
 
 
@@ -76,29 +104,19 @@ def terms():
 
 @app.route('/report', methods=['GET', 'POST'])
 def report():
-    # if request.method == "POST":
-    #     option = request.form['report']
-    #     gamename = request.form['gamename']
-    #     category = request.form['category']
+    if request.method == "POST":
+        option = request.form['report']
+        gamename = request.form['gamename']
+        category = request.form['category']
+    
+    now = datetime.now()
+    formatted_date = now.strftime('%Y-%m-%d %H:%M:%S')
+    
+    cursor.execute('''INSERT INTO report(Gamename,Issue,reportdate) VALUES(%s,%s,%s)''',
+    (gamename,option,formatted_date))
+    
+    conn.commit()
 
-    # db = firestore.client()
-    # doc_ref = db.collection('Report').document(gamename)
-    # docs = db.collection('Report').document(gamename).get()
-    # doc = docs.to_dict()
-    # if doc:
-    #     num = doc['number']
-    #     nums = int(num)
-    #     nums = nums+1
-    #     doc_ref.update({
-    #         'number': f'{nums}',
-    #         f'{nums}': option
-
-    #     })
-    # else:
-    #     doc_ref.set({
-    #         'number': '1',
-    #         '1': option
-    #     })
 
     return redirect('/')
 
