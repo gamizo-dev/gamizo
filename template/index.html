@@ -241,7 +241,7 @@
     </div>
     <div style="display: none">
       {%for j in cat%}
-      <a id="{{loop.index}}" class="categorisedClass" href="/{{j[{{loop.index}}]}}">{{j[{{loop.index}}]}}</a>
+      <a id="{{loop.index}}" class="categorisedClass" href="/{{j[0]}}">{{j[0]}}</a>
       {%endfor%}
     </div>
     <!-- cards-->
@@ -267,7 +267,7 @@
                   </div>
                   <p class="dwns">{{i[8]}}</p>
                 </div>
-                {% if i.AppSize+"B" != "Varies with deviceB" %}
+                {% if i[4]+"B" != "Varies with deviceB" %}
                 <p class="size">{{i[4]+"B"}}</p>
                 {% endif %}
               </div>
