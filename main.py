@@ -22,7 +22,7 @@ transfer = S3Transfer(client)
 app = Flask(__name__,template_folder='template')
 
 conn = mysql.connector.connect(host='127.0.0.1',
-                              database='gimizogames',
+                              database='gimizo2',
                               user='gimizodata',
                               password='King04@2021!',
                               auth_plugin='mysql_native_password')
@@ -30,12 +30,12 @@ conn = mysql.connector.connect(host='127.0.0.1',
 cursor=conn.cursor()
 @app.route('/')
 def index():
-    cursor.execute('''SELECT * from games WHERE category="Popular"''')
+    cursor.execute('''SELECT * from gamesdata''')
     
     result=cursor.fetchall()
 
     
-    cursor.execute('''SELECT DISTINCT category from games''')
+    cursor.execute('''SELECT DISTINCT category from gamesdata''')
     a=cursor.fetchall()
   
 
@@ -44,11 +44,11 @@ def index():
 
 @app.route('/<string:cat>')
 def index1(cat):
-    cursor.execute('''SELECT * from games WHERE category=%s''',(cat))
+    cursor.execute('''SELECT * from gamesdata WHERE category=%s''',(cat))
     result=cursor.fetchall()
 
 
-    cursor.execute('''SELECT DISTINCT category from games''')
+    cursor.execute('''SELECT DISTINCT category from gamesdata''')
     a=cursor.fetchall()
 
     return render_template('index.html', cat=a,list=result)

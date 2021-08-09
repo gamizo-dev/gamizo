@@ -241,7 +241,7 @@
     </div>
     <div style="display: none">
       {%for j in cat%}
-      <a id="{{loop.index}}" class="categorisedClass" href="/{{j}}">{{j}}</a>
+      <a id="{{loop.index}}" class="categorisedClass" href="/{{j[{{loop.index}}]}}">{{j[{{loop.index}}]}}</a>
       {%endfor%}
     </div>
     <!-- cards-->
