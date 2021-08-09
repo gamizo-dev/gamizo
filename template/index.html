@@ -251,12 +251,12 @@
         <!-- top Details -->
         <div class="details-bar">
           <div class="text_ico">
-            <img class="game-ico" src="{{i.imageLink}}" alt="DP" />
+            <img class="game-ico" src="{{i[11]}}" alt="DP" />
             <div class="text">
-              <h2>{{i.name[0:35]}}</h2>
+              <h2>{{i[1]}}</h2>
               <div class="game-numbers">
                 <div style="display: flex; flex-direction: row">
-                  <p class="rating">{{i.Rating}}</p>
+                  <p class="rating">{{i[6]}}</p>
                   <div class="star">
                     <img src="\static/asset/ico/Star 1.png" alt="" />
                   </div>
@@ -265,15 +265,15 @@
                   <div class="dwn-ico">
                     <img src="\static/asset/ico/download-ico.png" alt="" width="16px" height="16px" />
                   </div>
-                  <p class="dwns">{{i.SmallDownloads}}</p>
+                  <p class="dwns">{{i[8]}}</p>
                 </div>
                 {% if i.AppSize+"B" != "Varies with deviceB" %}
-                <p class="size">{{i.AppSize+"B"}}</p>
+                <p class="size">{{i[4]+"B"}}</p>
                 {% endif %}
               </div>
             </div>
           </div>
-          <button type="button" class="more" id="{{i.GameName}}" value="{{i.Category}}"
+          <button type="button" class="more" id="{{i[9]}}" value="{{i[7]}}"
             onclick="ShowReportfrm(this.id,this.value);">
             <div class="circle"></div>
             <div class="circle"></div>
@@ -282,19 +282,19 @@
         </div>
         <div class="game-video">
 
-          <video id="{{loop.index}}video" class="backdrop-video" src="{{i.videoUrl}}"></video>
-          <video id="video{{loop.index}}" class="impvideo" src="{{i.videoUrl}}">
+          <video id="{{loop.index}}video" class="backdrop-video" src="{{i[3]}}"></video>
+          <video id="video{{loop.index}}" class="impvideo" src="{{i[3]}}">
             <img class="play_btn" src="\static/asset/ico/play_arrow_white_24dp.svg" alt="img">
           </video>
           <div class="play-button"></div>
           <div id="sound"></div>
         </div>
         <div class="btns">
-          <a href="{{i.link}}" target="_blank">
+          <a href="{{i[2]}}" target="_blank">
             <button id="btn" type="submit" value="Install Now" class="btn play-now">
               <h1>Play Now</h1>
             </button></a>
-          <a id="https://gimizo.com/share/{{i.Category}}_{{i.doc_number}}_{{i.GameName}}"
+          <a id="https://gimizo.com/share/{{i[7]}}_{{i[9]}}"
             onclick="ShowSharefrm(this.id);">
             <button id="btn" type="submit" class="btn share">
               <h1>Share</h1>
