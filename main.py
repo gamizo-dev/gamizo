@@ -21,10 +21,10 @@ transfer = S3Transfer(client)
 
 app = Flask(__name__,template_folder='template')
 
-conn = mysql.connector.connect(host='127.0.0.1',
+conn = mysql.connector.connect(host='165.232.184.154',
                               database='gimizo2',
-                              user='gimizodata',
-                              password='King04@2021!',
+                              user='root',
+                              password='Gimizo@04!2021810',
                               auth_plugin='mysql_native_password')
 
 cursor=conn.cursor()
@@ -54,7 +54,7 @@ def index1(cat):
     return render_template('index.html', cat=a,list=result)
 
 @app.route('/share/<string:sharestr>')
-def index1(sharestr):
+def sharepage(sharestr):
     category=''
     gamename=''
 
