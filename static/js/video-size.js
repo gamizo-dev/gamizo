@@ -5,12 +5,12 @@
     // var backVideo = document.getElementsByClassName("backdrop-video");
 
     var array=[];
-    for(j=1;j<20;j++){
+    for(j=1;j<main.length;j++){
       var video = document.getElementById("video"+j);
       array.push(video);
     }
     var array2=[];
-    for(k=1;k<20;k++){
+    for(k=1;k<main.length;k++){
       var backVideo = document.getElementById(k+"video");
       array2.push(backVideo);
     }

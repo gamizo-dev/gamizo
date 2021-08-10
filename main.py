@@ -1,4 +1,3 @@
-from MySQLdb.cursors import Cursor
 from flask import Flask, render_template, request, redirect
 from boto3 import session
 from boto3.s3.transfer import S3Transfer

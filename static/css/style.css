@@ -544,6 +544,9 @@ a {
   padding: 3%;
   background: white;
 }
+.copy-link input:focus {
+  outline: none;
+}
 .copy-text {
   padding: 3%;
   border: none;
