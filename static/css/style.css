@@ -226,8 +226,8 @@ body {
 .play_arrow {
   position: absolute;
   z-index: 20;
-  width: 20%;
-  height: 20%;
+  width:20%;
+  height:20%;
 }
 
 .impvideo {

@@ -1,6 +1,6 @@
 //videoplayer js
 const videos = document.getElementsByClassName("impvideo");
-const play_btn = DocumentTimeline.getElementsByClassName("play_arrow");
+const play_btn = document.querySelectorAll(".play_arrow");
 // const backvideos= document.getElementsByClassName("backdrop-video");
 function newfunc() {
   for (var i = 0; i < videos.length; i++) {
@@ -24,6 +24,12 @@ function elementInViewport(videos) {
 }
 
 // window.addEventListener('resize', checkScroll, false);
-
+function disappearArrow(){
+  for( var r=0;r<play_btn.length;r++){
+  play_btn[r].style.display="none";
+  }
+}
+document.addEventListener("click",disappearArrow,false);
+window.addEventListener("click",newfunc,false);
 window.addEventListener("scroll", newfunc, false);
 
