@@ -79,7 +79,7 @@ render(data);
 const content = document.querySelector(".content");
 const cardshift = document.querySelector(".cards");
 const body = document.querySelector(".body");
-
+const bg = document.querySelector(".main-bg");
 
 var i=0;
 function ShowContent() {
@@ -89,6 +89,7 @@ function ShowContent() {
       if(cardshift.classList.contains("cards")){
         cardshift.classList.remove("cards");
         cardshift.classList.add("shift");
+        bg.style.height="700px";
         i=1;
       }
     }
@@ -103,6 +104,7 @@ function HideContent(){
     if(cardshift.classList.contains("shift")){
       cardshift.classList.remove("shift");
       cardshift.classList.add("cards");
+      bg.style.height="450px";
     }
   }
   }
