@@ -72,7 +72,8 @@
     <div class="card-container">
       <div class="ccard" style="visibility: hidden;"></div>
       <div class="ccard">
-        <h1 class="title">Contact Us</h1>
+        <h1 class="title">Contact us</h1>
+        <div class="contact-us-line"></div>
         <form name="submit-to-google-sheet">
           <div class="input-container">
             <input name="name" type="#{type}" id="name" required="required" />
@@ -85,7 +86,7 @@
             <div class="bar"></div>
           </div>
           <div class="input-container">
-            <textarea name="message" id="message" required></textarea>
+            <textarea maxlength="500" name="message" id="message" required></textarea>
             <script type="text/javascript">
               var msg = document.querySelector('#message')
               window.addEventListener("load", () => {

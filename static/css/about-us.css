@@ -1,41 +1,15 @@
-:root {
-  --ps-g-blue: linear-gradient(
-    242.7deg,
-    #00a0ff 7.36%,
-    #00a1ff 8.12%,
-    #00beff 35.54%,
-    #00d2ff 62.85%,
-    #00dfff 89.73%,
-    #00e3ff 115.75%
-  );
-  --ps-g-green: linear-gradient(
-    142.39deg,
-    #32a071 -38.78%,
-    #2da771 -33.87%,
-    #15cf74 -4.91%,
-    #06e775 18.21%,
-    #00f076 32.37%
-  );
-  --ps-g-red: linear-gradient(217.62deg, #ff3a44 16.07%, #c31162 175.33%);
-  --ps-g-yellow: linear-gradient(
-    270deg,
-    #ffe000 -7.59%,
-    #ffbd00 89.79%,
-    #ffa500 176.94%,
-    #ff9c00 230.52%
-  );
-  --ps-c-blue: #3bccff;
-  --ps-c-green: #48ff48;
-  --ps-c-red: #ff3333;
-  --ps-c-yellow: #ffd400;
+
+:root{
+  --ps-g-blue: linear-gradient(242.7deg, #00A0FF 7.36%, #00A1FF 8.12%, #00BEFF 35.54%, #00D2FF 62.85%, #00DFFF 89.73%, #00E3FF 115.75%);
+  --ps-g-green: linear-gradient(142.39deg, #32A071 -38.78%, #2DA771 -33.87%, #15CF74 -4.91%, #06E775 18.21%, #00F076 32.37%);
+  --ps-g-red: linear-gradient(217.62deg, #FF3A44 16.07%, #C31162 175.33%);
+  --ps-g-yellow: linear-gradient(270deg, #FFE000 -7.59%, #FFBD00 89.79%, #FFA500 176.94%, #FF9C00 230.52%);
+  --ps-c-blue:#3BCCFF;
+  --ps-c-green:#48FF48;
+  --ps-c-red:#FF3333;
+  --ps-c-yellow:#FFD400;
 }
 
-body {
-  min-height: 100vh;
-}
-.cointainer {
-  height: auto;
-}
 .bg-grad {
   height: 100%;
   background: radial-gradient(
@@ -45,9 +19,11 @@ body {
     ),
     #051638;
 }
+
 .main-bg {
   visibility: hidden;
 }
+
 .wave {
   visibility: hidden;
 }
@@ -58,17 +34,20 @@ body {
   color: white;
   padding-inline: 2em;
 }
-.content-about h1{
+
+.content-about h1 {
   text-align: left;
   font-size: 3rem;
 }
-.content-about .about-line{
+
+.content-about .about-line {
   height: 4px;
   border-radius: 20px;
   width: 30%;
-  background-color: var(--ps-c-red);
+  background: var(--ps-g-red);
 }
-.content-about p{
+
+.content-about p {
   margin-block: 3em;
   font-size: 1.3rem;
   font-weight: 300;
@@ -76,6 +55,7 @@ body {
   text-align: left;
 }
 
+/* Footer */
 .made-with-love {
   position: absolute;
   left: 0;

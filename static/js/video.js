@@ -26,7 +26,7 @@ function elementInViewport(videos) {
 // window.addEventListener('resize', checkScroll, false);
 function disappearArrow(){
   for( var r=0;r<play_btn.length;r++){
-  play_btn[r].style.display="none";
+  play_btn[r].style.opacity="0";
   }
 }
 document.addEventListener("click",disappearArrow,false);

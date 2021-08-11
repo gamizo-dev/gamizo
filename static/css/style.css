@@ -15,6 +15,7 @@
   --light: #f7f7fd;
   --primary: #295ed9;
   --secondary: #2ba84a;
+  --green:#068661;
 }
 
 body {
@@ -223,11 +224,21 @@ body {
   place-items: center;
   position: relative;
 }
-.play_arrow {
+
+.card .game-video .play_arrow {
   position: absolute;
-  z-index: 20;
-  width:20%;
-  height:20%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 300ms ease-in-out;
+}
+.card .game-video .play_arrow svg{
+  width: 40%;
+  opacity:0.8;
+  transition: all 300ms ease-out;
 }
 
 .impvideo {
@@ -248,50 +259,51 @@ body {
   filter: blur(8px);
   opacity: 1;
 }
-
-.card .btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
+.card a{
   width: 100%;
-  height: 59px;
+}
+.card .btns {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  height: 60px;
 }
 
 .card .btns .btn {
-  width: 50%;
   height: 50px;
-  font-size: 1.3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
   display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  flex-direction: row;
+  gap: 10px;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   color: white;
 }
 
 .card .btns .play-now {
   border-radius: 0 0 0 15px;
-  background: #3c5cff;
+  background: var(--green);
   cursor: pointer;
   border: none;
+  transition: all 300ms ease-in-out;
+}
+.card .btns .play-now:hover{
+  background: #04694d;
 }
 
 .card .btns .share {
   border-radius: 0 0 15px 0;
-  background: #8255ff;
+  background: var(--primary);
   cursor: pointer;
   border: none;
-  transform: translate(100%, -100%);
+  /* transform: translate(100%, -100%); */
   transition: all 300ms ease-in-out;
 }
 .card .btns .share:hover {
-  background: #6d45da;
+  background: #1f48a8;
 }
 a {
   text-decoration: none;
@@ -300,6 +312,7 @@ a {
   width: 70%;
   margin-top: 7rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 .logo-bg p {
@@ -307,6 +320,7 @@ a {
   font-weight: 300;
   font-size: 14px;
   text-align: center;
+  max-width: 75%;
 }
 .logo-bg .logo {
   opacity: 1;

@@ -8,10 +8,14 @@
     <title>Gimizo | Privacy Policy</title>
     <link rel="stylesheet" href="\static/css/style.css" />
     <style>
-        .terms {
+        .pp {
             background-color: white;
             padding: 5em 2em;
             box-sizing: border-box;
+        }
+
+        .menu-btn .line {
+            background: var(--dark);
         }
     </style>
     <link rel="stylesheet" href="../static/css/menu.css">
@@ -20,48 +24,73 @@
 <body>
     <div class="cointainer">
         <!-- Menu Button -->
-        <div class="menu-btn">
+        <div class="menu-btn" onclick="open_menu();">
             <div class="line"></div>
-            <div class="line center-line"></div>
+            <div class="line"></div>
             <div class="line"></div>
         </div>
         <!-- Side Menu -->
-        <div class="form-Backdrop" id="nav-menu" style="display: none;">
-            <div id="menu">
-                <div class="menu-content">
+        <div class="form-Backdrop" id="nav-menu" style="display: none">
+            <div id="menu" onclick="close_menu();z=0;">
+                <div class="menu-content" onclick="open_menu();z=1;">
                     <div class="top-bar">
-                        <div class="menu-btn">
+                        <div class="menu-btn" onclick="z=0;close_menu();">
                             <div class="line"></div>
                             <div class="line"></div>
                         </div>
                     </div>
                     <ul>
-                        <li class="menu-link"><a href="/index">Home</a></li>
+                        <li class="menu-link"><a href="index.html">Home</a></li>
                         <li class="menu-link"><a href="/contact">Contact Us</a></li>
                         <li class="menu-link"><a href="/about">About Us</a></li>
                     </ul>
+
                     <div class="extra-links">
-                        <a href="/privacy">Privacy Policy</a>
-                        <br>
+                        <!-- google sign in -->
+                        <!-- <div class="google_signin">
+                <div id="my-signin2"></div>
+                <script>
+                  function onSuccess(googleUser) {
+                    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                  }
+                  function onFailure(error) {
+                    console.log(error);
+                  }
+                  function renderButton() {
+                    gapi.signin2.render('my-signin2', {
+                      'scope': 'profile email',
+                      'width': 240,
+                      'height': 50,
+                      'longtitle': true,
+                      'theme': 'dark',
+                      'onsuccess': onSuccess,
+                      'onfailure': onFailure
+                    });
+                  }
+                </script>
+              </div> -->
+                        <!-- end of google sign in -->
+                        <a href="/privacy" class="extra-selected">Privacy Policy</a>
+
                         <a href="/terms">Terms & conditions</a>
                     </div>
                 </div>
             </div>
             <script>
-                var menu = document.querySelector("#menu")
-                var cointainer = document.querySelector(".cointainer")
+                var menu = document.querySelector("#menu");
+                var cointainer = document.querySelector(".cointainer");
                 window.addEventListener("load", () => {
-                    let widthNow = cointainer.clientWidth
-                    menu.setAttribute("style", `width:${widthNow}px;`)
-                })
+                    let widthNow = cointainer.clientWidth;
+                    menu.setAttribute("style", `width:${widthNow}px;`);
+                });
                 window.addEventListener("resize", () => {
-                    let widthNow = cointainer.clientWidth
-                    menu.setAttribute("style", `width:${widthNow}px;`)
-                })
+                    let widthNow = cointainer.clientWidth;
+                    menu.setAttribute("style", `width:${widthNow}px;`);
+                });
             </script>
         </div>
         <!-- End of Side Menu -->
-        <div class="terms">
+        <div class="pp">
             <div class="styles-wrapper-88b097">
                 <div class="styles-document-previewer-wrapper-e181fc">
                     <div><span class="document-previewer-logo-d16635"></span>

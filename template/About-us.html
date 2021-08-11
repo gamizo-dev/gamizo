@@ -13,6 +13,71 @@
 
 <body>
   <div class="cointainer">
+    <!-- Menu Button -->
+    <div class="menu-btn">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <!-- Side Menu -->
+    <div class="form-Backdrop" id="nav-menu" style="display: none">
+      <div id="menu" onclick="close_menu();z=0;">
+        <div class="menu-content" onclick="open_menu();z=1;">
+          <div class="top-bar">
+            <div class="menu-btn" onclick="z=0;close_menu();">
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+          <ul>
+            <li class="menu-link"><a href="index.html">Home</a></li>
+            <li class="menu-link"><a href="/contact">Contact Us</a></li>
+            <li class="menu-link selected"><a href="/about">About Us</a></li>
+          </ul>
+          
+          <div class="extra-links">
+            <div class="google_signin">
+              <div id="my-signin2"></div>
+                        <script>
+              function onSuccess(googleUser) {
+                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+              }
+              function onFailure(error) {
+                console.log(error);
+              }
+              function renderButton() {
+                gapi.signin2.render('my-signin2', {
+                  'scope': 'profile email',
+                  'width': 240,
+                  'height': 50,
+                  'longtitle': true,
+                  'theme': 'dark',
+                  'onsuccess': onSuccess,
+                  'onfailure': onFailure
+                });
+              }
+                        </script>
+            </div>
+            <a href="/privacy">Privacy Policy</a>
+            
+            <a href="/terms">Terms & conditions</a>
+          </div>
+        </div>
+      </div>
+      <script>
+        var menu = document.querySelector("#menu");
+        var cointainer = document.querySelector(".cointainer");
+        window.addEventListener("load", () => {
+          let widthNow = cointainer.clientWidth;
+          menu.setAttribute("style", `width:${widthNow}px;`);
+        });
+        window.addEventListener("resize", () => {
+          let widthNow = cointainer.clientWidth;
+          menu.setAttribute("style", `width:${widthNow}px;`);
+        });
+      </script>
+    </div>
+    <!-- End of Side Menu -->
     <!-- Background Gradient -->
     <div class="bg-grad">
       <div class="main-bg">
@@ -25,68 +90,23 @@
         </svg>
       </div>
     </div>
-     <!-- Content -->
-     <div class="content-about">
-       <h1>About us</h1>
-       <div class="about-line"></div>
+    <!-- Content -->
+    <div class="content-about">
+      <h1>About us</h1>
+      <div class="about-line"></div>
       <p>Gimizo is a gaming startup aiming to revolutionize the mobile gaming industry. Through Gimizo, users could
         explore various gameplay and choose which game to play. The gameplay videos are 100% real and user could
         select a game according to their interest. Users could see how actually the game look like, its features,
         graphics, comtrols before downloading the game. Our vision is to create a community of gaming enthusiasts and
         build products to make gaming experience more joyful.</p>
-        <!-- follow me template -->
-<div class="made-with-love">
-  Made with 
-  <i>♥</i> by 
-  <a href="#">Team Gimizo</a>
-</div>
+      <!-- follow me template -->
+      <div class="made-with-love">
+        Made with
+        <i>♥</i> by
+        <a href="#">Team Gimizo</a>
       </div>
-    <!-- Menu Button -->
-    <div class="menu-btn">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
     </div>
-    <!-- Side Menu -->
-    <div class="form-Backdrop" id="nav-menu" style="display: none;">
-      <div id="menu">
-        <div class="menu-content">
-          <div class="top-bar">
-            <div class="menu-btn">
-              <div class="line"></div>
-              <div class="line"></div>
-            </div>
-          </div>
-          <ul>
-            <li class="menu-link"><a href="/">Home</a></li>
-            <li class="menu-link selected"><a href="/contact">Contact Us</a></li>
-            <li class="menu-link"><a href="/about">About Us</a></li>
-          </ul>
-          <div class="extra-links">
-            <a href="/privacy">Privacy Policy</a>
-            <br>
-            <a href="/terms">Terms & conditions</a>
-          </div>
-        </div>
-      </div>
-      
-      <script>
-        var menu = document.querySelector("#menu")
-        var cointainer = document.querySelector(".cointainer")
-        window.addEventListener("load", () => {
-          let widthNow = cointainer.clientWidth
-          menu.setAttribute("style", `width:${widthNow}px;`)
-        })
-        window.addEventListener("resize", () => {
-          let widthNow = cointainer.clientWidth
-          menu.setAttribute("style", `width:${widthNow}px;`)
-        })
-      </script>
-    </div>
-    <!-- End of Side Menu -->
-   
   </div>
   <script src="../static/js/app.js"></script>
 </body>
-
 </html>
