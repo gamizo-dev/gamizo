@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gimizo | About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../static/css/menu.css">
   <link rel="stylesheet" href="../static/css/style.css">
   <link rel="stylesheet" href="../static/css/about-us.css">
@@ -19,6 +22,7 @@
       <div class="line"></div>
       <div class="line"></div>
     </div>
+    <!-- End of Menu Button -->
     <!-- Side Menu -->
     <div class="form-Backdrop" id="nav-menu" style="display: none">
       <div id="menu" onclick="close_menu();z=0;">
@@ -34,32 +38,32 @@
             <li class="menu-link"><a href="/contact">Contact Us</a></li>
             <li class="menu-link selected"><a href="/about">About Us</a></li>
           </ul>
-          
+
           <div class="extra-links">
             <div class="google_signin">
               <div id="my-signin2"></div>
-                        <script>
-              function onSuccess(googleUser) {
-                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-              }
-              function onFailure(error) {
-                console.log(error);
-              }
-              function renderButton() {
-                gapi.signin2.render('my-signin2', {
-                  'scope': 'profile email',
-                  'width': 240,
-                  'height': 50,
-                  'longtitle': true,
-                  'theme': 'dark',
-                  'onsuccess': onSuccess,
-                  'onfailure': onFailure
-                });
-              }
-                        </script>
+              <script>
+                function onSuccess(googleUser) {
+                  console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                }
+                function onFailure(error) {
+                  console.log(error);
+                }
+                function renderButton() {
+                  gapi.signin2.render('my-signin2', {
+                    'scope': 'profile email',
+                    'width': 240,
+                    'height': 50,
+                    'longtitle': true,
+                    'theme': 'dark',
+                    'onsuccess': onSuccess,
+                    'onfailure': onFailure
+                  });
+                }
+              </script>
             </div>
             <a href="/privacy">Privacy Policy</a>
-            
+
             <a href="/terms">Terms & conditions</a>
           </div>
         </div>
@@ -99,6 +103,13 @@
         select a game according to their interest. Users could see how actually the game look like, its features,
         graphics, comtrols before downloading the game. Our vision is to create a community of gaming enthusiasts and
         build products to make gaming experience more joyful.</p>
+        <div class="social-wrapper">
+          <div class="social-icos">
+            <a href="https://m.facebook.com/106168938412235/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/mwlite/company/gimizo" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/gimizoofficial?utm_medium=copy_link" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
       <!-- follow me template -->
       <div class="made-with-love">
         Made with
@@ -109,4 +120,5 @@
   </div>
   <script src="../static/js/app.js"></script>
 </body>
+
 </html>
