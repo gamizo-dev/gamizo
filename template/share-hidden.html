@@ -56,8 +56,10 @@
       <div class="main-bg"></div>
       <div class="wave">
         <svg width="414" height="49" viewBox="0 0 414 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 31.6447L13.8 35.6003C27.6 39.5559 55.2 47.4671 82.8 48.7774C110.4 50.1866 138 44.7476 165.6 36.9106C193.2 28.9253 220.8 18.5418 248.4 14.5121C276 10.6307 303.6 13.1029 331.2 17.1327C358.8 21.0141 386.4 26.453 400.2 28.9994L414 31.6447V0H400.2C386.4 0 358.8 0 331.2 0C303.6 0 276 0 248.4 0C220.8 0 193.2 0 165.6 0C138 0 110.4 0 82.8 0C55.2 0 27.6 0 13.8 0H0V31.6447Z" fill="#051638"/>
-          </svg>
+          <path
+            d="M0 31.6447L13.8 35.6003C27.6 39.5559 55.2 47.4671 82.8 48.7774C110.4 50.1866 138 44.7476 165.6 36.9106C193.2 28.9253 220.8 18.5418 248.4 14.5121C276 10.6307 303.6 13.1029 331.2 17.1327C358.8 21.0141 386.4 26.453 400.2 28.9994L414 31.6447V0H400.2C386.4 0 358.8 0 331.2 0C303.6 0 276 0 248.4 0C220.8 0 193.2 0 165.6 0C138 0 110.4 0 82.8 0C55.2 0 27.6 0 13.8 0H0V31.6447Z"
+            fill="#051638" />
+        </svg>
       </div>
     </div>
     <!-- Menu Button -->
@@ -81,32 +83,32 @@
             <li class="menu-link"><a href="/contact">Contact Us</a></li>
             <li class="menu-link"><a href="/about">About Us</a></li>
           </ul>
-          
+
           <div class="extra-links">
             <div class="google_signin">
               <div id="my-signin2"></div>
-                        <script>
-              function onSuccess(googleUser) {
-                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-              }
-              function onFailure(error) {
-                console.log(error);
-              }
-              function renderButton() {
-                gapi.signin2.render('my-signin2', {
-                  'scope': 'profile email',
-                  'width': 240,
-                  'height': 50,
-                  'longtitle': true,
-                  'theme': 'dark',
-                  'onsuccess': onSuccess,
-                  'onfailure': onFailure
-                });
-              }
-                        </script>
+              <script>
+                function onSuccess(googleUser) {
+                  console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                }
+                function onFailure(error) {
+                  console.log(error);
+                }
+                function renderButton() {
+                  gapi.signin2.render('my-signin2', {
+                    'scope': 'profile email',
+                    'width': 240,
+                    'height': 50,
+                    'longtitle': true,
+                    'theme': 'dark',
+                    'onsuccess': onSuccess,
+                    'onfailure': onFailure
+                  });
+                }
+              </script>
             </div>
             <a href="/privacy">Privacy Policy</a>
-            
+
             <a href="/terms">Terms & conditions</a>
           </div>
         </div>
@@ -153,7 +155,6 @@
       </div>
     </div>
     <!--Share form-->
-
     <section class="form-Backdrop cointainer" id="sharefrm" style="display: none">
       <div class="form" onclick="k=1;">
         <div class="tag-remove" id="closebtn" onclick="k=0;HideSharefrm();"></div>
@@ -187,25 +188,88 @@
         </form>
       </div>
     </section>
-
     <!-- logo -->
     <div class="logo-bg">
       <div class="logo">
         <div class="css-1u8s3kb">
           <div style="transform: scale(1)">
             <svg width="307" height="77" viewBox="0 0 307 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M285 22C275.074 22 267 30.0737 267 40C267 49.9245 275.074 58 285 58C294.924 58 303 49.9245 303 40C303 30.0737 294.924 22 285 22ZM286.019 54.2276C280.952 51.5035 277.505 46.1576 277.505 40C277.505 33.8461 280.95 28.4984 286.017 25.7761C293.416 26.3012 299.276 32.4719 299.276 40C299.276 47.5281 293.416 53.695 286.019 54.2276Z" fill="#F7F7FD"/>
-              <path d="M144.297 33.2186C143.643 32.014 142.696 31.1019 141.457 30.4823C140.252 29.8284 138.824 29.5014 137.172 29.5014C134.315 29.5014 132.026 30.4479 130.305 32.3409C128.584 34.1995 127.724 36.6949 127.724 39.827C127.724 43.1656 128.619 45.7814 130.409 47.6744C132.233 49.533 134.728 50.4623 137.895 50.4623C140.063 50.4623 141.887 49.9116 143.367 48.8102C144.882 47.7088 145.983 46.1256 146.671 44.0605H135.468V37.5553H154.674V45.7642C154.02 47.967 152.901 50.0149 151.318 51.9079C149.769 53.8009 147.79 55.3326 145.381 56.5028C142.971 57.673 140.252 58.2581 137.223 58.2581C133.644 58.2581 130.443 57.4837 127.621 55.9349C124.833 54.3516 122.647 52.166 121.064 49.3781C119.515 46.5902 118.741 43.4065 118.741 39.827C118.741 36.2474 119.515 33.0637 121.064 30.2758C122.647 27.4535 124.833 25.2679 127.621 23.7191C130.409 22.1358 133.592 21.3442 137.172 21.3442C141.509 21.3442 145.157 22.394 148.117 24.4935C151.111 26.593 153.09 29.5014 154.054 33.2186H144.297ZM168.392 21.7572V58H159.564V21.7572H168.392ZM215.834 21.7572V58H207.006V36.2646L198.9 58H191.776L183.618 36.213V58H174.79V21.7572H185.219L195.39 46.8484L205.457 21.7572H215.834ZM231.011 21.7572V58H222.183V21.7572H231.011ZM246.805 50.7721H262.397V58H236.79V51.2884L252.278 28.9851H236.79V21.7572H262.397V28.4688L246.805 50.7721Z" fill="#F7F7FD"/>
-              <path d="M11.0696 1H42.6357C48.1981 1 52.7085 5.50739 52.7085 11.0694V48.2591V52.7099H11.0696C5.50758 52.7099 1 48.1999 1 42.6371V11.0694C1 5.507 5.50718 1 11.0696 1Z" fill="#F7F7FD" stroke="#F7F7FD" stroke-width="2"/>
-              <path d="M63.7004 22.1907H82.812C85.9642 22.1907 88.5149 24.7449 88.5149 27.8902V47.0038C88.5149 50.1563 85.9636 52.7099 82.812 52.7099H57.9944V47.0038V27.8902C57.9944 24.7458 60.5507 22.1907 63.7004 22.1907Z" fill="#F7F7FD" stroke="#F7F7FD" stroke-width="2"/>
-              <path d="M57.9944 58.7268H60.7625V57.7268L60.7626 58.7268H60.7629H60.7634H60.7641H60.765H60.766H60.7673H60.7688H60.7704H60.7723H60.7743H60.7766H60.779H60.7816H60.7844H60.7874H60.7906H60.7939H60.7975H60.8012H60.8051H60.8092H60.8135H60.818H60.8226H60.8275H60.8325H60.8377H60.843H60.8486H60.8543H60.8602H60.8663H60.8726H60.879H60.8856H60.8924H60.8993H60.9064H60.9137H60.9212H60.9288H60.9366H60.9446H60.9528H60.9611H60.9695H60.9782H60.987H60.996H61.0051H61.0144H61.0239H61.0335H61.0433H61.0532H61.0633H61.0736H61.084H61.0946H61.1053H61.1162H61.1273H61.1385H61.1499H61.1614H61.173H61.1849H61.1968H61.209H61.2212H61.2337H61.2462H61.259H61.2718H61.2848H61.298H61.3113H61.3248H61.3384H61.3521H61.366H61.38H61.3942H61.4085H61.4229H61.4375H61.4523H61.4671H61.4821H61.4973H61.5126H61.528H61.5435H61.5592H61.575H61.591H61.607H61.6232H61.6396H61.6561H61.6727H61.6894H61.7063H61.7232H61.7403H61.7576H61.7749H61.7924H61.81H61.8278H61.8456H61.8636H61.8817H61.8999H61.9183H61.9367H61.9553H61.974H61.9928H62.0118H62.0308H62.05H62.0692H62.0886H62.1081H62.1277H62.1475H62.1673H62.1872H62.2073H62.2275H62.2477H62.2681H62.2886H62.3092H62.3299H62.3507H62.3716H62.3926H62.4137H62.435H62.4563H62.4777H62.4992H62.5208H62.5425H62.5644H62.5863H62.6083H62.6304H62.6526H62.6749H62.6973H62.7198H62.7423H62.765H62.7878H62.8106H62.8335H62.8566H62.8797H62.9029H62.9262H62.9496H62.973H62.9966H63.0202H63.0439H63.0677H63.0916H63.1156H63.1396H63.1637H63.1879H63.2122H63.2366H63.261H63.2855H63.3101H63.3348H63.3595H63.3844H63.4092H63.4342H63.4592H63.4844H63.5095H63.5348H63.5601H63.5855H63.6109H63.6365H63.662H63.6877H63.7134H63.7392H63.7651H63.791H63.8169H63.843H63.8691H63.8952H63.9214H63.9477H63.9741H64.0005H64.0269H64.0534H64.08H64.1066H64.1333H64.16H64.1868H64.2136H64.2405H64.2674H64.2944H64.3214H64.3485H64.3757H64.4028H64.4301H64.4573H64.4847H64.512H64.5394H64.5669H64.5944H64.6219H64.6495H64.6771H64.7048H64.7325H64.7602H64.788H64.8158H64.8436H64.8715H64.8994H64.9274H64.9554H64.9834H65.0115H65.0396H65.0677H65.0958H65.124H65.1522H65.1804H65.2087H65.237H65.2653H65.2937H65.322H65.3504H65.3788H65.4073H65.4358H65.4642H65.4927H65.5213H65.5498H65.5784H65.607H65.6356H65.6642H65.6928H65.7215H65.7501H65.7788H65.8075H65.8362H65.8649H65.8937H65.9224H65.9512H65.9799H66.0087H66.0375H66.0663H66.095H66.1238H66.1527H66.1815H66.2103H66.2391H66.2679H66.2967H66.3256H66.3544H66.3832H66.412H66.4408H66.4697H66.4985H66.5273H66.5561H66.5849H66.6137H66.6425H66.6713H66.7H66.7288H66.7576H66.7863H66.8151H66.8438H66.8725H66.9012H66.9299H66.9586H66.9873H67.0159H67.0445H67.0732H67.1018H67.1303H67.1589H67.1875H67.216H67.2445H67.273H67.3014H67.3299H67.3583H67.3867H67.4151H67.4434H67.4717H67.5H67.5283H67.5565H67.5847H67.6129H67.641H67.6692H67.6972H67.7253H67.7533H67.7813H67.8093H67.8372H67.8651H67.8929H67.9207H67.9485H67.9762H68.0039H68.0316H68.0592H68.0868H68.1143H68.1418H68.1693H68.1967H68.224H68.2513H68.2786H68.3058H68.333H68.3601H68.3872H68.4142H68.4412H68.4682H68.495H68.5219H68.5487H68.5754H68.602H68.6287H68.6552H68.6817H68.7082H68.7346H68.7609H68.7872H68.8134H68.8395H68.8656H68.8917H68.9176H68.9435H68.9694H68.9952H69.0209H69.0465H69.0721H69.0976H69.1231H69.1485H69.1738H69.199H69.2242H69.2493H69.2743H69.2993H69.3242H69.349H69.3737H69.3984H69.423H69.4475H69.4719H69.4963H69.5206H69.5448H69.5689H69.5929H69.6169H69.6408H69.6646H69.6883H69.7119H69.7355H69.7589H69.7823H69.8056H69.8288H69.8519H69.8749H69.8978H69.9207H69.9434H69.9661H69.9887H70.0112H70.0335H70.0558H70.078H70.1001H70.1221H70.144H70.1658H70.1876H70.2092H70.2307H70.2521H70.2734H70.2946H70.3157H70.3367H70.3576H70.3784H70.3991H70.4197H70.4402H70.4606H70.4808H70.501H70.5211H70.541H70.5608H70.5806H70.6002H70.6197H70.639H70.6583H70.6775H70.6965H70.7154H70.7342H70.7529H70.7715H70.7899H70.8083H70.8265H70.8446H70.8626H70.8804H70.8981H70.9157H70.9332H70.9506H70.9678H70.9849H71.0019H71.0188H71.0355H71.0521H71.0685H71.0849H71.1011H71.1171H71.1331H71.1489H71.1646H71.1801H71.1955H71.2108H71.2259H71.2409H71.2558H71.2705H71.2851H71.2995H71.3138H71.328H71.342H71.3559H71.3696H71.3832H71.3967H71.41H71.4231H71.4361H71.449H71.4617H71.4743H71.4867H71.499C73.0264 58.7268 74.2658 59.9654 74.2658 61.4984V72.2318C74.2658 73.7604 73.027 74.9999 71.499 74.9999H60.7625C59.2355 74.9999 57.9944 73.7597 57.9944 72.2318V58.7268Z" fill="#2BA84A" stroke="#2BA84A" stroke-width="2"/>
-              <path d="M44.362 58.7268H52.7089V60.1538V67.0785C52.7089 67.8645 52.0702 68.5056 51.2801 68.5056H44.362C43.5733 68.5056 42.9336 67.8643 42.9336 67.0785V60.1538C42.9336 59.3681 43.5733 58.7268 44.362 58.7268Z" fill="#F7F7FD" stroke="#F7F7FD" stroke-width="2"/>
-              </svg>
-              
+              <path
+                d="M277 20C267.074 20 259 28.0737 259 38C259 47.9245 267.074 56 277 56C286.924 56 295 47.9245 295 38C295 28.0737 286.924 20 277 20ZM278.019 52.2276C272.952 49.5035 269.505 44.1576 269.505 38C269.505 31.8461 272.95 26.4984 278.017 23.7761C285.416 24.3012 291.276 30.4719 291.276 38C291.276 45.5281 285.416 51.695 278.019 52.2276Z"
+                fill="#F7F7FD" />
+              <path
+                d="M136.297 31.2186C135.643 30.014 134.696 29.1019 133.457 28.4823C132.252 27.8284 130.824 27.5014 129.172 27.5014C126.315 27.5014 124.026 28.4479 122.305 30.3409C120.584 32.1995 119.724 34.6949 119.724 37.827C119.724 41.1656 120.619 43.7814 122.409 45.6744C124.233 47.533 126.728 48.4623 129.895 48.4623C132.063 48.4623 133.887 47.9116 135.367 46.8102C136.882 45.7088 137.983 44.1256 138.671 42.0605H127.468V35.5553H146.674V43.7642C146.02 45.967 144.901 48.0149 143.318 49.9079C141.769 51.8009 139.79 53.3326 137.381 54.5028C134.971 55.673 132.252 56.2581 129.223 56.2581C125.644 56.2581 122.443 55.4837 119.621 53.9349C116.833 52.3516 114.647 50.166 113.064 47.3781C111.515 44.5902 110.741 41.4065 110.741 37.827C110.741 34.2474 111.515 31.0637 113.064 28.2758C114.647 25.4535 116.833 23.2679 119.621 21.7191C122.409 20.1358 125.592 19.3442 129.172 19.3442C133.509 19.3442 137.157 20.394 140.117 22.4935C143.111 24.593 145.09 27.5014 146.054 31.2186H136.297ZM160.392 19.7572V56H151.564V19.7572H160.392ZM207.834 19.7572V56H199.006V34.2646L190.9 56H183.776L175.618 34.213V56H166.79V19.7572H177.219L187.39 44.8484L197.457 19.7572H207.834ZM223.011 19.7572V56H214.183V19.7572H223.011ZM238.805 48.7721H254.397V56H228.79V49.2884L244.278 26.9851H228.79V19.7572H254.397V26.4688L238.805 48.7721Z"
+                fill="#F7F7FD" />
+              <path
+                d="M50.6357 0H19.0696C12.9549 0 8 4.95469 8 11.0694V42.6371C8 48.7518 12.9549 53.7099 19.0696 53.7099H61.7085V48.2591V11.0694C61.7085 4.95469 56.75 0 50.6357 0Z"
+                fill="#F7F7FD" />
+              <path
+                d="M50.6357 0H19.0696C12.9549 0 8 4.95469 8 11.0694V42.6371C8 48.7518 12.9549 53.7099 19.0696 53.7099H61.7085V48.2591V11.0694C61.7085 4.95469 56.75 0 50.6357 0Z"
+                fill="url(#paint0_linear)" />
+              <path
+                d="M90.812 21.1907H71.7004C67.9993 21.1907 64.9944 24.1926 64.9944 27.8902V47.0038V53.7099H90.812C94.5165 53.7099 97.5149 50.7079 97.5149 47.0038V27.8902C97.5149 24.1926 94.5165 21.1907 90.812 21.1907Z"
+                fill="#F7F7FD" />
+              <path
+                d="M90.812 21.1907H71.7004C67.9993 21.1907 64.9944 24.1926 64.9944 27.8902V47.0038V53.7099H90.812C94.5165 53.7099 97.5149 50.7079 97.5149 47.0038V27.8902C97.5149 24.1926 94.5165 21.1907 90.812 21.1907Z"
+                fill="url(#paint1_linear)" />
+              <path
+                d="M79.4991 57.7268C77.4183 57.7268 68.7626 57.7268 68.7626 57.7268H64.9945V72.2318C64.9945 74.3122 66.6836 75.9999 68.7626 75.9999H79.4991C81.5799 75.9999 83.2659 74.3122 83.2659 72.2318V61.4984C83.2659 59.4142 81.5799 57.7268 79.4991 57.7268Z"
+                fill="#2BA84A" />
+              <path
+                d="M79.4991 57.7268C77.4183 57.7268 68.7626 57.7268 68.7626 57.7268H64.9945V72.2318C64.9945 74.3122 66.6836 75.9999 68.7626 75.9999H79.4991C81.5799 75.9999 83.2659 74.3122 83.2659 72.2318V61.4984C83.2659 59.4142 81.5799 57.7268 79.4991 57.7268Z"
+                fill="url(#paint2_linear)" />
+              <path
+                d="M79.4991 57.7268C77.4183 57.7268 68.7626 57.7268 68.7626 57.7268H64.9945V72.2318C64.9945 74.3122 66.6836 75.9999 68.7626 75.9999H79.4991C81.5799 75.9999 83.2659 74.3122 83.2659 72.2318V61.4984C83.2659 59.4142 81.5799 57.7268 79.4991 57.7268Z"
+                fill="url(#paint3_linear)" />
+              <path
+                d="M61.7087 57.7268H52.3619C51.0208 57.7268 49.9335 58.8159 49.9335 60.1538V67.0785C49.9335 68.4165 51.0208 69.5056 52.3619 69.5056H59.28C60.6227 69.5056 61.7087 68.4165 61.7087 67.0785V60.1538V57.7268Z"
+                fill="#F7F7FD" />
+              <path
+                d="M61.7087 57.7268H52.3619C51.0208 57.7268 49.9335 58.8159 49.9335 60.1538V67.0785C49.9335 68.4165 51.0208 69.5056 52.3619 69.5056H59.28C60.6227 69.5056 61.7087 68.4165 61.7087 67.0785V60.1538V57.7268Z"
+                fill="url(#paint4_linear)" />
+              <defs>
+                <linearGradient id="paint0_linear" x1="54.5" y1="49" x2="-63.9875" y2="-77.5117"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00A0FF" />
+                  <stop offset="0.007" stop-color="#00A1FF" />
+                  <stop offset="0.26" stop-color="#00BEFF" />
+                  <stop offset="0.512" stop-color="#00D2FF" />
+                  <stop offset="0.76" stop-color="#00DFFF" />
+                  <stop offset="1" stop-color="#00E3FF" />
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="53" y1="62.5" x2="88.0004" y2="30.0004"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#32A071" />
+                  <stop offset="0.069" stop-color="#2DA771" />
+                  <stop offset="0.476" stop-color="#15CF74" />
+                  <stop offset="0.801" stop-color="#06E775" />
+                  <stop offset="1" stop-color="#00F076" />
+                </linearGradient>
+                <linearGradient id="paint2_linear" x1="80.7527" y1="60.9899" x2="55.8354" y2="93.3145"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF3A44" />
+                  <stop offset="1" stop-color="#C31162" />
+                </linearGradient>
+                <linearGradient id="paint3_linear" x1="91.5001" y1="80" x2="64.0001" y2="52"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFE000" />
+                  <stop offset="0.409" stop-color="#FFBD00" />
+                  <stop offset="0.775" stop-color="#FFA500" />
+                  <stop offset="1" stop-color="#FF9C00" />
+                </linearGradient>
+                <linearGradient id="paint4_linear" x1="57.4999" y1="64" x2="47.9981" y2="71.9979"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF3A44" />
+                  <stop offset="1" stop-color="#C31162" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+
           </div>
         </div>
       </div>
-      <p>Lorem ipsum dolor sit, consectetur adipiscing elit. </p>
+      <p>A new way to discover Play Store mobile games. </p>
     </div>
     <!-- Categroy Selector -->
     <div class="category-select">
@@ -227,7 +291,7 @@
     <!-- cards-->
 
     <div class="cards">
-     <div class="card">
+      <div class="card">
         <!-- top Details -->
         <div class="details-bar">
           <div class="text_ico">
@@ -235,16 +299,14 @@
             <div class="text">
               <h2>{{sp[1]}}</h2>
               <div class="game-numbers">
-                <div style="display: flex; flex-direction: row">
+                <div>
                   <p class="rating">{{sp[6]}}</p>
                   <div class="star">
-                    <img src="\static/asset/ico/Star 1.png" alt="" />
+                    <img src="../static/asset/ico/star 1.svg" alt="rating-ico" />
                   </div>
                 </div>
-                <div style="display: flex; flex-direction: row">
-                  <div class="dwn-ico">
-                    <img src="\static/asset/ico/download-ico.png" alt="" width="16px" height="16px" />
-                  </div>
+                <div class="downls">
+                  <img src="../static/asset/ico/download-ico.svg" alt="" width="16px" height="16px" />
                   <p class="dwns">{{sp[8]}}</p>
                 </div>
                 {% if sp[4]+"B" != "Varies with deviceB" %}
@@ -266,18 +328,24 @@
           <video id="video{{loop.index}}" class="impvideo" src="{{sp[3]}}">
             <img class="play_btn" src="\static/asset/ico/play_arrow_white_24dp.svg" alt="img">
           </video>
-          <div class="play-button"></div>
+          <div class="play_arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFFFFF">
+              <path
+                d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z" />
+            </svg>
+          </div>
           <div id="sound"></div>
         </div>
         <div class="btns">
           <a href="{{sp[2]}}" target="_blank">
             <button id="btn" type="submit" value="Install Now" class="btn play-now">
-              <h1>Play Now</h1>
+              <img src="../static/asset/ico/Play-store-icon.svg" alt="Play-store-icon">
+              <p>Play Now</p>
             </button></a>
-          <a id="https://gimizo.com/share/{{sp[7]}}_{{sp[9]}}"
-            onclick="ShowSharefrm(this.id);">
+          <a id="https://gimizo.com/share/{{sp[7]}}_{{sp[9]}}" onclick="ShowSharefrm(this.id);">
             <button id="btn" type="submit" class="btn share">
-              <h1>Share</h1>
+              <img src="../static/asset/ico/Share-icon.svg" alt="Play-store-icon">
+              <p>Share</p>
             </button></a>
         </div>
       </div>
@@ -290,16 +358,14 @@
             <div class="text">
               <h2>{{i[1]}}</h2>
               <div class="game-numbers">
-                <div style="display: flex; flex-direction: row">
+                <div>
                   <p class="rating">{{i[6]}}</p>
                   <div class="star">
-                    <img src="\static/asset/ico/Star 1.png" alt="" />
+                    <img src="../static/asset/ico/star 1.svg" alt="" />
                   </div>
                 </div>
-                <div style="display: flex; flex-direction: row">
-                  <div class="dwn-ico">
-                    <img src="\static/asset/ico/download-ico.png" alt="" width="16px" height="16px" />
-                  </div>
+                <div class="downls">
+                  <img src="../static/asset/ico/download-ico.svg" alt="" width="16px" height="16px" />
                   <p class="dwns">{{i[8]}}</p>
                 </div>
                 {% if i[4]+"B" != "Varies with deviceB" %}
@@ -319,20 +385,25 @@
 
           <video id="{{loop.index}}video" class="backdrop-video" src="{{i[3]}}"></video>
           <video id="video{{loop.index}}" class="impvideo" src="{{i[3]}}">
-            <img class="play_btn" src="\static/asset/ico/play_arrow_white_24dp.svg" alt="img">
           </video>
-          <div class="play-button"></div>
+          <div class="play_arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFFFFF">
+              <path
+                d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z" />
+            </svg>
+          </div>
           <div id="sound"></div>
         </div>
         <div class="btns">
           <a href="{{i[2]}}" target="_blank">
             <button id="btn" type="submit" value="Install Now" class="btn play-now">
-              <h1>Play Now</h1>
+              <img src="../static/asset/ico/Play-store-icon.svg" alt="Play-store-icon">
+              <p>Play Now</p>
             </button></a>
-          <a id="https://gimizo.com/share/{{i[7]}}_{{i[9]}}"
-            onclick="ShowSharefrm(this.id);">
+          <a id="https://gimizo.com/share/{{i[7]}}_{{i[9]}}" onclick="ShowSharefrm(this.id);">
             <button id="btn" type="submit" class="btn share">
-              <h1>Share</h1>
+              <img src="../static/asset/ico/Share-icon.svg" alt="Play-store-icon">
+              <p>Share</p>
             </button></a>
         </div>
       </div>

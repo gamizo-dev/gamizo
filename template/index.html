@@ -13,6 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="Love playing mobile games ? Discover Play Store games through Gimizo, watch short
     gameplay videos and download the game you like." />
+    <meta property="og:image" content="../static/asset/ico/Favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -157,7 +158,6 @@
       </div>
     </div>
     <!--Share form-->
-
     <section class="form-Backdrop cointainer" id="sharefrm" style="display: none">
       <div class="form" onclick="k=1;">
         <div class="tag-remove" id="closebtn" onclick="k=0;HideSharefrm();"></div>
@@ -191,7 +191,6 @@
         </form>
       </div>
     </section>
-
     <!-- logo -->
     <div class="logo-bg">
       <div class="logo">
@@ -303,16 +302,14 @@
             <div class="text">
               <h2>{{i[1]}}</h2>
               <div class="game-numbers">
-                <div style="display: flex; flex-direction: row">
+                <div>
                   <p class="rating">{{i[6]}}</p>
                   <div class="star">
-                    <img src="\static/asset/ico/Star 1.png" alt="" />
+                    <img src="../static/asset/ico/star 1.svg" alt="" width="16px" height="16px" />
                   </div>
                 </div>
-                <div style="display: flex; flex-direction: row">
-                  <div class="dwn-ico">
-                    <img src="\static/asset/ico/download-ico.png" alt="" width="16px" height="16px" />
-                  </div>
+                <div class="downls">
+                  <img src="../static/asset/ico/download-ico.svg" alt="" width="13px" height="13px"/>
                   <p class="dwns">{{i[8]}}</p>
                 </div>
                 {% if i[4]+"B" != "Varies with deviceB" %}
