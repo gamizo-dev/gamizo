@@ -1,6 +1,7 @@
 //videoplayer js
 const videos = document.getElementsByClassName("impvideo");
 const play_btn = document.querySelectorAll(".play_arrow");
+var z=0;
 // const backvideos= document.getElementsByClassName("backdrop-video");
 function newfunc() {
   for (var i = 0; i < videos.length; i++) {
@@ -14,7 +15,6 @@ function elementInViewport(videos) {
     // console.log('Element is in the viewport!');
     videos.play();
     // return 1;
-    disappearArrow();
     videos.loop = true;
   } else {
     // console.log('Element is NOT in the viewport!');
@@ -26,11 +26,14 @@ function elementInViewport(videos) {
 
 // window.addEventListener('resize', checkScroll, false);
 function disappearArrow(){
+  if(z==1){
   for( var r=0;r<play_btn.length;r++){
   play_btn[r].style.opacity="0";
   }
 }
-document.addEventListener("click",disappearArrow,false);
+}
+document.addEventListener("click",disappearArrow,z=1,false);
+document.addEventListener("scroll",disappearArrow,false);
 window.addEventListener("click",newfunc,false);
 window.addEventListener("scroll", newfunc, false);
 
