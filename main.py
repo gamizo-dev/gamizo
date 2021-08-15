@@ -29,7 +29,8 @@ conn = mysql.connector.connect(host='165.232.184.154',
 cursor=conn.cursor()
 @app.route('/')
 def index():
-    cursor.execute('''SELECT * from gamesdata''')
+    category='Popular'
+    cursor.execute('''SELECT * from gamesdata where category=%s ''',(category,))
     
     result=cursor.fetchall()
 
@@ -63,7 +64,7 @@ def sharepage(sharestr):
         i=i+1
 
     i=i+1
-    while i<=len(sharestr):
+    while i<len(sharestr):
         gamename=gamename+sharestr[i]
         i=i+1
 
@@ -75,9 +76,9 @@ def sharepage(sharestr):
     cursor.execute('''SELECT DISTINCT category from gamesdata''')
     a=cursor.fetchall()
 
-    cursor.execute('''SELECT * from where category="Popular" ''')
+    category='Popular'
+    cursor.execute('''SELECT * from gamesdata where category=%s and gamename!=%s ''',(category,gamename))
     result=cursor.fetchall()
-
     return render_template('share-hidden.html', sp=sp,cat=a,list=result)
 
 
@@ -121,4 +122,4 @@ def report():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True,host='0.0.0.0')

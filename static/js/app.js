@@ -11,7 +11,8 @@
 //     line[i].classList.toggle("menu-open");
 //   }
 // });
-document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+// document.addEventListener("contextmenu", (event) => event.preventDefault());
 
 var menuBtn = document.querySelector(".menu-btn");
 var sideMenu = document.querySelector("#nav-menu");

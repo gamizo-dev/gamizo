@@ -14,6 +14,7 @@
   <meta name="description" content="Love playing mobile games ? Discover Play Store games through Gimizo, watch short
     gameplay videos and download the game you like." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="\static/js/video.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
@@ -286,13 +287,14 @@
       </div>
     </div>
     <div style="display: none">
-      {%for j in cat%}
+      {% for j in cat %}
       <a id="{{loop.index}}" class="categorisedClass" href="/{{j[0]}}">{{j[0]}}</a>
-      {%endfor%}
+      {% endfor %}
     </div>
     <!-- cards-->
 
     <div class="cards">
+    {% for sp in sp %}
       <div class="card">
         <!-- top Details -->
         <div class="details-bar">
@@ -304,11 +306,11 @@
                 <div>
                   <p class="rating">{{sp[6]}}</p>
                   <div class="star">
-                    <img src="../static/asset/ico/star 1.svg" alt="rating-ico" />
+                    <img src="../static/asset/ico/star 1.svg" alt="rating-ico" width="16px" height="16px" />
                   </div>
                 </div>
                 <div class="downls">
-                  <img src="../static/asset/ico/download-ico.svg" alt="" width="16px" height="16px" />
+                  <img src="../static/asset/ico/download-ico.svg" alt="" width="13px" height="13px" />
                   <p class="dwns">{{sp[8]}}</p>
                 </div>
                 {% if sp[4]+"B" != "Varies with deviceB" %}
@@ -351,7 +353,8 @@
             </button></a>
         </div>
       </div>
-      {%for i in list%}
+      {% endfor %}
+      {% for i in list %}
       <div class="card">
         <!-- top Details -->
         <div class="details-bar">
@@ -363,11 +366,11 @@
                 <div>
                   <p class="rating">{{i[6]}}</p>
                   <div class="star">
-                    <img src="../static/asset/ico/star 1.svg" alt="" />
+                    <img src="../static/asset/ico/star 1.svg" alt="" width="16px" height="16px"/>
                   </div>
                 </div>
                 <div class="downls">
-                  <img src="../static/asset/ico/download-ico.svg" alt="" width="16px" height="16px" />
+                  <img src="../static/asset/ico/Download-ico.svg" alt="" width="13px" height="13px" />
                   <p class="dwns">{{i[8]}}</p>
                 </div>
                 {% if i[4]+"B" != "Varies with deviceB" %}
@@ -409,7 +412,7 @@
             </button></a>
         </div>
       </div>
-      {%endfor%}
+      {% endfor %}
     </div>
     <div id="snackbar">Copied to clipboard</div>
   </div>
@@ -417,7 +420,7 @@
 
 <script src="\static/js/app.js"></script>
 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-<script src="\static/js/video.js"></script>
+
 <script src="\static/js/dropdown.js"></script>
 <script src="\static/js/video-size.js"></script>
 <script src="\static/js/forms.js"></script>
