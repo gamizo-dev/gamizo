@@ -28,6 +28,15 @@ body {
   margin: 0 auto 100px;
   margin-top: 5vh;
 }
+.container{
+  width: 414px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  border-top:1px solid var(--dark);
+}
 .bg-grad {
   height: 100%;
   background: radial-gradient(

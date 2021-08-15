@@ -2,12 +2,18 @@
   --blue: #226dc9;
 }
 
-.form-Backdrop {
+.form-backdrop {
+  top:0;
   padding: 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.548);
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  transition: all 300ms ease-in;
 }
 
 #menu .menu-content .top-bar {
@@ -16,6 +22,7 @@
 
 /* Menu change when menu open */
 #menu .menu-btn {
+  z-index:10000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,6 +47,7 @@
 }
 
 #menu .menu-content {
+  z-index:500;
   width: 70%;
   background-color: white;
   height: 100%;

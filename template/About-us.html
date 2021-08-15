@@ -17,16 +17,16 @@
 <body>
   <div class="cointainer">
     <!-- Menu Button -->
-    <div class="menu-btn">
+    <div class="menu-btn" onclick="open_menu();">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
     </div>
     <!-- End of Menu Button -->
     <!-- Side Menu -->
-    <div class="form-Backdrop" id="nav-menu" style="display: none">
+    <div class="form-backdrop" id="nav-menu" style="display: none">
       <div id="menu" onclick="close_menu();z=0;">
-        <div class="menu-content" onclick="open_menu();z=1;">
+        <div class="menu-content" onclick="keep_menu_open();z=1;">
           <div class="top-bar">
             <div class="menu-btn" onclick="z=0;close_menu();">
               <div class="line"></div>
@@ -34,7 +34,7 @@
             </div>
           </div>
           <ul>
-            <li class="menu-link"><a href="index.html">Home</a></li>
+            <li class="menu-link"><a href="/">Home</a></li>
             <li class="menu-link"><a href="/contact">Contact Us</a></li>
             <li class="menu-link selected"><a href="/about">About Us</a></li>
           </ul>

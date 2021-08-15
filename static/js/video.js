@@ -14,6 +14,7 @@ function elementInViewport(videos) {
     // console.log('Element is in the viewport!');
     videos.play();
     // return 1;
+    disappearArrow();
     videos.loop = true;
   } else {
     // console.log('Element is NOT in the viewport!');

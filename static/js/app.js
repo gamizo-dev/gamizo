@@ -24,6 +24,11 @@ function open_menu() {
       sideMenu.setAttribute("style", "display:block;");
     }
 }
+function keep_menu_open(){
+  if (sideMenu.style.display == "block") {
+    sideMenu.setAttribute("style", "display:block;");
+  }
+}
 function close_menu() {
   console.log("close")
   console.log(z)
@@ -31,5 +36,5 @@ function close_menu() {
       sideMenu.setAttribute("style", "display:none;");
     }
 }
-menuBtn.addEventListener("click", open_menu, false);
-crossBtn.addEventListener("click", close_menu, false);
+// menuBtn.addEventListener("click", open_menu, false);
+// crossBtn.addEventListener("click", close_menu, false);

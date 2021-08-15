@@ -69,23 +69,24 @@
       <div class="line"></div>
     </div>
     <!-- Side Menu -->
-    <div class="form-Backdrop" id="nav-menu" style="display: none">
-      <div id="menu">
-        <div class="menu-content">
+    <div class="form-backdrop" id="nav-menu" style="display: none">
+      <div id="menu" onclick="close_menu();z=0;">
+        <div class="menu-content" onclick="keep_menu_open();z=1;">
           <div class="top-bar">
-            <div class="menu-btn">
+            <div class="menu-btn" onclick="z=0;close_menu();">
               <div class="line"></div>
               <div class="line"></div>
             </div>
           </div>
           <ul>
-            <li class="menu-link selected"><a href="index.html">Home</a></li>
+            <li class="menu-link selected"><a href="/">Home</a></li>
             <li class="menu-link"><a href="/contact">Contact Us</a></li>
             <li class="menu-link"><a href="/about">About Us</a></li>
           </ul>
 
           <div class="extra-links">
-            <div class="google_signin">
+            <!-- google sign in -->
+            <!-- <div class="google_signin">
               <div id="my-signin2"></div>
               <script>
                 function onSuccess(googleUser) {
@@ -106,7 +107,8 @@
                   });
                 }
               </script>
-            </div>
+            </div> -->
+            <!-- end of google sign in -->
             <a href="/privacy">Privacy Policy</a>
 
             <a href="/terms">Terms & conditions</a>
@@ -137,7 +139,7 @@
           <input type="radio" id="2" name="report" value="PoorQuality" />
           <label for="2" class="check">Poor Quality</label>
           <input type="radio" id="3" name="report" value="InappropiateLink" />
-          <label for="2" class="check">Inappropiate Link</label>
+          <label for="3" class="check">Inappropiate Link</label>
           <input type="radio" id="4" name="report" value="VideoLaging" />
           <label for="4" class="check">Video laging</label>
           <input type="radio" id="5" name="report" value="Others" />

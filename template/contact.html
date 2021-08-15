@@ -13,7 +13,7 @@
 
 <body>
 
-  <div class="cointainer">
+  <div class="container">
     <!-- Background Gradient -->
     <div class="bg-grad">
       <div class="main-bg">
@@ -26,17 +26,17 @@
       </div>
     </div>
     <!-- Menu Button -->
-    <div class="menu-btn">
+    <div class="menu-btn" onclick="open_menu();">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
     </div>
     <!-- Side Menu -->
-    <div class="form-Backdrop" id="nav-menu" style="display: none;">
-      <div id="menu">
-        <div class="menu-content">
+    <div class="form-backdrop" id="nav-menu" style="display: none;">
+      <div id="menu" onclick="close_menu();z=0;">
+        <div class="menu-content" onclick="keep_menu_open();z=1;">
           <div class="top-bar">
-            <div class="menu-btn">
+            <div class="menu-btn" onclick="z=0;close_menu();">
               <div class="line"></div>
               <div class="line"></div>
             </div>
@@ -55,7 +55,7 @@
       </div>
       <script>
         var menu = document.querySelector("#menu")
-        var cointainer = document.querySelector(".cointainer")
+        var cointainer = document.querySelector(".container")
         window.addEventListener("load", () => {
           let widthNow = cointainer.clientWidth
           menu.setAttribute("style", `width:${widthNow}px;`)

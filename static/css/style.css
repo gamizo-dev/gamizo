@@ -49,11 +49,11 @@ body {
   z-index: 5;
 }
 .menu-content{
-  z-index: 5;
+  z-index: 10;
 }
-#nav-menu .menu-btn{
-  z-index:10;
-}
+/* #nav-menu .menu-btn{
+  z-index:10000;
+} */
 
 .menu-btn .line {
   background-color: var(--light);
