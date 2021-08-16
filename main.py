@@ -1,23 +1,13 @@
 from flask import Flask, render_template, request, redirect
-from boto3 import session
-from boto3.s3.transfer import S3Transfer
+
+
 import mysql.connector
 from datetime import datetime
 import random
-import asyncio
 
-ACCESS_ID = '5GFF7YOAHZWTV5VKP7Q6'
-SECRET_KEY = '3mPgnLrUXGhLSb+0JHFElxP0HICyv7LSaEw0hsLWs5c'
 
-# Initiate session
-session = session.Session()
-client = session.client('s3',
-                        region_name='sgp1',
-                        endpoint_url='https://sgp1.digitaloceanspaces.com',
-                        aws_access_key_id=ACCESS_ID,
-                        aws_secret_access_key=SECRET_KEY)
-transfer = S3Transfer(client)
-# Upload a file to your Space
+
+
 
 
 app = Flask(__name__,template_folder='template')
