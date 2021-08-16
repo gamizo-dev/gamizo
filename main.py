@@ -3,6 +3,8 @@ from boto3 import session
 from boto3.s3.transfer import S3Transfer
 import mysql.connector
 from datetime import datetime
+import random
+import asyncio
 
 ACCESS_ID = '5GFF7YOAHZWTV5VKP7Q6'
 SECRET_KEY = '3mPgnLrUXGhLSb+0JHFElxP0HICyv7LSaEw0hsLWs5c'
@@ -26,9 +28,10 @@ conn = mysql.connector.connect(host='165.232.184.154',
                               password='Gimizo@04!2021810',
                               auth_plugin='mysql_native_password')
 
-cursor=conn.cursor()
+
 @app.route('/')
 def index():
+    cursor=conn.cursor()
     category='Popular'
     cursor.execute('''SELECT * from gamesdata where category=%s ''',(category,))
     
@@ -37,13 +40,18 @@ def index():
     
     cursor.execute('''SELECT DISTINCT category from gamesdata''')
     a=cursor.fetchall()
-  
+    
+    random.shuffle(result)
+    random.shuffle(a)
 
+    cursor.close()
     return render_template('index.html', list=result, cat=a)
 
 
+
 @app.route('/<string:cat>')
-def index1(cat):
+async def index1(cat):
+    cursor=conn.cursor()
     cursor.execute('''SELECT * from gamesdata WHERE category=%s''',(cat,))
     result=cursor.fetchall()
 
@@ -51,10 +59,23 @@ def index1(cat):
     cursor.execute('''SELECT DISTINCT category from gamesdata''')
     a=cursor.fetchall()
 
-    return render_template('index.html', cat=a,list=result)
+    random.shuffle(result)
+    random.shuffle(a)
+
+  
+
+    
+    category='Popular'
+    cursor.execute('''SELECT * from gamesdata where category=%s ''',(category,))
+    result1=cursor.fetchall()
+    
+    await asyncio.sleep(0.01)
+    cursor.close()
+    return render_template('index.html', cat=a,list=result,list1=result1)
 
 @app.route('/share/<string:sharestr>')
 def sharepage(sharestr):
+    cursor=conn.cursor()
     category=''
     gamename=''
 
@@ -79,6 +100,11 @@ def sharepage(sharestr):
     category='Popular'
     cursor.execute('''SELECT * from gamesdata where category=%s and gamename!=%s ''',(category,gamename))
     result=cursor.fetchall()
+
+    random.shuffle(result)
+    random.shuffle(a)
+
+    cursor.close()
     return render_template('share-hidden.html', sp=sp,cat=a,list=result)
 
 
@@ -104,6 +130,7 @@ def terms():
 
 @app.route('/report', methods=['GET', 'POST'])
 def report():
+    cursor=conn.cursor()
     if request.method == "POST":
         option = request.form['report']
         gamename = request.form['gamename']
@@ -117,9 +144,9 @@ def report():
     
     conn.commit()
 
-
+    cursor.close()
     return redirect('/')
 
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True,port=8000)
