@@ -40,7 +40,7 @@ def index():
 
 
 @app.route('/<string:cat>')
-async def index1(cat):
+def index1(cat):
     cursor=conn.cursor()
     cursor.execute('''SELECT * from gamesdata WHERE category=%s''',(cat,))
     result=cursor.fetchall()
@@ -59,7 +59,7 @@ async def index1(cat):
     cursor.execute('''SELECT * from gamesdata where category=%s ''',(category,))
     result1=cursor.fetchall()
     
-    await asyncio.sleep(0.01)
+
     cursor.close()
     return render_template('index.html', cat=a,list=result,list1=result1)
 
